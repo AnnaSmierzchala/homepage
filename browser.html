@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+    <header id="top">
+
+        <p class="header">WTF: Co ten frontend?</p>
+
+
+        <nav class="navigation">
+            <a href="index.html" target="_blank" class="nav-link">Strona główna</a>
+            <a href="html.html" target="_blank" class="nav-link">HTML</a>
+            <a href="css.html" target="_blank" class="nav-link">CSS</a>
+            <a href="javascript.html" target="_blank" class="nav-link">JavaScript</a>
+            <a href="browser.html" target="_blank" class="nav-link">Przeglądarka</a>
+            <a href="terminal.html" target="_blank" class="nav-link">Terminal</a>
+            <a href="spis-tresci.html" target="_blank" class="nav-link">Spis lekcji</a>
+        </nav>
+    </header>
+    <main>
+        <h1 class="main-header">Wszystko o przeglądarce</h1>
+        <section>
+            <h2 class="section-header">Przeglądarka part I</h2>
+            <article>
+                <h3>Jak działa internet i przeglądarka?</h3>
+
+                <section>
+                    <h4>Protokół HTTP</h4>
+                    <p>Przeglądarka używa protokołu HTTP (Hypertext Transfer Protocol) - zazwyczaj.<br />
+                        HTTP - protokół do transportowania htmla i całej reszty, którą widzimy na stronach (Protokół,
+                        który obsługuje strony internetowe i ich zawartość).<br />
+                        HTTPS - Secure, szyfrowany, bezpieczny, rekomendowany.</p>
+
+                    <img src="img/http.JPG" alt="http">
+
+                    <p>Przeglądarka sama dopisuje port po wykryciu czy jest to HTTP czy HTTPS.
+                        Mówi nam, na którym porcie na serwerze znajdują się pliki tej strony. Na którym porcie
+                        przeglądarka musi się dogadywać z serwerem, żeby ten transport miał sens.</p>
+
+                    <p>Po kolei:</p>
+                    <ol>
+                        <li>Wpisuję w pasku adresu cotenfrontend.pl -> enter (URL - Uniform Resource Locator - adres,
+                            który wpisujemy)</li>
+                        <li>Przeglądarka szuka serwera co ten frontend.pl - DNS (DNS tłumaczy nazwy zrozumiałe dla nas
+                            na adresy IP (mówi nam gdzie jaki serwer się znajduje). Mówi nam na jakim serwerze znajduje
+                            się strona)</li>
+                        <li>Po znalezieniu serwera (jak się połączymy z serwerem) odpytuje go o index (szuka u siebie
+                            tego pliku) (jeśli podamy sam adres serwera) - to co jest indexem zależy od konfiguracji
+                            serwera (nie musi to być index.html, ale w przypadku stron statycznych najczęściej tak jest)
+                        </li>
+                        <li>Serwer wysyła do przeglądarki zawartość html</li>
+                        <li>przeglądarka wczytuje html i szuka wszystkich dodatkowych zasobów: style, skrypty, obrazki
+                            itp. i dla każdego z zasobów wykonuje zapytanie (Pobieranie zawartości HTMLa do
+                            przeglądarki, serwer odpowiada zawartością. Do każdego zasobu osobne zapytanie, serwer
+                            zwraca pliki)</li>
+                        <li>Przeglądarka parsuje (sprawdza składnię strony) i renderuje stronę (zamienia kod HTML na to
+                            co widzimy, aplikuje style i ładuje dodatkowe zasoby)</li>
+                    </ol>
+
+                    <p>Komunikacja przeglądarka - serwer odbywa się na zasadach request - response.</p>
+                    <p>Narzędzie deweloperskie -> Zakładka Network - możemy podejrzeć to co przeglądarka pobiera z
+                        serwera.</p>
+                </section>
+
+                <section>
+                    <h4>Odpowiedzi protokołu HTTP</h4>
+
+                    <p>Czasami serwer nie odpowiada i dostajemy błędy albo serwer może odpowiedzieć z błędem.Odpowiedzi
+                        serwera mają różne kody i pozwala nam to na diagnozowanie problemów.
+                    </p>
+
+                    <p>Kody odpowiedzi protokołu HTTP:</p>
+                    <ul>
+                        <li>100- HOLD ON</li>
+                        <li>200- OK HERE YOU GO</li>
+                        <li>30x- szukasz w złym miejscu, przekieruję Cię w dobre, wiem gdzie to
+                            np. adres do przekierowania na grupę na fb GO AWAY</li>
+                        <li>404- nie mam tego czego potrzebujesz YOU FACKED UP</li>
+                        <li>50x- nie czuję się najlepiej, błąd wewnętrzny serwera, we can do nothing I FUCKED UP</li>
+
+                    </ul>
+                </section>
+
+                <section>
+                    <h4>"/" Root</h4>
+                    <p>Root jest istotną częścią ścieżek do zasobów, dobrze wiedzieć jak działa. Mówi nam
+                        w którym miejscu przeglądarka powinna szukać zasobów.
+                    </p>
+
+                    <p>Przeglądarka dokleja tego slasha z końca pl/…..</p>
+                    <img src="img/root1.JPG" alt="root">
+                    <p>...przed img.</p>
+
+                    <p>Ścieżka bezwzględna "/"</p>
+                    <img src="img/root2.JPG" alt="root">
+                    <p>Ścieżka względna bez "/"</p>
+                    <p>Brak "/"" z przodu drugiej ścieżki uczynił adres do zasobu relatywnym, dlatego przeglądarka
+                        szukała pliku w aktualnym katalogu - /podstrona/img/wtf.svg</p>
+
+                    <p>Tworząc stronę uruchamianą “z dysku” pomijaj używanie slasha z przodu.
+                        Użyjemy "/"" jak będziemy używać serwera lokalnego.
+                    </p>
+
+
+                </section>
+            </article>
+        </section>
+
+    </main>
+    <footer>
+        Anna się uczy 2020. <a href="#top">Powrót na górę strony</a>
+    </footer>
+</body>
+
+</html>
