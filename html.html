@@ -244,6 +244,88 @@
           </section>
         </article>
       </section>
+
+      <section class="lessons">
+        <h2 class="lessons__title">HTML part III</h2>
+
+        <article class="lesson">
+          <h3 class="lesson__title">BEM: Block - Element - Modifier</h3>
+          <p class="lesson__text">
+            Block - nadrzędny element, coś co nam ogranicza nasz content. <br />
+            Element - część bloku - nie musi być bezpośrednim dzieckiem<br />
+            Modifier - modyfikator, jeśli element występuje w kilku wariacjach
+            tworzymy dodatkową klasę.
+          </p>
+
+          <p class="lesson__text">
+            Szukamy elementów na stronie i dzielimy ją na bloki Myślimy o
+            elementach składowych/ robimy analizę-selekcję. Trzeba najpierw
+            podzielić na bloki i uzupełnić HTML potem CSS. Nie stosujemy skrótów
+            przy nazywaniu klas, lepiej pełna nazwa.
+          </p>
+
+          <p class="lesson__text"><strong>Przykład I</strong></p>
+          <p class="lesson__text">
+            Cała dłoń jako .hand czyli nasz 1 główny element, ma swoje
+            podelementy, które są palcami <br />
+            .hand__finger bazowa klasa dla każdego z palców, kciuk ma
+            modyfikator .hand__finger--thumb (jakaś własność dla kciuka jest
+            inna od pozostałych palców), dodaje własności specyficzne tylko dla
+            kciuka, albo nadpisuje część wartości z tej klasy bazowej.<br />
+            Klasa każdego z elementów zaczyna się od nazwy, bloku czyli hand,
+            potem element finger i modyfikator thumb. 2 klasy są tylko wtedy
+            kiedy mamy modyfikator.
+          </p>
+
+          <img
+            src="img/BEMhand.JPG"
+            alt="BEM example hand"
+            class="lesson__image"
+          />
+          <img
+            src="img/BEMhand2.JPG"
+            alt="BEM example hand classes"
+            class="lesson__image"
+          />
+
+          <p class="lesson__text"><strong>Przykład II</strong></p>
+          <p class="lesson__text">
+            Opisujemy to czym jest ten element pod kątem treści, nawet jak to
+            będzie opakowane w sekcję to się może nazywać klasa article. <br />
+            Może też być blok w bloku jak np. .article-footer, można też zrobić
+            footer jako element czyli aricle__footer.
+          </p>
+
+          <img
+            src="img/BEMarticle.JPG"
+            alt="BEM example article"
+            class="lesson__image"
+          />
+
+          <p class="lesson__text"><strong>Przykład III</strong></p>
+          <p class="lesson__text">
+            Nawigacja to blok, link to element navigation__link, link do strony
+            głównej to może być modyfikator czyli navigtion__link--homepage
+          </p>
+
+          <p class="lesson__text">
+            Podstawowe style nadajemy do klasy bazowej navigation__link a to co
+            chcemy mieć dodatkowo dajemy do modyfikatora
+            navigtion__link--homepage, nie przepisujemy wszystkiego.<br />
+            Tworzymy dwie klasy jeśli element ma modyfikator - w modyfikatorze
+            zmieniamy tylko unikalne dla niego wartości, nie przepisujemy rzeczy
+            z klasy bazowej.<br />
+            W CSS dobrze ustawić alfabetycznie. Nie zwiększamy specyficzności.
+            Trzymamy się jednej klasy.
+          </p>
+
+          <img
+            src="img/BEMcss.jpg"
+            alt="screenshootCSS"
+            class="lesson__image"
+          />
+        </article>
+      </section>
     </main>
     <footer class="footer">
       Anna się uczy 2020.

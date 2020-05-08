@@ -71,14 +71,16 @@ body {
   font-size: 18px;
 }
 
-.lesson__description-link,
-.extra__list-link {
+.lesson__text-link,
+.extra__list-link, 
+.lesson-section__text-link {
   text-decoration: none;
   color: #470a1e;
 }
 
-.lesson__description-link:hover,
-.extra__list-link:hover  {
+.lesson__text-link:hover,
+.extra__list-link:hover,
+.lesson-section__text-link:hover  {
   color: #ec5b8c;
 }
 

@@ -53,10 +53,63 @@
                 </ul>
 
             </article>
+
+            <article class="lesson">
+                <h3 class="lesson__title">Jest GIT!</h3>
+                <p class="lesson__text">GIT- system kontroli wersji (stworzył go Linux Torwards)-  będziemy używać GITa jako maszynki do robienia zip-ów
+              </p>
+              <ul class="lesson__list">
+                  <li class="lesson__list-item">Pozwala na sprawne zarządzanie zmianami w projekcie, możemy robić zmiany w plikach a potem cofnąć się do stanu początkowego</li>
+                      <li class="lesson__list-item">Możemy pracować nad projektem w grupie</li>
+                      <li class="lesson__list-item">Działa lokalnie</li>
+                      <li class="lesson__list-item">Do działania zdalnego potrzebuje serwera np.GitHub</li>
+                      <li class="lesson__list-item">Znajomość podstaw GITa jest wymagana niezależnie od technologii</li>
+                      <li class="lesson__list-item">Commitujemy jak dokładamy jakąś widoczną zmianę do projektu, lepiej częściej niż za mało</li>
+                      <li class="lesson__list-item">Podstawowy flow: git add . / git commit -m”opis zmiany” / git push</li>
+              </ul>
+  
+              <p class="lesson__text">git -- version - sprawdzamy czy git się zainstalował, podaje nam wersje gita</p>
+  
+                  <p class="lesson__text">Konfiguracja:<br/>
+                  git config --global user.name “Anna Śmierzchała”<br/>
+                  git config --global user.email smierzchala.anna@gmail.com<br/>
+                  
+                  sprawdzamy:<br/>
+                  git config --get user.name /user.email</p>
+                  
+                  <p class="lesson__text">Zainstalował się też terminal: git bash i powershell jakby co</p>
+  
+                  <p class="lesson__text"><strong>Repozytorium = projekt, czyli zawiera wszystkie pliki naszego projektu</strong><br/>
+  
+                  W terminalu musimy wrócić do homepage, potem git init, i tworzy się ninja katalog którego nie widać .git</p>
+                      <p class="lesson__text"><strong>Commit = stan projektu na daną chwilę i opis tego co się zmieniło od ostatniego zapisu
+                      zapisuje historię zmian między poszczególnymi commitami</strong><br/>
+                      
+                      git status - no commit yet, nie śledzone pliki więc musimy dodać je do repozytorium, żeby je śledzić
+                      </p>
+  
+                      <p class="lesson__text">Polecenia:<br/>
+                      git add . - dodaj pliki<br/>
+                      git status - pokazuje nowe pliki do zacommitowania<br/>
+                      git commit -m “initial commit” - dodanie commita, opis zmian, opisy zrozumiałe, co zmieniliśmy<br/>
+                      gitk - pokazuje historię commitów<br/>
+                      dir / a zamiast ls a<br/>
+                      cls zamiast clear</p>
+
+                      <p class="lesson__text"><strong>Jak często commitować?</strong><br/>
+                         Na początku rób to często! Np. dodałem sekcje, dodałem style </p>
+
+                    <p class="lesson__text">Robię zmiany, sprawdzam stronę czy jest ok, git status, git add ., i git commit -m””, gitk</p>
+
+                    <p class="lesson__text">W VSC mamy narzędzie do commitowania też, ale lepiej korzystać z terminala/konsoli. Jest też rozszerzenie GitLens - pokazuje nam po kolei wszystkie commity.</p> 
+
+                    <p class="lesson__text"><strong>Check pointy:</p></strong>
+                    <img class="lesson__image" src="img/checkpoint.JPG" alt="checkpointy">
+            </article>
         </section>
 
     </main>
-    <footer>
+    <footer class="footer">
         Anna się uczy 2020. <a href="#top" class="footer__link">Powrót na górę strony</a>
     </footer>
 </body>
