@@ -1,85 +1,83 @@
 body {
-    /* Background pattern from Toptal Subtle Patterns */
-    background-image: url("pink dust.png");
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  /* Background pattern from Toptal Subtle Patterns */
+  background-image: url("pink dust.png");
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-
 .header {
-    letter-spacing: 2px;
-    color: #ffffff;
-    text-align: center;
-    font-size: 35px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 35px;
 }
 
 .main-header-paragraph,
 .header-paragraph {
-    text-align: center;
-    color: #e0c2cc;
-    font-size: 15px;
-    letter-spacing: 2px;
+  text-align: center;
+  color: #e0c2cc;
+  font-size: 15px;
+  letter-spacing: 2px;
 }
 
 .navigation {
-    text-align: center;
-    font-size: 20px;
+  text-align: center;
+  font-size: 20px;
 }
 
 .nav-link {
-    text-decoration: none;
-    color: #ec5b8c;
-    border-right: 1px solid #b40d45;
-    padding: 5px;
-    letter-spacing: 1px;
+  text-decoration: none;
+  color: #ec5b8c;
+  border-right: 1px solid #b40d45;
+  padding: 5px;
+  letter-spacing: 1px;
 }
 
-
 .nav-link:hover {
-    color: #b40d45;
+  color: #b40d45;
 }
 
 .main-header {
-    font-size: 30px;
-    background-color: #f49fbc;
-    color: #920736;
-    margin: 20px 300px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-align: center;
+  font-size: 30px;
+  background-color: #f49fbc;
+  color: #920736;
+  margin: 20px 300px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-align: center;
 }
 
 .section-header {
-    font-size: 23px;
-    background-color: #f7b5cb;
-    color: #920736;
-    margin: 20px 400px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-align: center;
+  font-size: 23px;
+  background-color: #f7b5cb;
+  color: #920736;
+  margin: 20px 400px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-align: center;
 }
 
 article {
-    background-image: url("pink_rice.png");
-    margin: 20px 200px;
-    padding: 5px 20px;
-    border-radius: 20px;
+  background-image: url("pink_rice.png");
+  margin: 20px 200px;
+  padding: 5px 20px;
+  border-radius: 20px;
 }
 
 h3 {
-    color: #b40d45;
-    font-size: 18px;
+  color: #b40d45;
+  font-size: 18px;
 }
 
 a {
-    text-decoration: none;
-    color: #470a1e;
+  text-decoration: none;
+  color: #470a1e;
 }
 
 a:hover {
-    color: #ec5b8c;
+  color: #ec5b8c;
 }
 
 footer {
-    text-align: center;
-    color: #ffffff;
+  text-align: center;
+  color: #ffffff;
 }

@@ -7,4 +7,3 @@ console.log(`Hej, nazywam się ${firstName} i mam ${age} lat`);
 
 
 
-

@@ -1,228 +1,281 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-</head>
+  <body>
+    <header id="top" class="heading">
+      <p class="heading__title">WTF: Co ten frontend?</p>
+      <p class="heading__paragraph">Moje notatki i co jeszcze?</p>
 
-<body>
-
-    <header id="top">
-
-        <p class="header">WTF: Co ten frontend?</p>
-        <p class="header-paragraph">Moje notatki i co jeszcze?</p>
-
-        <nav class="navigation">
-            <a href="index.html" target="_blank" class="nav-link">Strona główna</a>
-            <a href="html.html" target="_blank" class="nav-link">HTML</a>
-            <a href="css.html" target="_blank" class="nav-link">CSS</a>
-            <a href="javascript.html" target="_blank" class="nav-link">JavaScript</a>
-            <a href="browser.html" target="_blank" class="nav-link">Przeglądarka</a>
-            <a href="terminal.html" target="_blank" class="nav-link">Terminal</a>
-            <a href="spis-tresci.html" target="_blank" class="nav-link">Spis lekcji</a>
-
-        </nav>
+      <nav class="navigation">
+        <a href="index.html" target="_blank" class="navigation__link">Strona główna</a>
+        <a href="html.html" target="_blank" class="navigation__link">HTML</a>
+        <a href="css.html" target="_blank" class="navigation__link">CSS</a>
+        <a href="javascript.html" target="_blank" class="navigation__link"
+          >JavaScript</a
+        >
+        <a href="browser.html" target="_blank" class="navigation__link">Przeglądarka</a>
+        <a href="terminal.html" target="_blank" class="navigation__link">Terminal</a>
+        <a href="spis-tresci.html" target="_blank" class="navigation__link"
+          >Spis lekcji</a
+        >
+      </nav>
     </header>
 
     <main>
-        <h1 class="main-header">Wszystko co przydatne!</h1>
-        <section>
+      <h1 class="main-header">Wszystko co przydatne!</h1>
+      <section class="lessons">
+        <h2 class="lessons__title">Ogólnie</h2>
 
-            <h2 class="section-header">Ogólnie</h2>
+        <article id="article-info" class="lesson">
+          <h3 class="lesson__title">Wstęp do kursu i zasady</h3>
 
+          <p class="lesson__description">Zasady:</p>
+          <ul class="lesson__list">
+            <li class="lesson__list-item">Obejrzyj lekcje</li>
+            <li class="lesson__list-item">Sprawdź prace domowe</li>
+            <li class="lesson__list-item">Obejrzyj jeszcze raz przy wykonywaniu zadań</li>
+            <li class="lesson__list-item">Uwaga - Działaj regularnie!</li>
+            <li class="lesson__list-item">Pytaj!</li>
+          </ul>
+          <section class="lesson__section">
+            <h4 class="lesson__section-title">Czego się nauczę?</h4>
+            <ul class= "lesson__list">
+              <li class="lesson__list-item">Jak działać i uczyć się samodzielnie.</li>
+              <li class="lesson__list-item">Gdzie szukać informacji.</li>
+              <li class="lesson__list-item">Jak wygląda praca frontend developera.</li>
+              <li class="lesson__list-item">HTML</li>
+              <li class="lesson__list-item">CSS</li>
+              <li class="lesson__list-item">JavaScript.</li>
+              <li class="lesson__list-item">Narzędzia frontend developera.</li>
+              <li class="lesson__list-item">Jak planować pracę.</li>
+            </ul>
+          </section>
+        </article>
 
-            <article id="article-info">
+        <article id="article-frontend" class="lesson">
+          <h3 class="lesson__title">Czym jest frontend?</h3>
+          <p class="lesson__description">frontend/front end/ front-end -> all are correct</p>
 
-                <h3>Wstęp do kursu i zasady</h3>
+          <p class="lesson__description">
+            <strong>Frontend </strong> - to co się wyświetla w przeglądarce,
+            youtube - aplikacja frontendowa, też się wyświetla w przeglądarce,
+            spotify, VSC - edytor stworzony za pomocą technologii frontendowych
+            ale nie przeglądarkowy.<br />
+            HTML, CSS, JavaScript - technologie używane do budowania aplikacji,
+            stron.
+          </p>
 
-                <p>Zasady:</p>
-                <ul>
-                    <li>Obejrzyj lekcje</li>
-                    <li>Sprawdź prace domowe</li>
-                    <li>Obejrzyj jeszcze raz przy wykonywaniu zadań</li>
-                    <li>Uwaga - Działaj regularnie!</li>
-                    <li>Pytaj!</li>
-                </ul>
-                <section>
-                    <h4>Czego się nauczę?</h4>
-                    <ul>
-                        <li>Jak działać i uczyć się samodzielnie.</li>
-                        <li>Gdzie szukać informacji.</li>
-                        <li>Jak wygląda praca frontend developera.</li>
-                        <li> HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript.</li>
-                        <li>Narzędzia frontend developera.</li>
-                        <li>Jak planować pracę.</li>
-                    </ul>
-                </section>
-            </article>
+          <section class="lesson__section">
+            <h4 class="lesson__section-title"><strong>Frontend:</strong></h4>
+            <ul class="lesson__list">
+              <li class="lesson__list-item">odpowiada za wygląd stron/aplikacji internetowych</li>
+              <li class="lesson__list-item">odpowiada za interakcje z użytkownikiem</li>
+              <li class="lesson__list-item">
+                generowany przy użyciu 3 technologii (głównie) HTML, CSS,
+                JavaScript (WebAssembly - nie jest jeszcze super popularne -
+                pozwala na uruchamianie kodu nie napisanego w JS)
+              </li>
+              <li class="lesson__list-item">
+                technologie frontendowe przejmują rynek tradycyjnych aplikacji
+                (w wybranych obszarach)
+              </li>
+            </ul>
+          </section>
+        </article>
+        <article id="section-map" class="lesson">
+            <h3 class="lesson__title">Ścieżka rozwoju</h3>
 
-            <article id="article-frontend">
+            <p class ="lesson__description">
+              Taka fajna
+              <a href="https://roadmap.sh/frontend" class="lesson__description-link" target="_blank">mapka</a>
+            </p>
+        
+        </article>
 
-                <h3>Czym jest frontend?</h3>
-                <p>frontend/front end/ front-end -> all are correct</p>
+        <article class="lesson">
+          <h3 class="lesson__title">Warstwy strony internetowej:</h3>
+          <ul class="lesson__list">
+            <li class="lesson__list-item">
+              0 treść, kontent, wszystko co jest nośnikiem informacji (tekst,
+              link, lista, video, obrazki, formularze, definicje, nagłówki)
+            </li>
+            <li class="lesson__list-item">1 Semantyka HTML, opakowuje treść w znaczniki</li>
+            <li class="lesson__list-item">2 Prezentacja CSS, nadaje wygląd elementom</li>
+            <li class="lesson__list-item">3 Interakcja: JavaScript</li>
+          </ul>
+        </article>
 
+        <article class="lesson">
+          <h3 class="lesson__title">Opowieść o wężu, kebabie, wielbłądzie i Pascalu</h3>
+          <p class="lesson__description">Nazywanie rzeczy:</p>
+          <ul class="lesson__list">
+            <li class="lesson__list-item">bez polskich znaków</li>
+            <li>bez spacji</li>
+            <li class="lesson__list-item">angielskie słowa</li>
+            <li class="lesson__list-item">jeden schemat konsekwentnie</li>
+          </ul>
+          <p class="lesson__description">Konwencje nazewnictwa:</p>
+          <ul class="lesson__list">
+            <li class="lesson__list-item">camelCase - superSweetKiss (najczęściej)</li>
+            <li class="lesson__list-item">kebab-case - super-sweet-kiss (najczęściej)</li>
+            <li class="lesson__list-item">snake_case - super_sweet_kiss</li>
+            <li class="lesson__list-item">PascalCase - SuperSweetKiss</li>
+          </ul>
+        </article>
 
-                <p><strong>Frontend </strong> - to co się wyświetla w przeglądarce, youtube - aplikacja frontendowa, też
-                    się wyświetla w
-                    przeglądarce, spotify, VSC - edytor stworzony za pomocą technologii frontendowych ale nie
-                    przeglądarkowy.<br />
-                    HTML, CSS, JavaScript - technologie używane do budowania aplikacji, stron.</p>
+        <article class="lesson">
+          <h3 class="lesson__title"> Magia programowania</h3>
+          <p class="lesson__description">Czym jest programowanie?</p>
 
-                <section>
-                    <h4><strong>Frontend:</strong></h4>
-                    <ul>
-                        <li>odpowiada za wygląd stron/aplikacji internetowych</li>
-                        <li>odpowiada za interakcje z użytkownikiem</li>
-                        <li>generowany przy użyciu 3 technologii (głównie) HTML, CSS, JavaScript (WebAssembly - nie jest
-                            jeszcze super popularne - pozwala na uruchamianie kodu nie napisanego w JS)</li>
-                        <li>technologie frontendowe przejmują rynek tradycyjnych aplikacji (w wybranych obszarach)</li>
-                    </ul>
-                </section>
-                <section id="section-map">
-                    <h4>Ścieżka rozwoju</h4>
+          <p class="lesson__description">
+            Jak gotowanie, tylko przepisy wymyślane są na bieżąco! <br />
+            Kolejność wykonywania kroków/instrukcji jest bardzo ważna!
+            Instrukcja jako algorytm zapisany za pomocą schematu blokowego.
+            <br />
+            Zamiana ludzkiego języka na język zrozumiały przez komputer!
+          </p>
 
-                    <p> Taka fajna <a href="https://roadmap.sh/frontend" target="_blank">mapka</a></p>
-                </section>
-            </article>
+          <p class="lesson__description">
+            Każdy język programowania ma swoją składnię, gramatykę, ortografię.
+            Important!<br />
+            Ponad 700 języków programowania!!! M.in. JavaScript (JS).
+          </p>
+        </article>
 
-            <article>
-                <h3>Warstwy strony internetowej:</h3>
-                <ul>
-                    <li>0 treść, kontent, wszystko co jest nośnikiem informacji (tekst, link, lista, video, obrazki,
-                        formularze, definicje, nagłówki)</li>
-                    <li>1 Semantyka HTML, opakowuje treść w znaczniki</li>
-                    <li>2 Prezentacja CSS, nadaje wygląd elementom</li>
-                    <li>3 Interakcja: JavaScript</li>
+        <section class="lessons">
+          <h2 class="lessons__title">Technicznie</h2>
 
-                </ul>
-            </article>
+          <article id="article-tools" class="lesson">
+            <h3 class="lesson__title">Narzędzia i grupy</h3>
 
-            <article>
-                <h3>Opowieść o wężu, kebabie, wielbłądzie i Pascalu</h3>
-                <p>Nazywanie rzeczy:</p>
-                <ul>
-                    <li>bez polskich znaków</li>
-                    <li>bez spacji</li>
-                    <li>angielskie słowa</li>
-                    <li> jeden schemat konsekwentnie</li>
+            <p class="lesson__description">
+              Google Chrome <br />
+              Edytor kodu - Visual Studio Code <br />
+              Slack
+            </p>
+          </article>
 
-                </ul>
-                <p>Konwencje nazewnictwa:</p>
-                <ul>
-                    <li>camelCase - superSweetKiss (najczęściej)</li>
-                    <li>kebab-case - super-sweet-kiss (najczęściej)</li>
-                    <li>snake_case - super_sweet_kiss</li>
-                    <li>PascalCase - SuperSweetKiss</li>
-                </ul>
+          <article id="article-configuration" class="lesson">
+            <h3 class="lesson__title">Konfiguracja Windows</h3>
 
-            </article>
+            <p class="lesson__description">
+              Tworzymy folder DEV na dysku C. <br />
+              W VSC otwieramy folder za pomocą File/Open folder.
+            </p>
+          </article>
 
+          <article class="lesson">
+            <h3 class="lesson__title">DevTools: podglądamy!</h3>
+            <p class="lesson__description">
+              Narzędzia deweloperskie. <br />
+              W przeglądarce prawy “Inspect” albo F12
+            </p>
+          </article>
 
+          <article class="lesson">
+            <h3 class="lesson__title">Kanban</h3>
+            <p class="lesson__description">Planowanie pracy w celu śledzenia swoich postępów np. nauki.</p>
+            <p class="lesson__description">Kanban - podział na 3 kolumny (lub więcej):</p>
+            <ul class="lesson__list">
+              <li class="lesson__list-item">TODO = do zrobienie (dobrze opisać definition of done)</li>
+              <li class="lesson__list-item">DOING = w trakcie (najlepiej jedno zadanie na raz)</li>
+              <li class="lesson__list-item">DONE = zrobione</li>
+            </ul>
 
-            <article>
-                <h3>Magia programowania</h3>
-                <p>Czym jest programowanie?</p>
-
-                <p>Jak gotowanie, tylko przepisy wymyślane są na bieżąco! <br />
-                    Kolejność wykonywania kroków/instrukcji jest bardzo ważna! Instrukcja jako algorytm zapisany za
-                    pomocą schematu blokowego. <br />
-                    Zamiana ludzkiego języka na język zrozumiały przez komputer!</p>
-
-                <p>Każdy język programowania ma swoją składnię, gramatykę, ortografię. Important!<br />
-                    Ponad 700 języków programowania!!! M.in. JavaScript (JS).
-
-
-                </p>
-            </article>
-
-
-
-            <section>
-                <h2 class="section-header">Technicznie</h2>
-
-                <article id="article-tools">
-
-                    <h3>Narzędzia i grupy</h3>
-
-                    <p>Google Chrome <br />
-                        Edytor kodu - Visual Studio Code <br />
-                        Slack </p>
-                </article>
-
-                <article id="article-configuration">
-
-                    <h3>Konfiguracja Windows</h3>
-
-                    <p>Tworzymy folder DEV na dysku C. <br />
-                        W VSC otwieramy folder za pomocą File/Open folder.</p>
-                </article>
-
-                <article>
-                    <h3>DevTools: podglądamy!</h3>
-                    <p>Narzędzia deweloperskie. <br />
-                        W przeglądarce prawy “Inspect” albo F12</p>
-                </article>
-
-                <article>
-                    <h3>Kanban</h3>
-                    <p>Planowanie pracy w celu śledzenia swoich postępów np. nauki.</p>
-                    <p>Kanban - podział na 3 kolumny (lub więcej):</p>
-                    <ul>
-                        <li>TODO = do zrobienie (dobrze opisać definition of done)</li>
-                        <li>DOING = w trakcie (najlepiej jedno zadanie na raz)</li>
-                        <li>DONE = zrobione</li>
-                    </ul>
-
-                    <p>Korzystaj z metody Kanban na <a href="https://trello.com/" target="_blank">Trello.com</a>
-                    </p>
-                </article>
-
-            </section>
-
-            <section>
-                <h2 class="section-header">Przydatne linki i skróty:</h2>
-                <article>
-                    <h3>Linki:</h3>
-                    <ul>
-                        <li><a href="https://validator.w3.org/nu/#textarea" target="_blank">Walidator kodu</a></li>
-                        <li><a href="https://coolors.co/" target="_blank">Kolory</a></li>
-                        <li><a href="https://css-tricks.com/" target="_blank">CSS tricks</a></li>
-                        <li><a href="https://developer.mozilla.org/" target="_blank">MDN</a></li>
-                        <li><a href="https://stackoverflow.com/" target="_blank">Forum</a></li>
-                        <li><a href="https://codepen.io/" target="_blank">Codepen</a></li>
-                        <li><a href="https://repl.it/" target="_blank">Repl.it</a></li>
-                        <li><a href="https://www.cssmatic.com/box-shadow" target="_blank">Box shadow</a></li>
-                        <li><a href="https://dev.w3.org/html5/html-author/charref" target="_blank">Encje</a></li>
-                        <li><a href="https://www.w3.org/TR/html52/ " target="_blank">Specyfikacja HTML</a></li>
-                        <li><a href="https://www.w3.org/TR/CSS/" target="_blank">Specyfikacja CSS</a></li>
-                        <li><a href="https://www.trello.com/" target="_blank">Trello</a></li>
-                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes" target="_blank">Spis atrybutów globalnych</a></li>
-                        <li><a href="https://www.w3.org/TR/CSS/" target="_blank">Specyfikacja CSS</a></li>
-                        <li><a href="https://www.w3.org/TR/CSS/" target="_blank">Specyfikacja CSS</a></li>
-                        <li><a href="https://www.w3.org/TR/CSS/" target="_blank">Specyfikacja CSS</a></li>
-
-                    </ul>
-                </article>
-                <article>
-                    <h3>Skróty:</h3>
-                </article>
-            </section>
-
-
+            <p class="lesson__description">
+              Korzystaj z metody Kanban na
+              <a href="https://trello.com/" class="lesson__description-link" target="_blank">Trello.com</a>
+            </p>
+          </article>
         </section>
 
+        <section class="extras">
+          <h2 class="extras__title">Przydatne linki i skróty:</h2>
+          <article class="extra">
+            <h3 class="extra__title">Linki:</h3>
+            <ul class="extra__list">
+              <li class="extra__list-item">
+                <a href="https://validator.w3.org/nu/#textarea" target="_blank"
+                  >Walidator kodu</a
+                >
+              </li>
+              <li class="extra__list-item"><a href="https://coolors.co/" target="_blank" class="extra__list-item-link">Kolory</a></li>
+              <li class="extra__list-item">
+                <a href="https://css-tricks.com/" target="_blank" class="extra__list-item-link">CSS tricks</a>
+              </li>
+              <li class="extra__list-item">
+                <a href="https://developer.mozilla.org/" target="_blank" class="extra__list-item-link">MDN</a>
+              </li>
+              <li class="extra__list-item">
+                <a href="https://stackoverflow.com/" target="_blank" class="extra__list-item-link">Forum</a>
+              </li>
+              <li class="extra__list-item"><a href="https://codepen.io/" target="_blank" class="extra__list-item-link">Codepen</a></li>
+              <li class="extra__list-item"><a href="https://repl.it/" target="_blank" class="extra__list-item-link">Repl.it</a></li>
+              <li class="extra__list-item">
+                <a href="https://www.cssmatic.com/box-shadow" target="_blank" class="extra__list-item-link"
+                  >Box shadow</a
+                >
+              </li>
+              <li class="extra__list-item">
+                <a
+                  href="https://dev.w3.org/html5/html-author/charref"
+                  target="_blank" class="extra__list-item-link"
+                  >Encje</a
+                >
+              </li>
+              <li class="extra__list-item">
+                <a href="https://www.w3.org/TR/html52/ " target="_blank" class="extra__list-item-link"
+                  >Specyfikacja HTML</a
+                >
+              </li>
+              <li class="extra__list-item">
+                <a href="https://www.w3.org/TR/CSS/" target="_blank" class="extra__list-item-link"
+                  >Specyfikacja CSS</a
+                >
+              </li>
+              <li class="extra__list-item">
+                <a href="https://www.trello.com/" target="_blank" class="extra__list-item-link">Trello</a>
+              </li>
+              <li class="extra__list-item">
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes"
+                  target="_blank" class="extra__list-item-link"
+                  >Spis atrybutów globalnych</a
+                >
+              </li>
+              <li class="extra__list-item">
+                <a href="https://www.w3.org/TR/CSS/" target="_blank" class="extra__list-item-link"
+                  >Specyfikacja CSS</a
+                >
+              </li>
+              <li class="extra__list-item">
+                <a href="https://www.w3.org/TR/CSS/" target="_blank" class="extra__list-item-link"
+                  >Specyfikacja CSS</a
+                >
+              </li>
+              <li class="extra__list-item">
+                <a href="https://www.w3.org/TR/CSS/" target="_blank" class="extra__list-item-link"
+                  >Specyfikacja CSS</a
+                >
+              </li>
+            </ul>
+          </article>
+          <article class="extra">
+            <h3 class="extra__title">Skróty:</h3>
+          </article>
+        </section>
+      </section>
     </main>
-    <footer>
-        Anna się uczy 2020. <a href="#top">Powrót na górę strony</a>
+    <footer class="footer">
+      Anna się uczy 2020. <a href="#top" class="footer__link">Powrót na górę strony</a>
     </footer>
 
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
