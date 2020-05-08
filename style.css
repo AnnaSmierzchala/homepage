@@ -4,7 +4,7 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.header {
+.heading__title {
   letter-spacing: 2px;
   color: #ffffff;
   text-align: center;
@@ -12,7 +12,7 @@ body {
 }
 
 .main-header-paragraph,
-.header-paragraph {
+.heading__paragraph {
   text-align: center;
   color: #e0c2cc;
   font-size: 15px;
@@ -24,7 +24,7 @@ body {
   font-size: 20px;
 }
 
-.nav-link {
+.navigation__link {
   text-decoration: none;
   color: #ec5b8c;
   border-right: 1px solid #b40d45;
@@ -32,7 +32,7 @@ body {
   letter-spacing: 1px;
 }
 
-.nav-link:hover {
+.navigation__link:hover {
   color: #b40d45;
 }
 
@@ -46,7 +46,8 @@ body {
   text-align: center;
 }
 
-.section-header {
+.lessons__title,
+.extras__title {
   font-size: 23px;
   background-color: #f7b5cb;
   color: #920736;
@@ -56,28 +57,40 @@ body {
   text-align: center;
 }
 
-article {
+.lesson,
+.extra {
   background-image: url("pink_rice.png");
   margin: 20px 200px;
   padding: 5px 20px;
   border-radius: 20px;
 }
 
-h3 {
+.lessons__title,
+.extra__title {
   color: #b40d45;
   font-size: 18px;
 }
 
-a {
+.lesson__description-link,
+.extra__list-item-link {
   text-decoration: none;
   color: #470a1e;
 }
 
-a:hover {
+.lesson__description-link:hover,
+.extra__list-item-link:hover  {
   color: #ec5b8c;
 }
 
-footer {
+.footer {
   text-align: center;
   color: #ffffff;
+}
+
+.footer__link {
+    color: #920736;
+}
+
+.footer__link:hover {
+    color: #ec5b8c;
 }
