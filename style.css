@@ -11,7 +11,7 @@ body {
   font-size: 35px;
 }
 
-.main-header-paragraph,
+.main-header__paragraph,
 .heading__paragraph {
   text-align: center;
   color: #e0c2cc;
@@ -72,13 +72,13 @@ body {
 }
 
 .lesson__description-link,
-.extra__list-item-link {
+.extra__list-link {
   text-decoration: none;
   color: #470a1e;
 }
 
 .lesson__description-link:hover,
-.extra__list-item-link:hover  {
+.extra__list-link:hover  {
   color: #ec5b8c;
 }
 
