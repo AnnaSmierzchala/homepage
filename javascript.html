@@ -118,6 +118,135 @@
             </article>
         </section>
 
+        <section class="lessons">
+            <h2 class="lessons__title">JS part II</h2>
+
+            <article class="lesson">
+                <h3 class="lesson__title">Typy danych i immutability</h3>
+                <p class="lesson__text">Zmienna to takie połączenie z naszym wszechświatem wartości.<br/>
+                    Zmienna to nie wartość, zmienna wskazuje nam na jakąś wartość.<br/> 
+                    Używamy camelCase do zapisywania zmiennych</p>
+                    
+                    <p class="lesson__text">Sposoby zapisywania zmiennych w JS, sposoby definicji zmiennych:<br/>
+                    LET<br/>
+                    CONST<br/>
+                    VAR - od tego się trochę odchodzi</p>
+                    
+                    <a href="https://caniuse.com/" class="lesson__text-link">Can I use…?</a>
+
+            <section class="lesson-section">
+                <h4 class="lesson-section__title">CONST</h4>
+                <p class="lesson-section__text">const - zmienne mające stałe połączenie z jedną wartością, tego połączenia nie możemy zmienić
+                </p>
+                <img src="img/const1.JPG" alt="constJS" class="lesson-section__image">
+                <p class="lesson-section__text">Odpytujemy co się kryje pod połączeniem tej zmiennej z jaką wartością.<br/>
+                     name = ‘Irena’ dostaję błąd bo nie mogę zmienić zmiennej, która jest stała.<br/>
+                    Const to jest stałe wiązanie między nazwą naszej zmiennej do konkretnej wartości i tego połączenia nie możemy edytować.</p>
+
+            </section>
+
+            <section class="lesson-section">
+                <h4 class="lesson-section__title">LET</h4>
+                <p class="lesson-section__text">let - zmienne, których połączenie możemy przepinać, ale definiujemy tylko raz, zmienna którą możemy zmieniać, pozwala nam na zmianę przepisania/przypisania</p>
+
+                <p class="lesson-section__text">Przepięcie, edycja połączenia między zmienną a wartością, to nie jest nadpisanie wartości Ania, bo ta wartość już istnieje w moim wszechświecie wartości. Można też podpiąć cyfry i też zadziała.</p>
+
+                <img src="img/let.JPG" alt="letJS" class="lesson-section__image">
+
+                <p class="lesson-section__text">Jak wypisze teraz name to dostanę Ania.</p>
+
+<p class="lesson-section__text">Definiowanie zmiennych w JS to jest tworzenie takiego połączenia z jakąś wartością. 
+
+Nazwę zmiennej definiujemy tylko raz; możemy zmieniać przypisanie naszej zmiennej do innej wartości i to połączenie możemy edytować. <br/>
+Edytujemy zmienne tak jakbyśmy przepinali wtyczkę z gniazdka do gniazdka. Mamy cały czas jedno urządzenie a jest przypięte do różnych gniazdek w mieszkaniu. Ładowarkę możemy przypinać do różnych gniazdek i to działa. Wtedy możemy zapytać gdzie jest telefon (nasza zmienna) np. wpięty w gniazdko w sypialni, albo w salonie.Nie zmieniamy gniazdek bo one fizycznie cały czas istnieją. Zmieniamy miejsce, w którym nasz telefon jest podpięty.</p> 
+
+<p class="lesson-section__text">Zmienne w JS są jak młody pelikan “łykną” wszystko. Nie interesuje go czy to będzie liczba czy wyraz. Do zmiennej możemy przypisać wszystko kiedy ją inicjujemy.</p>
+
+            </section>
+<section class="lesson-section">
+    <h4 class="lesson-section__title">Typy proste w JS (primitives):</h4>
+    <ul class="lesson-section__list">
+        <li class="lesson-section__list-item">String - tekst, otaczamy ‘ lub “ zalecane ‘</li>
+        <li class="lesson-section__list-item">    Number - liczba</li>
+        <li class="lesson-section__list-item">   Bigint - duża liczba większa niż 2 do 53</li>
+            <li class="lesson-section__list-item">boolean - true lub false, wartości logiczne</li>
+            <li class="lesson-section__list-item">   null - wartość celowo niezdefiniowana, celowo tak definiujemy żeby nie dostać błędu albo chcemy później nadpisać</li>
+                <li class="lesson-section__list-item">   undefined - brak definicji</li>
+                    <li class="lesson-section__list-item">    *symbol - tworzy “unikalne opakowanie”</li>
+            </li>
+    </ul>
+
+    <img src="img/let2JPG.JPG" alt="letJS" class="lesson-section__image">
+    <p class="lesson-section__text">Jakiego typu jest zmienna? typeof<br/>
+        undefine wskazuje, że nie ma takiej zmiennej, null wskazuje na nulla, bo tak był zdefiniowany.
+    </p>
+<p class="lesson-section__text">Przykład:</p>
+<img src="img/let3.JPG" alt="letJS" class="lesson-section__image">
+<p class="lesson-section__text">Stworzona nowa zmienna y i przypisuje do tej zmiennej x, y tworzy połączenie do 10
+    Jeśli zmienie x na 20 to y się nie zmieni i zostanie 10 why?</p>
+    
+    <p class="lesson-section__text">= nie tworzy nowych zmiennych, on tworzy połączenia, które później nam zwraca.</p>
+    
+    <p class="lesson-section__text">Nie możemy zmieniać wartości primitive values w JS. To co zmieniamy to połączenie między nimi, a zmiennymi IMMUTABILITY.<br/>
+    
+    Edytujemy połączenia a nie same wartości. Wartości samych w sobie nie możemy zmieniać.
+    Kiedy myślimy, że zmieniamy wartość  to tak naprawdę zmieniamy połączenie między nazwą zmiennej a nową wartością. 
+    </p>
+
+</section>
+</article>
+
+<article class="lesson">
+    <h3 class="lesson__title">DOMowe przedszkole</h3>
+    <p class="lesson__text">DOM- Document Object Model</p>
+
+        <p class="lesson__text">Plik HTML to nie DOM. To co widzimy po wyświetl źródło strony to nie DOM. Ale to co widzimy w DevTools to już DOM!<br/>
+        Nasz plik HTML z edytora to jakby instrukcja, przeglądarka dostaje tego HTMLa, a to co widzimy w DevTools, to już skręcony mebel, DOM.<br/>
+         DOM to “złożony” w przeglądarce HTML
+
+        </p>
+
+        <p class="lesson__text">JS love DOM</p>
+           <p class="lesson__text">DOM to miejsce gdzie możemy się komunikować z naszą stroną internetową i za pomocą JS dostawać się do jej elementów i je modyfikować. JavaScript może modyfikować DOM</p>
+            
+            <p class="lesson__text">document.querySelector(‘.selector’) - funkcja querySelector zwraca node (węzeł) z HTML-a, selektor jest zapisywany zgodnie z css
+            </p>
+            
+            <p class="lesson__text">Chcę sprawdzić czy mogę podpiąć się do mojego nagłówka np.
+            </p>
+<img src="img/DOM.JPG" alt="dom" class="lesson__image">
+<p class="lesson__text">Przypinam się konkretnie do tego elementu, wartością do której się przypinam jest ten element, wypisuje się w konsoli nie tylko sam element ale wszystko co zawiera też. Podobnie sie używało w jQuery, to z tym dolarem.
+</p>
+
+<img src="img/DOM2.JPG" alt="dom" class="lesson__image">
+<p class="lesson__text">Metoda, żeby dostać się do elementów w HTMLu! Są też inne ale ta jest spoko :D.<br/>
+
+    Aleeee, chcemy się dostać do elementu za pomocą BEMa, bo co np jak zmienimy klasy itp?<br/>
+    Tworzymy klasę, modyfikator do klasy, np. header--js podstawiamy to zamiast konkretnego selektora. korzystając z BEM - tworzymy dodatkową klasę z modyfikatorem --js (ułatwia identyfikację / usuwa potencjalne problemy). Nie stylujemy po tym, dodajemy tylko, jeśli jakiś element ma mieć coś wspólnego z JS
+    </p>
+<img src="img/DOM3.JPG" alt="dom" class="lesson__image">
+
+<p class="lesson__text">JavaScript może modyfikować treść:</p>
+
+<img src="img/DOM4.JPG" alt="dom" class="lesson__image">
+<p class="lesson__text">Zmienia mi się treść nagłówka, została nadpisana ta z HTMLa przez JS. Dlatego to jest DOM bo uwzględnia wszystkie zmiany, w HTML dalej jest pierwotny nagłówek ale JS go zmienił i w przeglądarce oraz DevTools jest taki jak po zmodyfikowaniu JSem, po zastosowaniu skryptu. Jakby co to nie jest typ prosty. 
+    </p>
+
+<p class="lesson__text">Dalej nam pokaże nagłówek zmieniony:
+</p>
+
+<img src="img/DOM5.JPG" alt="dom" class="lesson__image">
+<p class="lesson__text">innerHTML pozwala na wypisanie treści ale też na podmienienie jej (jeżeli dokonamy przypisania na pomocą “=”).<br/>
+
+    Możemy też np. Hej wrzucić w span hej, to się pokaże w Devtools. </p>
+    
+    <p class="lesson__text">Możemy modyfikować treści na stronie. Nie jest to super popularna praktyka ale dobrze wiedzieć, że w ten sposób można się odwoływać do elementów, które są w kodzie HTML za pomocą JS i coś z nimi robić, np. podmiana treści.
+    </p>
+
+    <img src="img/DOM6.JPG" alt="dom" class="lesson__image">
+    <p class="lesson__text">To sobie napisałam w skryptach. Wewnętrzny HTML ma wskazywać na inną wartość.Jak używamy console to wtedy jest widnoczne w konsoli.</p>
+    </article>
+</section>
     </main>
     <footer class="footer">
         Anna się uczy 2020. <a href="#top" class="footer__link">Powrót na górę strony</a>

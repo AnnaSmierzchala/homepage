@@ -2,6 +2,7 @@ body {
   /* Background pattern from Toptal Subtle Patterns */
   background-image: url("pink dust.png");
   font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 20px auto;
 }
 
 .heading__title {
@@ -40,47 +41,58 @@ body {
   font-size: 30px;
   background-color: #f49fbc;
   color: #920736;
-  margin: 20px 300px;
+  margin: 20px auto;
+  max-width: 750px;
   padding: 10px 20px;
   border-radius: 20px;
   text-align: center;
 }
 
+
 .lessons__title,
-.extras__title {
+.extras__title,
+.weeks__title {
   font-size: 23px;
   background-color: #f7b5cb;
   color: #920736;
-  margin: 20px 400px;
+  margin: 20px auto;
+  max-width: 500px;
   padding: 10px 20px;
   border-radius: 20px;
   text-align: center;
 }
 
 .lesson,
-.extra {
+.extra,
+.week {
   background-image: url("pink_rice.png");
-  margin: 20px 200px;
+  margin: 20px auto;
+  width: 900px;
+  max-width: 900px;
   padding: 5px 20px;
   border-radius: 20px;
+  box-sizing: border-box;
 }
 
-.lessons__title,
-.extra__title {
+.lesson__title,
+.extra__title,
+.week__title {
   color: #b40d45;
   font-size: 18px;
 }
 
 .lesson__text-link,
 .extra__list-link, 
-.lesson-section__text-link {
+.lesson-section__text-link,
+.week__list-link {
   text-decoration: none;
   color: #470a1e;
 }
 
 .lesson__text-link:hover,
 .extra__list-link:hover,
-.lesson-section__text-link:hover  {
+.lesson-section__text-link:hover,
+.week__list-link:hover  {
   color: #ec5b8c;
 }
 

@@ -1,147 +1,484 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-</head>
-
-
-<body>
+  <body>
     <header id="top" class="heading">
+      <p class="heading__title">WTF: Co ten frontend?</p>
 
-        <p class="heading__title">WTF: Co ten frontend?</p>
-
-
-        <nav class="navigation">
-            <a href="index.html" target="_blank" class="navigation__link">Strona główna</a>
-            <a href="html.html" target="_blank" class="navigation__link">HTML</a>
-            <a href="css.html" target="_blank" class="navigation__link">CSS</a>
-            <a href="javascript.html" target="_blank" class="navigation__link">JavaScript</a>
-            <a href="browser.html" target="_blank" class="navigation__link">Przeglądarka</a>
-            <a href="terminal.html" target="_blank" class="navigation__link">Terminal</a>
-            <a href="spis-tresci.html" target="_blank" class="navigation__link">Spis lekcji</a>
-        </nav>
+      <nav class="navigation">
+        <a href="index.html" target="_blank" class="navigation__link"
+          >Strona główna</a
+        >
+        <a href="html.html" target="_blank" class="navigation__link">HTML</a>
+        <a href="css.html" target="_blank" class="navigation__link">CSS</a>
+        <a href="javascript.html" target="_blank" class="navigation__link"
+          >JavaScript</a
+        >
+        <a href="browser.html" target="_blank" class="navigation__link"
+          >Przeglądarka</a
+        >
+        <a href="terminal.html" target="_blank" class="navigation__link"
+          >Terminal</a
+        >
+        <a href="spis-tresci.html" target="_blank" class="navigation__link"
+          >Spis lekcji</a
+        >
+      </nav>
     </header>
 
     <main>
-        <h1 class="main-header">Wszystko o CSS</h1>
-        <section class="lessons">
-            <h2 class="lessons__title">CSS part I</h2>
+      <h1 class="main-header">Wszystko o CSS</h1>
+      <section class="lessons">
+        <h2 class="lessons__title">CSS part I</h2>
 
-            <article class="lesson">
-                <h3 class="lesson__title">Co to jest CSS?</h3>
+        <article class="lesson">
+          <h3 class="lesson__title">Co to jest CSS?</h3>
 
-                <p class="lesson__text">CSS Cascading Style Sheets - Kaskadowe Arkusze Stylów:</p>
-                <ul class="lesson__list">
-                    <li class="lesson__list-item">Odpowiadają za prezentację treści strony, wygląd elementów HTML na ekranie,wydrukach itp.</li>
-                    <li class="lesson__list-item">Nie mają jednej wersji (rozwój modułów), potocznie mówi się, że aktualna wersja to 3.</li>
-                    <li class="lesson__list-item"> Przeglądarki potrafią różnie interpretować CSS co prowadzi do tego, że pisanie stylów powoduje
-                        wiele frustracji u programistów (ale jest też niezłym wyzwaniem :)).</li>
-                    <li class="lesson__list-item">Całą specyfikację znajdziesz <a href="https://www.w3.org/TR/CSS/" target="_blank">na stronie
-                            W3C.</a></li>
-                </ul>
+          <p class="lesson__text">
+            CSS Cascading Style Sheets - Kaskadowe Arkusze Stylów:
+          </p>
+          <ul class="lesson__list">
+            <li class="lesson__list-item">
+              Odpowiadają za prezentację treści strony, wygląd elementów HTML na
+              ekranie,wydrukach itp.
+            </li>
+            <li class="lesson__list-item">
+              Nie mają jednej wersji (rozwój modułów), potocznie mówi się, że
+              aktualna wersja to 3.
+            </li>
+            <li class="lesson__list-item">
+              Przeglądarki potrafią różnie interpretować CSS co prowadzi do
+              tego, że pisanie stylów powoduje wiele frustracji u programistów
+              (ale jest też niezłym wyzwaniem :)).
+            </li>
+            <li class="lesson__list-item">
+              Całą specyfikację znajdziesz
+              <a href="https://www.w3.org/TR/CSS/" target="_blank"
+                >na stronie W3C.</a
+              >
+            </li>
+          </ul>
 
-                <p class="lesson__text">Składnia CSS to reguły</p>
+          <p class="lesson__text">Składnia CSS to reguły</p>
 
-                <p class="lesson__text">selektor {<br />
-                    właściwość: wartość;<br />
-                    }</p>
+          <p class="lesson__text">
+            selektor {<br />
+            właściwość: wartość;<br />
+            }
+          </p>
 
-                <p class="lesson__text">Pliki z rozszerzeniem .css -> ale nie jest to jedyna reguła<br />
-                    Podpinamy w sekcji head &lt;link href=”style.css” rel=”stylesheet” type=”text/css”&gt;
-                    Można stylować w sekcji head &lt;style&gt; </p>
+          <p class="lesson__text">
+            Pliki z rozszerzeniem .css -> ale nie jest to jedyna reguła<br />
+            Podpinamy w sekcji head &lt;link href=”style.css” rel=”stylesheet”
+            type=”text/css”&gt; Można stylować w sekcji head &lt;style&gt;
+          </p>
 
-                <p class="lesson__text">#czerwony/zielony/niebieski system szesnastkowy dla kolorów</p>
-                <p class="lesson__text">Fajne kolorki znajdziemy w <a href="https://coolors.co/" target="_blank" class="lesson__text-link">generator palet.</a></p>
+          <p class="lesson__text">
+            #czerwony/zielony/niebieski system szesnastkowy dla kolorów
+          </p>
+          <p class="lesson__text">
+            Fajne kolorki znajdziemy w
+            <a
+              href="https://coolors.co/"
+              target="_blank"
+              class="lesson__text-link"
+              >generator palet.</a
+            >
+          </p>
+        </article>
+      </section>
+      <section class="lessons">
+        <h2 class="lessons__title">CSS part II</h2>
 
-            </article>
-        </section>
-        <section class="lessons">
-            <h2 class="lessons__title">CSS part II</h2>
+        <article class="lesson">
+          <h3 class="lesson__title">Jak można stylować?</h3>
+          <ul class="lesson__list">
+            <li class="lesson__list-item">W sekcji head &lt;style&gt;</li>
+            <li class="lesson__list-item">
+              Style inline &lt;znacznik
+              style=”color:yellow;”&gt;treść&lt;/znacznik&gt;
+            </li>
+            <li class="lesson__list-item">Przy użyciu !important</li>
+            <li class="lesson__list-item">Po elementach: element</li>
+            <li class="lesson__list-item">
+              Po klasach: .class (. kropka to selektor klasy)
+            </li>
+            <li class="lesson__list-item">
+              Po id: #id (# hasz to selektor id)
+            </li>
+          </ul>
 
-            <article class="lesson">
-                <h3 class="lesson__title">Jak można stylować?</h3>
-                <ul class="lesson__list">
-                    <li class="lesson__list-item" >W sekcji head &lt;style&gt;</li>
-                    <li class="lesson__list-item">Style inline &lt;znacznik style=”color:yellow;”&gt;treść&lt;/znacznik&gt; </li>
-                    <li class="lesson__list-item">Przy użyciu !important</li>
-                    <li class="lesson__list-item">Po elementach: element</li>
-                    <li class="lesson__list-item">Po klasach: .class (. kropka to selektor klasy)</li>
-                    <li class="lesson__list-item">Po id: #id (# hasz to selektor id)
-                    </li>
-                </ul>
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Klasy</h4>
+            <p class="lesson-section__text">
+              html class=”name = css .name<br />
+              html id=”name” =css #name
+            </p>
+            <p class="lesson-section__text">
+              Najlepiej stylować po klasach, bez zagnieżdżeń.<br />
+              Klasy nazywamy po angielsku zgodnie z przeznaczeniem, tworzymy
+              klasy nawet kiedy mamy jeden element danego typu.<br />
+              Nie używamy important i stylów inlineowych.
+            </p>
 
-                <section class="lesson-section">
-                    <h4 class="lesson-section__title">Klasy</h4>
-                    <p class="lesson-section__text">html class=”name = css .name<br />
-                        html id=”name” =css #name</p>
-                    <p class="lesson-section__text">Najlepiej stylować po klasach, bez zagnieżdżeń.<br />
-                        Klasy nazywamy po angielsku zgodnie z przeznaczeniem, tworzymy klasy nawet kiedy mamy jeden
-                        element danego typu.<br />
-                        Nie używamy important i stylów inlineowych.</p>
+            <p class="lesson-section__text">
+              Klasa w HTML:<br />
+              &lt;znacznik class=”name”&gt;treść&lt;/znacznik&gt;
+            </p>
+            <p class="lesson-section__text">
+              Klasa w CSS:<br />
+              .name {<br />
+              właściwość: wartość;<br />
+              }
+            </p>
 
-                    <p class="lesson-section__text">Klasa w HTML:<br />
-                        &lt;znacznik class=”name”&gt;treść&lt;/znacznik&gt;</p>
-                    <p class="lesson-section__text">Klasa w CSS:<br />
-                        .name {<br />
-                        właściwość: wartość;<br />
-                        } </p>
+            <p class="lesson-section__text">Nazewnictwo klas:</p>
+            <ul class="lesson-section__list">
+              <li class="lesson-section__list-item">
+                Używać poj. słów z j. angielskiego
+              </li>
+              <li class="lesson-section__list-item">
+                Jeśli już muszą być dwa słowa użyć kebab-case
+              </li>
+              <li class="lesson-section__list-item">
+                Nazywać rzeczy zgodnie z ich funkcją na stronie
+              </li>
+              <li class="lesson-section__list-item">
+                Zaczynać od małej litery, nie zaczynać od cyfr
+              </li>
+              <li class="lesson-section__list-item">
+                Starać się, żeby element miał jedną klasę - nie zwiększać
+                specyficzności bez potrzeby
+              </li>
+            </ul>
+          </section>
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Łączenie selektorów</h4>
+            <p class="lesson-section__text">
+              Na przykład wszystkie linki z nav<br />
 
-                    <p class="lesson-section__text">Nazewnictwo klas:</p>
-                    <ul class="lesson-section__list">
-                        <li class="lesson-section__list-item">Używać poj. słów z j. angielskiego</li>
-                        <li class="lesson-section__list-item">Jeśli już muszą być dwa słowa użyć kebab-case</li>
-                        <li class="lesson-section__list-item">Nazywać rzeczy zgodnie z ich funkcją na stronie</li>
-                        <li class="lesson-section__list-item">Zaczynać od małej litery, nie zaczynać od cyfr</li>
-                        <li class="lesson-section__list-item">Starać się, żeby element miał jedną klasę - nie zwiększać specyficzności bez potrzeby</li>
-                    </ul>
+              nav a { albo header a {<br />
+              color: blue;<br />
+              }<br />
+              Style zaaplikują się tylko do konkretnego “a” z nav
+            </p>
 
-                </section>
-                <section class="lesson-section">
-                    <h4 class="lesson-section__title">Łączenie selektorów</h4>
-                    <p class="lesson-section__text">Na przykład wszystkie linki z nav<br />
+            <p class="lesson-section__text">
+              a {<br />
+              color: red;<br />
+              }<br />
+              Wszystkie inne “a” na stronie, które nie zawierają się w nav
+              (header)<br />
+              !important - nadpisuje style wszystkich “a”, lepiej nie używać :D
+            </p>
+          </section>
 
-                        nav a { albo header a {<br />
-                        color: blue;<br />
-                        }<br />
-                        Style zaaplikują się tylko do konkretnego “a” z nav</p>
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Specyficzność w CSS</h4>
+            <p class="lesson-section__text">
+              Jak są przejmowane style? Które są ważniejsze? Które mają wyższą
+              specyficzność?
+            </p>
+            <img
+              class="lesson-section__image"
+              src="img/specyficznosc.JPG"
+              alt="specyficznosc-css"
+            />
+            <p class="lesson-section__text">Jak to liczyć?</p>
+            <img
+              class="lesson-section__image"
+              src="img/specyficznosc1.JPG"
+              alt="specyficznosc1-css"
+            />
+            <p class="lesson-section__text">
+              Jeżeli specyficzność jest równa - pierwszeństwo ma selektor
+              “bliżej elementu”, bliżej dołu strony.
+            </p>
 
-                    <p class="lesson-section__text">a {<br />
-                        color: red;<br />
-                        }<br />
-                        Wszystkie inne “a” na stronie, które nie zawierają się w nav (header)<br />
-                        !important - nadpisuje style wszystkich “a”, lepiej nie używać :D
-                    </p>
+            <p class="lesson-section__text">
+              Najlepiej dodawać klasy do wszystkich elementów i unikać
+              zagnieżdżeń! Najłatwiej jest wtedy stylować :).<br />
 
-                </section>
+              Style, które ustawiasz na konkretny element mają pierwszeństwo nad
+              tymi, które się dziedziczy
+            </p>
+          </section>
+        </article>
+      </section>
 
-                <section class="lesson-section">
-                    <h4 class="lesson-section__title">Specyficzność w CSS</h4>
-                    <p class="lesson-section__text">Jak są przejmowane style? Które są ważniejsze? Które mają wyższą specyficzność?</p>
-                    <img class="lesson-section__image" src="img/specyficznosc.JPG" alt="specyficznosc-css">
-                    <p class="lesson-section__text">Jak to liczyć?</p>
-                    <img class="lesson-section__image" src="img/specyficznosc1.JPG" alt="specyficznosc1-css">
-                    <p class="lesson-section__text">Jeżeli specyficzność jest równa - pierwszeństwo ma selektor “bliżej elementu”, bliżej dołu
-                        strony.</p>
+      <section class="lessons">
+        <h2 class="lessons__title">CSS part III</h2>
 
-                    <p class="lesson-section__text">Najlepiej dodawać klasy do wszystkich elementów i unikać zagnieżdżeń! Najłatwiej jest wtedy
-                        stylować :).<br />
+        <article class="lesson">
+          <h3 class="lesson__title">Życie w pudełku</h3>
 
-                        Style, które ustawiasz na konkretny element mają pierwszeństwo nad tymi, które się dziedziczy
-                    </p>
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Display, wymiary i overflow.</h4>
+            <p class="lesson-section__text">
+              Świat stron internetowych jest płaski - prawie cały, bo poruszamy
+              się w przestrzeni dwuwymiarowej.<br />
 
-                </section>
-            </article>
-        </section>
+              div nie ma znaczenia semantycznego, używamy go gdy chcemy coś
+              opakować, tylko kiedy nie istnieje odpowiedni semantyczny
+              znacznik, używany do stylowania.
+            </p>
 
+            <p class="lesson-section__text">
+              własność display:block, domyślna wartość dla diva, ustawiają się
+              jeden pod drugim, tak samo article, section, main,<br />
+              np. a już nie ale możemy mu dać display:block;
+            </p>
+            <p class="lesson-section__text">
+              display:inline; dodajemy to do diva class .box, elementy ustawiają
+              się obok siebie
+            </p>
+            <p class="lesson-section__text">
+              display: inline-block; taka specjalna xd, wtedy nasz element
+              zachowa się jak przy display: inline; ale nadaje dodatkowe
+              właściwości niedostępne dla własności inlinowych a dostępne dla
+              blockowych np. width i height
+            </p>
+            <p class="lesson-section__text">
+              jak ustawimy szerokość i wysokość i display inline, to ona będzie
+              ignorowana bo się mają wyświetlić liniowo dopóki się mieści, aż
+              się treść skończy.
+            </p>
+
+            <img
+              src="img/display.JPG"
+              alt="display CSS"
+              class="lesson-section__image"
+            />
+
+            <p class="lesson-section__text">
+              max-width jak będziemy zmniejszać ekran to ten div razem z ekranem
+              będzie się zmniejszał jak by było tylko width to by się pojawił
+              taki scroll na dole przy zmniejszaniu szerokości ekranu
+            </p>
+
+            <p class="lesson-section__text">
+              max-height jak będzie za dużo treści to nam wyleci poza diva
+            </p>
+
+            <p class="lesson-section__text">
+              min-width np 600px, to jak zacznę zmniejszać okno to się pojawi
+              scroll bo nie będzie mniejsze niż 600px szerokości, ale może mieć
+              więcej
+            </p>
+
+            <p class="lesson-section__text">
+              min-height jak dodamy więcej treści to się będzie div poszerzał na
+              długość i żaden tekst nie będzie poza
+            </p>
+
+            <p class="lesson-section__text">głównie stylujemy w poziomie</p>
+
+            <p class="lesson-section__text">
+              overflow: pozwala na odcinanie treści, która nam wystaje, np.
+              overflow: hidden;
+            </p>
+
+            <img
+              src="img/overflow.JPG"
+              alt="overflow CSS"
+              class="lesson-section__image"
+            />
+
+            <img
+              src="img/overflow2.JPG"
+              alt="overflow CSS"
+              class="lesson-section__image"
+            />
+
+            <p class="lesson-section__text">
+              overflow: domyślna wartość to visible
+            </p>
+
+            <img
+              src="img/overflow3.JPG"
+              alt="overflow CSS"
+              class="lesson-section__image"
+            />
+
+            <p class="lesson-section__text">
+              overflow: auto dokłada nam scroll ale nie w przeglądarce ale w
+              konkretnym elemencie
+            </p>
+          </section>
+
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Jednostki</h4>
+
+            <p class="lesson-section__text">
+              Jak zapisywać wymiary?<br />
+              0 bez jednostki<br />
+              px <br />
+              % liczymy względem rodzica <br />
+              vw viewport width np 50vw % z szerokości całego okna a nie
+              rodzica, jak mamy diva w divie<br />
+              vh viewport height zawsze nam zajmie 100% okna na długość, 100vh
+            </p>
+          </section>
+
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">
+              Box model (padding, border, margin)
+            </h4>
+
+            <p class="lesson-section__text">
+              Wszystkie elementy na naszej stronie internetowej otoczone są
+              niewidzialnym prostokątem. Większość rzeczy zaczyna się od górnego
+              lewego rogu.
+            </p>
+            <img
+              src="img/boxmodel.JPG"
+              alt="boxmodel"
+              class="lesson-section__image"
+            />
+            <p class="lesson-section__text">
+              Padding - margines wewnętrzny, odpowiada za to o ile oddalone mają
+              być elementy, które znajdują się w środku elementu, który ma
+              padding, z paddingiem rośnie cały element.
+            </p>
+
+            <img
+              src="img/padding.JPG"
+              alt="padding CSS"
+              class="lesson-section__image"
+            />
+
+            <p class="lesson-section__text">
+              Border - też jest częścią elementu, też różne krawędzie mogą mieć
+              różne grubości albo style (dashed, dotted, solid) kolory;
+              border-radius np 50% to się robi kółko
+            </p>
+
+            <img
+              src="img/border.JPG"
+              alt="border CSS"
+              class="lesson-section_image"
+            />
+
+            <p class="lesson-section__text">
+              Margin - poza elementem, o ile możemy się odsunąć od innych
+              elementów, zapisujemy tak samo jak padding, mówi nam o
+              odległościach, które muszą być zachowane od naszego elementu,
+              działa tylko przy wartościach blokowych.
+            </p>
+
+            <p class="lesson-section__text">
+              margin: __px auto;<br />
+              jak mamy inline-block to nic nie zmienia, ale jak już jest block
+              to nam się ładnie wyśrodkuje na stronie, ale musi być podana
+              szerokość elementu, żeby on miał się z czego centrować
+            </p>
+
+            <img
+              src="img/margin.JPG"
+              alt="margin CSS"
+              class="lesson-section__image"
+            />
+          </section>
+
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Box-sizing</h4>
+            <img
+              src="img/box-sizing.JPG"
+              alt="boz-sizing image"
+              class="lesson-section__image"
+            />
+            <p class="lesson-section__text">
+              Domyślną wartością dla naszego box-sizing jest content box,
+              content ustawiamy na 200px to tu się dolicza padding, border więc
+              w rzeczywistości content jest większy niż 200.
+            </p>
+            <p class="lesson-section__text">
+              Border-box pozwala zdefiniować raz całą szerokość naszego elementu
+              i nie martwić się o paddingi. Margin jest liczony osobno bo jest
+              poza elementem.
+            </p>
+
+            <img
+              src="img/border-box.JPG"
+              alt="border-box CSS"
+              class="lesson-section__image"
+            />
+          </section>
+
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Position</h4>
+
+            <p class="lesson-section__text">
+              Position - pozwala na pozycjonowanie elementów w naszej
+              przestrzeni, nadpisując ustawienia przeglądarki :D
+            </p>
+
+            <p class="lesson-section__text">
+              position: static; domyśla własność
+            </p>
+
+            <p class="lesson-section__text">
+              position: relative; otwiera nam opcje żeby korzystać z position:
+              absolute; własności: top, right, bottom, left
+            </p>
+
+            <p class="lesson-section__text">
+              działa tak: główny div ma position: relative, a ten w nim ma
+              absolute plus top, right etc. jak z głównego skasujemy relative to
+              ten ze środka jakby wyleci poza diva, a jeżeli dodamy absolute itp
+              do głównego diva to on się będzie ustawiał względem całej strony,
+              np right to na prawo. Względem relative nasze elementy będą
+              pozycjonowane.
+            </p>
+
+            <p class="lesson-section__text">
+              z-index: np. mamy dwa takie same divy z takimi samymi ustawionymi
+              własnościami
+            </p>
+            <img
+              src="img/z-index.JPG"
+              alt="z-index CSS"
+              class="lesson-section__image"
+            />
+
+            <p class="lesson-section__text">
+              wyżej jest ten, który jest dalej czyli absolute second<br />
+
+              ale można im zdefiniować kolejność za pomocą atrybutu z-index
+              np.1000, ten który ma wyższy x-index jest bliżej ekranu, usera
+            </p>
+
+            <p class="lesson-section__text">
+              position: fixed przykleja się, musi mieć zdefiniowane width
+            </p>
+
+            <p class="lesson-section__text">
+              position: sticky, rodzic nie może mieć overflowa, przykleja się
+              dopiero w momencie tego co zdefiniowane np. top 30px i zostaje w
+              tym divie, ważne tu jest top, trochę podobnie do absolute.
+            </p>
+          </section>
+
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Float</h4>
+
+            <p class="lesson-section__text">
+              Nie służy do budowania layoutów. Zachowuje się jak inline block.
+              Ma opływać element. Albo treść ma opływać jego. Clear.
+            </p>
+          </section>
+        </article>
+      </section>
     </main>
     <footer class="footer">
-        Anna się uczy 2020. <a href="#top" class="footer__link">Powrót na górę strony</a>
+      Anna się uczy 2020.
+      <a href="#top" class="footer__link">Powrót na górę strony</a>
     </footer>
-</body>
-
+  </body>
 </html>
