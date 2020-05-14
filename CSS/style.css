@@ -1,15 +1,24 @@
 html {
   box-sizing: border-box;
-  }
-  *, *:before, *:after {
+}
+*,
+*:before,
+*:after {
   box-sizing: inherit;
-  }
-  
+}
 
 body {
-  background: #EB5757;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #eb5757; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #000000,
+    #eb5757
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #000000,
+    #eb5757
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   font-family: Georgia, "Times New Roman", Times, serif;
   margin: 20px auto;
@@ -59,12 +68,11 @@ background: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, F
   text-align: center;
 }
 
-
 .lessons__title,
 .extras__title,
 .weeks__title {
   font-size: 23px;
-  background-color: rgb(243,138,138, 0.253);
+  background-color: rgb(243, 138, 138, 0.253);
   color: #ffffff;
   margin: 20px auto;
   max-width: 500px;
@@ -76,9 +84,7 @@ background: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, F
 .lesson,
 .extra,
 .week {
-    background-color: rgba(251, 231, 210, 0.87);
-
-    
+  background-color: rgba(251, 231, 210, 0.87);
   margin: 20px auto;
   max-width: 900px;
   padding: 5px 20px;
@@ -94,7 +100,7 @@ background: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, F
 }
 
 .lesson__text-link,
-.extra__list-link, 
+.extra__list-link,
 .lesson-section__text-link,
 .week__list-link {
   text-decoration: none;
@@ -104,8 +110,25 @@ background: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, F
 .lesson__text-link:hover,
 .extra__list-link:hover,
 .lesson-section__text-link:hover,
-.week__list-link:hover  {
+.week__list-link:hover {
   color: #ec5b8c;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.extra--inline {
+  width: 440px;
+  margin-right: 10px;
+}
+
+.extra--inline1 {
+  width: 440px;
+  margin-left: 10px;
 }
 
 .footer {
@@ -114,9 +137,9 @@ background: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, F
 }
 
 .footer__link {
-    color: #920736;
+  color: #920736;
 }
 
 .footer__link:hover {
-    color: #ec5b8c;
+  color: #ec5b8c;
 }
