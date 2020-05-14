@@ -6,7 +6,12 @@ console.log(age);
 console.log(`Hej, nazywam się ${firstName} i mam ${age} lat`);
 
 
+const heading = document.querySelector('.main-header--js');
 
+heading.innerHTML = 'Tu miał być inny tekst ale go zmieniłam za pomocą js'
+
+console.log(heading);
+console.log(heading.innerHTML);
 
 
 
@@ -16,6 +21,10 @@ function greet(age, firstName) {
     
 }
 
+greet(27, 'Anna')
+
+
+
 function createContent(querySelectorContent, content) {
     const element = document.querySelector(querySelectorContent);
 
@@ -24,34 +33,3 @@ function createContent(querySelectorContent, content) {
 
 createContent(`.heading__paragraph--js`, 'Witaj świecie');
 
-const deathStar = {
-    diameter: 120000,
-    fire: (target) => {
-        console.log(`${target} destroyed`)
-    },
-    isOperating: true,
-    levels: 357,
-    name: 'Death Star',
-    population: 10000,
-    isLightOn: true,
-    comander: {
-        name: 'Darth Vader',
-        age: 44,
-    }
-}
-const myProperty = 'name';
-const showMeProperty = (myProperty) => {
-    console.log(`Twoja własność ${myProperty} to: ${deathStar[myProperty]}`);
-}
-
-showMeProperty('levels')
-
-
-function calculate(myNumber) {
-    console.log(`Dostałam ${myNumber}`);
-    return myNumber*7;
-}
- 
-const myResult = calculate(1);
- 
-console.log(myResult);
