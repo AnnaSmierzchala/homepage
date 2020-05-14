@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/style.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
@@ -59,7 +60,10 @@
             </li>
             <li class="lesson__list-item">
               Całą specyfikację znajdziesz
-              <a href="https://www.w3.org/TR/CSS/" target="_blank" class="lesson__text-link"
+              <a
+                href="https://www.w3.org/TR/CSS/"
+                target="_blank"
+                class="lesson__text-link"
                 >na stronie W3C.</a
               >
             </li>
@@ -473,6 +477,317 @@
               Ma opływać element. Albo treść ma opływać jego. Clear.
             </p>
           </section>
+        </article>
+      </section>
+      <section class="lessons">
+        <h2 class="lessons__title">CSS part IV</h2>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Klan</h3>
+
+          <p>
+            DOM jako rodzina elementów. Pojedynczy element (np. main) z naszego
+            drzewa to węzeł/node. Np. HTML ma 2 dzieci: head i body itp. itd.
+            Rodzic - dziecko
+          </p>
+
+          <p>
+            Dziedziczenie. Jeżeli definiujemy styl w rodzicu np. kolor to dzieci
+            go przejmą, ale jeśli jakieś dziecko ma ustawiony inny kolor
+            bezpośrednio to wtedy nie, bo on jest ważniejszy niż ‘inherited od
+            rodzica”. Jak wyłączymy np. w DevTools tą deklarację koloru dla
+            elementu to kolor się zmieni na ten dziedziczony. Dzieci dostają
+            atrybuty rodzica jeśli nie były wcześniej jawnie zdefiniowane.
+            <br />
+            Linki działają inaczej. Nie dziedziczą koloru po rodzicu bo są
+            zdefiniowane style przeglądarki, które mają w tym wypadku
+            pierwszeństwo. Dlatego zawsze musimy ustawić kolor linku
+            bezpośrednio.<br />
+            wartość: inherit; Możemy zdefiniować color: inherit; w CSS wtedy
+            kolor linku nawet jeśli będzie ustawiony na inny, będzie
+            dziedziczony a nie brany z przeglądarki. Inherit nadpisuje styl
+            przeglądarki i też ten przypisany. Nie musi to być bezpośrednio od
+            rodzica, może też być od dziadka itp.
+          </p>
+        </article>
+        <article class="lesson">
+          <h3 class="lesson__title">Normalizacja vs reset</h3>
+          <p>Nasza przeglądarka ma domyślne style w user agent stylesheet</p>
+
+          <p>
+            Reset powinien zresetować wszystkie domyślne style<br />
+
+            Typowy reset<br />
+
+            *{<br />
+            margin: 0;<br />
+            padding: 0;<br />
+            outline: none; jak wciskamy tab i outline jest on to pokazuje
+            dokładnie linki itp, a to jest ważne<br />
+            }<br />
+            ul, ol {<br />
+            list-style: none;<br />
+            }
+          </p>
+
+          <p>
+            Normalizacja:<br />
+            <a href="https://necolas.github.io/normalize.css/"
+              >Plik do załączenia</a
+            ><br />
+
+            Każda przeglądarka inaczej sobie zaimplementowała domyślne style, sa
+            drobne różnice.<br />
+            Sprawia, że nasze elementy (nawet jeśli nie będą ostylowane) będą
+            wyglądać jakby były ostylowane przez domyślne style przeglądarki w
+            sensowny sposób. Zbiór reguł. <br />
+            Podpinamy w osobnym pliku stylesheet.<br />
+            najpierw normalize potem nasze style.
+          </p>
+
+          <p>
+            Miksujemy<br />
+
+            html {<br />
+            box-sizing: border-box;<br />
+            }<br />
+            *, *:before, *:after {<br />
+            box-sizing: inherit;<br />
+            }<br />
+
+            Dopisujemy w css na samej górze.
+          </p>
+        </article>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Flexbox</h3>
+          <p class="lesson__text">
+            System pozycjonowania i rozmieszczania elementów. <br />
+            display: flex; do kontenera dodajemy<br />
+            Flex pracuje w dwóch osiach: poziomej - wiersz, pionowej - kolumna.
+          </p>
+          <p class="lesson__text">
+            <strong>flex-direction:</strong><br />
+            row --><br />
+            column<br />
+            row-reverse<br />
+            column-reverse
+          </p>
+
+          <p class="lesson__text">
+            <strong>flex-wrap:</strong> zawijanie wiersza, kolumny<br />
+            nowrap tu nam nie pokaże tych 400px dla każdego, tylko ustawi
+            wszystko obok siebie mniejsze<br />
+            wrap np. ustawiamy 400px dla item i one się będą ładnie ustawiać
+            zawijać<br />
+            wrap-reverse
+          </p>
+
+          <p class="lesson__text">
+            <strong>flex-flow:</strong> <br />
+            row nowrap<br />
+            flex-direction flex-wrap
+          </p>
+
+          <p class="lesson__text">
+            <strong>justify-content:</strong> ustawienie elementów wzdłuż osi
+            flex-direction<br />
+            flex-start przyklejony do krawędzi lewej<br />
+            flex-end prawej<br />
+            center<br />
+            space-between liczy wolne przestrzenie, robi się margines między
+            nimi<br />
+            space-around dodaje jeszcze marginesy po bokach i z obu stron na
+            bazie tej wolnej przestrzeni między elementami
+          </p>
+
+          <p class="lesson__text">
+            <strong>align-content:</strong> ustawienie wierszy/kolumn wzdłuż osi
+            przeciwnej do flex-direction (taki justify-content dla drugiej
+            osi)<br />
+            stretch<br />
+            flex-start one się zmniejszają bo nie mają zdefiniowanej
+            wysokości<br />
+            flex-end<br />
+            center<br />
+            space-between- nie ma przestrzeni na górze<br />
+            space-around
+          </p>
+
+          <p class="lesson__text">
+            <strong>align-items:</strong>ustawianie elementów wzdłuż osi
+            przeciwnej do flex-direction, w obrębie pojedynczego wiersza, dla
+            wszystkich elementów, które się znajdują w wierszu, będą tej samej
+            wysokości, jak zmniejszamy ekran to zamiast 3 zrobią się 2 duże a
+            ten jeden wskoczy jako mały<br />
+            stretch<br />
+            flex-start<br />
+            flex-end<br />
+            center<br />
+            baseline - względem dolnej krawędzi pierwszego wiersza z tekstem
+          </p>
+
+          <img
+            class="lesson__image"
+            src="img/flex-start-endJPG.JPG"
+            alt="flex start and end example"
+          />
+
+          <p class="lesson__text">
+            <strong>align-self:</strong> ustawianie elementu wzdłuż osi
+            przeciwnej do flex-direction np. center <br />
+            to niezależnie gdzie ta 6 się znajdzie będzie wyśrodkowana zawsze w
+            wierszu<br />
+            to jest robione na row i min-height przy column zdefiniowana
+            wysokość, więcej używa się row
+          </p>
+          <img
+            class="lesson__image"
+            src="img/align-self.JPG"
+            alt="align-self example"
+          />
+
+          <p class="lesson__text">
+            <strong>order:</strong> kolejność elementu <br />
+            0<br />
+            liczba całkowita (-/+)
+          </p>
+
+          <img class="lesson__image" src="img/order.JPG" alt="order example" />
+          <p class="lesson__text">
+            albo zamiast 1 dać minus 1 i wtedy już tej 2 nie musimy pisać
+          </p>
+
+          <p class="lesson__text">
+            <strong>flex-grow:</strong> współczynnik, odpowiada za to jak bardzo
+            nas element powinien rosnąć w wierszu, jeżeli zostanie jakieś wolne
+            miejsce, przestrzeń, wiersz się cały wypełnia<br />
+            0 czyli elementy nie rosną, bo jest przestrzeń między nimi<br />
+            liczba/proporcja np. 1 , też do pojedynczych elementów dodajemy
+            wtedy dany element jak mu damy 2 to dostanie podwójnie dużo miejsca
+            z tych wolnych przestrzeni
+          </p>
+
+          <p class="lesson__text">
+            <strong>flex-shrink:</strong><br />
+            1<br />
+            liczba/proporcja
+          </p>
+          <p class="lesson__text">
+            np.0 to się kurczy, chowa, jest scroll jak jest 1 domyślne to tak
+            ładnie się wszystkie pokazują przy zmniejszaniu strony, można dać
+            pojedynczemu elementowi np. 2 to on się będzie kurczył bardziej niż
+            reszta
+          </p>
+
+          <p class="lesson__text">
+            <strong>flex-basis:</strong> określenie minimalnej wysokości lub
+            szerokości elementu wewnątrz kontenera flexowego <br />
+            none<br />
+            rozmiar bazowy
+          </p>
+
+          <p class="lesson__text">
+            <strong>flex:</strong> flex-grow flex-shrink flex-basis
+          </p>
+        </article>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Tła</h3>
+          <p class="lesson__text">
+            background-image: url(‘ścieżka-do-pliku’);<br />
+            url względem pliku z cssami<br />
+            jak body się nie rozciąga na całą wysokość to dodać min-height:
+            100vh;<br />
+            do body też dodajemy class<br />
+          </p>
+          <p class="lesson__text">
+            Background-position<br />
+            ustawia nasze tło, względem elementu, który to tło dostaje, domyślna
+            wartość 0<br />
+            center center to środek zdjęcia, od środka będzie się ustawiać<br />
+            bottom center jak dużo treści to to tło się powtarza od dołu
+          </p>
+          <img
+            class="lesson__image"
+            src="img/background-position.JPG"
+            alt="background-position"
+          />
+
+          <p class="lesson__text">
+            Background-repeat:<br />
+            repeat - domyślna<br />
+            repeat-x powtarzane tylko po osi x<br />
+            repeat-y<br />
+            no-repeat<br />
+            round otacza i skaluje<br />
+            space<br />
+          </p>
+
+          <p class="lesson__text">
+            background-attachment:<br />
+            scroll domyślnie, idzie razem ze stroną<br />
+            fixed nie rusza się, nieruchome<br />
+            local +overflow scroll, to się tło skroluje razem z treścią, bez
+            local tło zostaje w miejscu a sama treść sie skroluje
+          </p>
+          <img
+            class="lesson__image"
+            src="img/background-attachment.JPG"
+            alt="background-attachment"
+          />
+
+          <p class="lesson__text">
+            background-origin: w, którym miejscu tło powinno się zaczynać, mało
+            się to wykorzystuje<br />
+            padding-box domyślnie<br />
+            border-box<br />
+            content-box
+          </p>
+
+          <p class="lesson__text">
+            background-clip: w, którym miejscu tło powinno być cięte<br />
+            border-box<br />
+            padding-box<br />
+            content-box tło ograniczone tylko do kontentu
+          </p>
+
+          <p class="lesson__text">
+            background-color:<br />
+
+            rgb(a) tło półprzezroczyste<br />
+            (255,255,255,0.4) np. kontent ma tło białe i dajemy to a w body jest
+            inne tło i wtedy je widać
+          </p>
+
+          <p class="lesson__text">
+            background-size: jak tło ma się zachowywać, jak duże ma być<br />
+            auto domyślne<br />
+            cover zawsze będzie wypełniał naszą stronę, jak zmniejszamy to
+            rośnie, żeby zapełnić sobą całą przestrzeń, jego przyklejenie
+            definiujemy za pomocą background position, chcemy wypełnić całą
+            przestrzeń, jak obrazek jest mniejszy to będzie skalowany w górę<br />
+            contain chcemy, żeby było widoczne całe niezależnie od przeglądarki,
+            chcemy pokazać cały obrazek<br />
+            &lt;width&gt; &lt;height&gt; wartości w pixelach 100px 100px
+          </p>
+
+          <p class="lesson__text">
+            Gradienty:
+            <a href="https://cssgradient.io/gradient-backgrounds/"
+              >CSSgradient</a
+            >
+          </p>
+
+          <img
+            class="lesson__image"
+            src="img/background.JPG"
+            alt="background-values"
+          />
+          <p class="lesson__text">
+            jak poniżej tych zdefiniowanych podamy samo background to ono
+            nadpisze te wcześniejsze
+          </p>
         </article>
       </section>
     </main>
