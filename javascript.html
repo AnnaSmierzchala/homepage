@@ -17,14 +17,24 @@
         <p class="heading__title">WTF: Co ten frontend?</p>
 
         <nav class="navigation">
-            <a href="index.html" target="_blank" class="navigation__link">Strona główna</a>
-            <a href="html.html" target="_blank" class="navigation__link">HTML</a>
-            <a href="css.html" target="_blank" class="navigation__link">CSS</a>
-            <a href="javascript.html" target="_blank" class="navigation__link">JavaScript</a>
-            <a href="browser.html" target="_blank" class="navigation__link">Przeglądarka</a>
-            <a href="terminal.html" target="_blank" class="navigation__link">Terminal</a>
-            <a href="spis-tresci.html" target="_blank" class="navigation__link">Spis lekcji</a>
-        </nav>
+            <a class="navigation__link" href="index.html" target="_blank" 
+              >Strona główna</a
+            >
+            <a class="navigation__link" href="html.html" target="_blank" >HTML</a>
+            <a class="navigation__link" href="css.html" target="_blank" >CSS</a>
+            <a class="navigation__link"href="javascript.html" target="_blank" 
+              >JavaScript</a
+            >
+            <a class="navigation__link" href="browser.html" target="_blank" 
+              >Przeglądarka</a
+            >
+            <a class="navigation__link" href="terminal.html" target="_blank" 
+              >Terminal</a
+            >
+            <a class="navigation__link" href="spis-tresci.html" target="_blank" 
+              >Spis lekcji</a
+            >
+          </nav>
     </header>
     <main>
         <h1 class="main-header">Wszystko o JavaScript</h1>
@@ -133,13 +143,13 @@
                     CONST<br/>
                     VAR - od tego się trochę odchodzi</p>
                     
-                    <a href="https://caniuse.com/" class="lesson__text-link">Can I use…?</a>
+                    <a class="lesson__text-link" href="https://caniuse.com/" >Can I use…?</a>
 
             <section class="lesson-section">
                 <h4 class="lesson-section__title">CONST</h4>
                 <p class="lesson-section__text">const - zmienne mające stałe połączenie z jedną wartością, tego połączenia nie możemy zmienić
                 </p>
-                <img src="img/const1.JPG" alt="constJS" class="lesson-section__image">
+                <img class="lesson-section__image" src="img/const1.JPG" alt="constJS" >
                 <p class="lesson-section__text">Odpytujemy co się kryje pod połączeniem tej zmiennej z jaką wartością.<br/>
                      name = ‘Irena’ dostaję błąd bo nie mogę zmienić zmiennej, która jest stała.<br/>
                     Const to jest stałe wiązanie między nazwą naszej zmiennej do konkretnej wartości i tego połączenia nie możemy edytować.</p>
@@ -152,7 +162,7 @@
 
                 <p class="lesson-section__text">Przepięcie, edycja połączenia między zmienną a wartością, to nie jest nadpisanie wartości Ania, bo ta wartość już istnieje w moim wszechświecie wartości. Można też podpiąć cyfry i też zadziała.</p>
 
-                <img src="img/let.JPG" alt="letJS" class="lesson-section__image">
+                <img class="lesson-section__image" src="img/let.JPG" alt="letJS" >
 
                 <p class="lesson-section__text">Jak wypisze teraz name to dostanę Ania.</p>
 
@@ -177,12 +187,12 @@ Edytujemy zmienne tak jakbyśmy przepinali wtyczkę z gniazdka do gniazdka. Mamy
             </li>
     </ul>
 
-    <img src="img/let2JPG.JPG" alt="letJS" class="lesson-section__image">
+    <img class="lesson-section__image" src="img/let2JPG.JPG" alt="letJS" >
     <p class="lesson-section__text">Jakiego typu jest zmienna? typeof<br/>
         undefine wskazuje, że nie ma takiej zmiennej, null wskazuje na nulla, bo tak był zdefiniowany.
     </p>
 <p class="lesson-section__text">Przykład:</p>
-<img src="img/let3.JPG" alt="letJS" class="lesson-section__image">
+<img class="lesson-section__image" src="img/let3.JPG" alt="letJS" >
 <p class="lesson-section__text">Stworzona nowa zmienna y i przypisuje do tej zmiennej x, y tworzy połączenie do 10
     Jeśli zmienie x na 20 to y się nie zmieni i zostanie 10 why?</p>
     
@@ -215,28 +225,28 @@ Edytujemy zmienne tak jakbyśmy przepinali wtyczkę z gniazdka do gniazdka. Mamy
             
             <p class="lesson__text">Chcę sprawdzić czy mogę podpiąć się do mojego nagłówka np.
             </p>
-<img src="img/DOM.JPG" alt="dom" class="lesson__image">
+<img class="lesson__image" src="img/DOM.JPG" alt="dom" >
 <p class="lesson__text">Przypinam się konkretnie do tego elementu, wartością do której się przypinam jest ten element, wypisuje się w konsoli nie tylko sam element ale wszystko co zawiera też. Podobnie sie używało w jQuery, to z tym dolarem.
 </p>
 
-<img src="img/DOM2.JPG" alt="dom" class="lesson__image">
+<img class="lesson__image" src="img/DOM2.JPG" alt="dom" >
 <p class="lesson__text">Metoda, żeby dostać się do elementów w HTMLu! Są też inne ale ta jest spoko :D.<br/>
 
     Aleeee, chcemy się dostać do elementu za pomocą BEMa, bo co np jak zmienimy klasy itp?<br/>
     Tworzymy klasę, modyfikator do klasy, np. header--js podstawiamy to zamiast konkretnego selektora. korzystając z BEM - tworzymy dodatkową klasę z modyfikatorem --js (ułatwia identyfikację / usuwa potencjalne problemy). Nie stylujemy po tym, dodajemy tylko, jeśli jakiś element ma mieć coś wspólnego z JS
     </p>
-<img src="img/DOM3.JPG" alt="dom" class="lesson__image">
+<img class="lesson__image" src="img/DOM3.JPG" alt="dom" >
 
 <p class="lesson__text">JavaScript może modyfikować treść:</p>
 
-<img src="img/DOM4.JPG" alt="dom" class="lesson__image">
+<img class="lesson__image" src="img/DOM4.JPG" alt="dom" >
 <p class="lesson__text">Zmienia mi się treść nagłówka, została nadpisana ta z HTMLa przez JS. Dlatego to jest DOM bo uwzględnia wszystkie zmiany, w HTML dalej jest pierwotny nagłówek ale JS go zmienił i w przeglądarce oraz DevTools jest taki jak po zmodyfikowaniu JSem, po zastosowaniu skryptu. Jakby co to nie jest typ prosty. 
     </p>
 
 <p class="lesson__text">Dalej nam pokaże nagłówek zmieniony:
 </p>
 
-<img src="img/DOM5.JPG" alt="dom" class="lesson__image">
+<img class="lesson__image" src="img/DOM5.JPG" alt="dom" >
 <p class="lesson__text">innerHTML pozwala na wypisanie treści ale też na podmienienie jej (jeżeli dokonamy przypisania na pomocą “=”).<br/>
 
     Możemy też np. Hej wrzucić w span hej, to się pokaże w Devtools. </p>
@@ -244,13 +254,366 @@ Edytujemy zmienne tak jakbyśmy przepinali wtyczkę z gniazdka do gniazdka. Mamy
     <p class="lesson__text">Możemy modyfikować treści na stronie. Nie jest to super popularna praktyka ale dobrze wiedzieć, że w ten sposób można się odwoływać do elementów, które są w kodzie HTML za pomocą JS i coś z nimi robić, np. podmiana treści.
     </p>
 
-    <img src="img/DOM6.JPG" alt="dom" class="lesson__image">
+    <img class="lesson__image" src="img/DOM6.JPG" alt="dom" >
     <p class="lesson__text">To sobie napisałam w skryptach. Wewnętrzny HTML ma wskazywać na inną wartość.Jak używamy console to wtedy jest widnoczne w konsoli.</p>
     </article>
 </section>
+
+<section class="lessons">
+    <h2 class="lessons__title">JS part III</h2>
+
+    <article class="lesson">
+        <h3 class="lesson__title">Obiekt</h3>
+        <p class="lesson__text">JavaScript jest obiektowym językiem programowania.<br/>
+
+            Prawie wszystko w JS jest obiektem, bo nawet typy proste, mimo iż nie są obiektem - to się tak zachowują. <br/>
+            
+            Obiekt jest strukturą danych, nasz świat jest obiektowy. <br/>
+            
+            Obiekt : samochód. Ma zbiór własności i zbiór akcji, które może wykonać. Kolejny obiekt - człowiek. <br/>
+            Obiekt jest też zmienną.
+            </p>
+            <p class="lesson__text">Tak definiujemy obiekt:</p>
+            <img class="lesson__image" src="img/objectJS.JPG" alt="Object JS example">
+
+            <p class="lesson__text">console.log(deathStar);<br/>
+                Wypiszą nam się te wartości ale zawsze w kolejności alfabetycznej. Czemu nie mam alfabetycznie w konsoli u mnie?</p>
+                
+                <p class="lesson__text">key: value/klucz: wartość “,” na końcu<br/>
+                
+                Klucz - unikalny w ramach obiektu<br/>
+                Wartość - prymitywy/funkcje/zagnieżdżenia</p>
+
+                <p class="lesson__text">const deathStar = {<br/>
+                    diameter: 120000,<br/>
+                    fire: (target) => {<br/>
+                        console.log(`${target} destroyed`)<br/>
+                    },<br/>
+                    isOperating: true,<br/>
+                    levels: 357,<br/>
+                    name: 'Death Star',<br/>
+                    population: 10000,<br/>
+                    isLightOn: true,<br/>
+                    comander: {<br/>
+                        name: 'Darth Vader',<br/>
+                        age: 44,<br/>
+                    }<br/>
+                }<br/>
+                console.log(deathStar);</p>
+
+                <p class="lesson__text"><em>/let, zmienne -> własności (property), zmienne w obiekcie, w środku nazywamy własnościami. <br/>
+                    ()=>{}, funkcje -> metody (methods), np. diameter własność, fire metoda</em>
+                    </p>
+
+                    <p class="lesson__text"><strong>. dot notation</strong>, odwoływanie się do rzeczy<br/>
+
+                        console.log(deathStar.name); - teraz nam wypisze tylko to co w name<br/>
+                        
+                        console to też obiekt, console.log to jedna z metod obiektu console</p>
+                        
+                       <p class="lesson__text"> document(obiekt).querySelector(metoda) ()<br/>
+                        element.innerHTML(własność) bo po nim jest =
+                        </p>
+
+                        <p class="lesson__text">korzystamy z gotowych obiektów, które dostarcza nam przeglądarka<br/>
+
+                            console.log(console); - Wyświetla nam wszystkie metody, które ma obiekt console. 
+                            </p>
+
+                    <p class="lesson__text">console.log(typeof deathStar); dostajemy object<br/>
+                        console.log(typeof deathStar.name); dostajemy string<br/>
+                        
+                        obiekt poznajemy po tym, że w konsoli są nawiasy sześcienne i można je rozwinąć. <br/>
+                        
+                        console.log(deathStar.comander.name);<br/>
+                        tyle kropek jaki jest poziom zagnieżdżeń
+                        </p>
+
+                <p class="lesson__text">Jak wywołujemy metodę? nazwa obiektu.fire<br/>
+                    
+                    deathStar.fire('rebel ship');<br/>
+                    
+                    info rebel ship destroyed (  Jak zrobić tą gwiazdkę, to buuumm?)
+                    </p>
+                
+                    <p class="lesson__text"><strong>[] bracket notation</strong><br/>
+
+                        console.log(deathStar['name']); ‘name’ tak musi być a nie name (undefined),szuka stringa podpiętego pod name<br/>
+                        
+                        chyba, że<br/>
+                        
+                        const myProperty = 'name';<br/>
+                        console.log(deathStar[myProperty]);<br/>
+                        
+                        to wtedy ok, bo zostanie przekazane powiązanie do wartości name
+                        </p>
+                        <p class="lesson__text">const myProperty = 'name';<br/>
+                            const showMeProperty = (myProperty) => {<br/>
+                                console.log(`Twoja własność ${myProperty} to: ${deathStar[myProperty]}`);<br/>
+                            }<br/>
+                             
+                            showMeProperty('levels')
+                            </p>
+                            <p class="lesson__text">Dostajemy twoja własność levels to: 357<br/>
+
+                                zamiast level coś co nie istnieje to dostaniemy undefined. 
+                                </p>
+
+            </article>
+            <article class="lesson">
+                <h3 class="lesson__title">Immutability w obiektach</h3>
+                <p class="lesson__text">JavaScript jest obiektowym językiem programowania.<br/>
+                    Niemutowalność w obiektach. Nie możemy zmieniać wartości primitive values w JS. To co zmieniamy to połączenie między nimi a zmiennymi. To chyba rozumiem.</p>
+
+                    <p class="lesson__text">Jak to się teraz zachowuje w obiektach?</p>
+                    <img class="lesson__image" src="img/humanOne.JPG" alt="object example JS">
+                    <p class="lesson__text">Wszechświat wartości jest ten sam.</br>
+
+                        chcemy zmienić humanTwo.age = 35;<br/>
+                        console.log(humanTwo)<br/>
+                        
+                        I to nam się zmieni ładnie na 35, linie są na zielono, bo tylko do obiektu jest połączenie const , mamy consta na obiekt, a od obiektu już nie. Własności od obiektu już nie są zdefiniowane jako const, one mogą być przepinane na inne wartości. Mutowanie obiektu. Powstanie połączenid do 35.
+                        </p>
+
+                    <p class="lesson__text">Typ złożony (obiekt) od typu prostego różni się tym, że te obiekty możemy mutować, a właściwie te własności naszego obiektu. </p>
+
+                    <img class="lesson__image" src="img/humanTwo.JPG" alt="object example JS">
+                    <p class="lesson__text">humanTwo i humanOne będą takie same</p>
+                    <img class="lesson__image" src="img/humanTwo2.JPG">
+                    <p class="lesson__text">tworzymy obiekt humanOne a przy tym przypisaniu Two = One mówimy tylko tyle, że humanTwo ma wskazywać dokładnie na to samo co humanOne. A to nam wskazuje bezpośrednio na obiekt. Nie tworzymy nowego obiektu tylko podpinamy się pod ten sam obiekt. 
+                    </p>
+
+                    <p class="lesson__text">Zmiana humanTwo.age = 35;<br/>
+                        I age zmienia się w 2 zmiennych. Przez to, że humanTwo wskazuje na ten sam obiekt co humanOne, to nawet jeżeli zmienimy wiek za pomocą humanTwo to też się zmieniło w zmiennej human.One.
+                        </p>
+                        <img class="lesson__image" src="img/human35.JPG" alt="object example JS">
+
+                        <img class="lesson__image" src="img/nexthuman.JPG" alt="object example JS">
+                        <p class="lesson__text">age pokaże 32. Age zostanie wpięty pod 32, bo my odpytujemy nasz kod co się teraz znajduje w human.One age jakie połączenie i on zwraca tylko połączenie czyli 32. Nie pole przypisujemy, tylko linię
+                            </p>
+
+                            <p class="lesson__text">zmiana humanOne.age = 35<br/>
+
+                                przed zmianą 32, 32, po zmianie 35, 32 (podobnie jak z tym x i y)
+                                </p>
+
+                                <p class="lesson__text">Z zagnieżdżeniem:</p>
+                                <img class="lesson__image" src="img/humans.JPG"> alt="object example JS">
+                                <p class="lesson__text">Pod tym adresem kryje się połączenie, co jest po address, czyli wartości street i city. <br/>
+
+                                    zmiana humanOne.address.street = ‘Lipowa’
+                                    </p>
+                                <p class="lesson__text">W tej sytuacji dla obu zmieni się na Lipowa. Jeżeli adres człowieka drugiego ma wskazywać na ten obiekt, to ulica też się zmieniła w tym adresie. Jest jeden obiekt z adresem. Tak jest połączone, że adres na wskazywać na to samo na co wskazuje ten adres, a ten adres wskazuje na ten obiekt.</p>
+
+                                <img class="lesson__image" src="img/lalallaal.JPG" alt="object example JS">
+
+                                <p class="lesson__text">Tu się tworzy nowy obiekt.<br/>
+                                    zmiana humanOne.address.street = ‘Lipowa’, wtedy humanOne street zmienia sie na Lipowa<br/>
+                                   <strong> Ważne na co wskazuje wskazanie, to połączenie! Czy na wartości proste czy na obiekty!</strong>
+
+                                    </p>
+
+                    </article>
+                    <article class="lesson">
+                        <h3 class="lesson__title">Funkcje</h3>
+                        <p class="lesson__text">fun(‘Hi!’), console.log to też funkcja</p>
+                            
+                           <p class="lesson__text"> Funkcja: f (x) = x<br/>
+                            argument/wynik<br/>
+                            f (x) = x*7</p>
+                            
+                           <p class="lesson__text"> Fukcja na wejściu dostaje dane - argumenty. Dla każdego argumentu zwraca jakąś wartość.Posiada określony wzór.
+                            
+                            </p>
+
+
+                            <p class="lesson__text">Funkcja w JS:</p>
+                            <img class="lesson__image"src="img/function.JPG"> alt="function JS example">
+                            <p class="lesson__text">deklaracja, nazwa funkcji, parametr-nazwa parametru</p>
+
+                               <p class="lesson__text"><strong>function calculate(myNumber) {<br/>
+                                console.log(`Dostałam $(myNumber)`);<br/>
+                                return myNumber*7;<br/>
+                               }<br/></strong>
+                               Mamy zdefiniowaną funkcję ale nie została wywołana dlatego nie pokazuje się nic w konsoli. 
+
+                            </p> 
+                            <p class="lesson__text">calculate(1), const myResult = calculate(1); Teraz w konsoli : Dostałam 1<br/>
+                                
+                                <strong>function calculate(myNumber) {<br/>
+                                    console.log(`Dostałam ${myNumber}`);<br/>
+                                    return myNumber*7;<br/>
+                                }<br/>
+                                 
+                                 const myResult = calculate(1);<br/>
+                                 
+                                 console.log(myResult);</strong></p>
+
+                                 <p class="lesson__text">Calculate(1) wywołujemy funkcję. Podajemy argument, czyli myNumber w tym przypadku 1. Zwracamy (return), że wartość na, którą ma wskazywać zmienna myResult to myNumber*7 -
+                                 przy użyciu const.<br/>
+                                 
+                                 Nie musimy podawać bezpośrednio wartości, np. możemy podać naszą zmienną age. Bo age mam wyżej const age = 27<br/>
+                                 const myResult = calculate(age);</p>
+                                 <p class="lesson__text">konsola zwraca: Dostałam 27, 189
+                                    </p>
+
+                                <p class="lesson__text">Czy myNumber może zmienić wartość age?<br/>
+                                    Wpisujemy console.log(age); Nie zmieni! nawet jak dopiszemy myNumber = myNumber * 7;</p>
+                                    
+                                    <p class="lesson__text"><strong>function calculate(myNumber) {<br/>
+                                        console.log(`Dostałam ${myNumber}`);<br/>
+                                        myNumber = myNumber * 7;<br/>
+                                        return myNumber;<br/>
+                                    }<br/><br/>
+                                     
+                                     const myResult = calculate(age);<br/>
+                                    console.log(age);<br/>
+                                     console.log(myResult);<br/>
+                                     console.log(age);<br/></strong>
+                                    </p>
+
+                                <p class="lesson__text">bo te wartości proste są niemutowalne, to co przekazujemy do funkcji to nie jest zmienna, przekazujemy wskazanie na co ona wskazuje, to połączenie, czyli wskazanie na wartość 27. Przekazujemy to połączenie jako argument do tej funkcji. 
+                                    </p>
+
+                            <p class="lesson__text">Mamy funkcję, która nam mnoży przez 7 i zwraca nam myNumber<br/>
+
+                                Słowo kluczowe - return<br/>
+                                Return sprawia, że jeżeli zrobimy taką operację calculate(age)<br/>
+                                const myResult = calculate(age);<br/>
+                                to wynik tej funkcji będzie zwrócony<br/>
+                                Jak skasujemy return to dostajemy undefined. Bo wtedy ta funkcja wykonuje obliczenia ale  niczego nie zwraca. 
+                                </p>
+                                <p class="lesson__text">jak zrobimy tak:</p>
+
+                                   <p class="lesson__text"> <strong>function calculate(myNumber) {<br/>
+                                        console.log(`Dostałam ${myNumber}`);<br/>
+                                        myNumber = myNumber * 7;<br/>
+                                        console.log(`wynik ${myNumber}`);<br/>
+                                    }<br/><br/>
+                                     
+                                     const myResult = calculate(age);<br/>
+                                    console.log(age);<br/>
+                                     console.log(myResult);<br/>
+                                     console.log(age);<br/></strong>
+                                    
+                                    to wynik się zrobi “wynik 189”, funkcja się wykonuje, operacje w środku się dzieją
+                                    </p>
+
+                                    <p class="lesson__text">Nie da się przypiąć wyniku tej operacji, stworzyć połączenia do wyniku, żeby użyć jakiejś zmiennej dodatkowej: const myResult = calculate(age);<br/>
+                                        
+                                        dlatego ta zmienna: console.log(myResult); dostaje undefined, bo nie ma zdefiniowanego returna w tej funkcji, czyli tego co ta funkcja musi nam zwrócić. 
+                                        </p>
+                                <p class="lesson__text">A jak zrobimy tak: return `wynik ${myNumber}`;</p>
+
+                                    <p class="lesson__text"><strong>function calculate(myNumber) {<br/>
+                                        console.log(`Dostałam ${myNumber}`);<br/>
+                                        myNumber = myNumber * 7;<br/>
+                                        return `wynik ${myNumber}`;<br/>
+                                    }<br/><br/>
+                                     
+                                     const myResult = calculate(age);<br/>
+                                    console.log(age);<br/>
+                                     console.log(myResult);<br/>
+                                     console.log(age);<br/></strong>
+                                    
+                                    
+                                    to pod zmienną myResult będzie siedział string,  napis wynik 189, to nie zawsze musi być liczba.
+                                    </p>
+
+                             <p class="lesson__text">Jeżeli funkcja nie ma zdefiniowanego returna to będzie undefined, a jak jest return to może być różnego typu. Funkcja może też przyjmować więcej rzeczy nie tylko pojedynczą liczbę czy napis, argumentów może być więcej. 
+                                </p>       
+
+                            <p class="lesson__text">Funkcja powitalna</p>
+
+                            <p class="lesson__text"><strong>function greet(age, firstName) {<br/>
+                                console.log(`Hej, nazywam się ${firstName} i mam ${age} lat`);<br/>
+                                
+                            }<br/><br/>
+                             
+                            greet(18, 'Ania')</strong></p>
+                            
+                            <p class="lesson__text">Dostaje 18 i Ania<br/>
+
+                                Jak podmienie na greet(age, firstName) to dostaje to co było wcześniej zdefiniowane czyli 27 Anna<br/>
+                                
+                                Jak nie podamy jakiegoś argumentu greet(age); to dostaniemy undefined<br/>
+                                
+                                jeśli podam odwrotnie greet(firstName, age) to pokaże mam na imię 27 i mam Ania lat<br/>
+                                
+                                bo pod age z function greet(age, firstName) podpisuje firstName z greet(firstName, age)
+                                </p>
+
+                            <p class="lesson__text">Można też podawać stringi.
+                            </p>
+
+                            <p class="lesson__text">Funkcję piszemy po to jeśli chcemy wywołać ją kilka razy, mamy fragment kodu który się powtarza.<br/>
+                                <strong>greet(age, firstName);<br/>
+                                greet(20, 'Ola');<br/></strong>
+                                
+                                Może być kilka razy w różnych miejscach w kodzie <br/>
+                                
+                                Funkcja, która będzie uzupełniać wybrany przeze mnie element wybraną treścią. Funkcja do podmieniania kontentu.<br/>
+                                Nawiasy sześcienne ograniczają nam blok kodu, funkcja składa się z tego co jest pomiędzy nawiasami. 
+                                </p>
+
+                                <p class="lesson__text"><strong>function createContent(querySelectorContent, content) {<br/>
+                                    const element = document.querySelector(querySelectorContent);<br/>
+                                 
+                                    element.innerHTML = content;<br/>
+                                } <br/>br/>
+                                 
+                                createContent(`.heading__paragraph--js`, 'Witaj świecie');<br/><br/></strong>
+                                
+                                I w podtytule pokazuje się Witaj świecie. </p>
+                                
+                                <p class="lesson__text">Nie ma returna, ale robi operacje w środku. Operacja polega na tym, że przekazuje to co ma iść do querySelector. Tworzymy element, który żyje tylko w obrębie tego bloku, kodu. Wewnętrzy HTML elementu przyjmuje wartość contentu, który jest drugim parametrem naszej funkcji.
+                                </p>
+
+                                <img class="lesson__image" src="img/function2.JPG" alt="function JS example">
+                                <p class="lesson__text">Funkcja w JS:<br/>
+                                    Deklarujemy nazwę funkcji - nie zawsze. W środku dokonujemy obliczeń/wykonujemy zadania. Funkcja przyjmuje argumenty(parametry) (ale nie musi)
+                                    </p>
+                                
+                                    <p class="lesson__text"><strong>function helloWorld() {<br/>
+                                        console.log(‘Witaj świecie’)<br/>
+                                        }<br/><br/>
+                                        helloWorld();</strong></p>
+                                        
+                                        <p class="lesson__text">I tak się wywoła. Funkcja zwraca zawsze coś (nawet jeśli nie mamy return - wtedy funkcja zwraca undefined)</p>
+                                        
+                                        
+                                        <p class="lesson__text">Po co definiujemy funkcje? żeby uzywać kodu, który się powtarza. Deklarujemy kod, który się powtarza (DRY - don’t repeat yourself)<br/>
+                                        Zwiększamy czytelność kodu<br/>
+                                        Łatwiejsze szukanie błędów<br/>
+                                        Odpowiedzialność za wykonywanie zadania w jednym miejscu.
+                                        </p>
+
+                                <p class="lesson__text">(Fat) arrow functions - jeszcze jeden sposób zapisu funkcji =></p>
+                                <img class="lesson__image" src="img/function3.JPG" alt="function JS example">
+
+                                <p class="lesson__text">Można też skrócić ten zapis, to jest to samo</p>
+
+                                <img class="lesson__image" src="img/function4.JPG" alt="function JS example">
+                                <p class="lesson__text">i z calculateOld też zadziała</p>
+
+                                    <p class="lesson__text">tak też zadziała, bo to też jest wskazanie na jakąś wartość:<br/>
+                                    <strong>const calculate = (myNumber) =>myNumber*7<br/>
+                                    console.log(calculate(7))</strong>
+                                    </p>
+
+                                <p class="lesson__text">(Fat) arrow function:<br/>
+                                    Skraca zapis deklaracji funkcji<br/>
+                                    Zwiększa czytelność (dyskusyjne)<br/>
+                                    Nie tworzy nowego kontekstu ‘this’, nie ma dostępu do ‘arguments’ i ‘super’<br/>
+                                    Nie jest zamiennikiem tradycyjnej funkcji, ale w większości przypadków nie zobaczysz różnicy.
+                                    </p>
+                                 
+                                
+                            </article>
+            </section>
     </main>
     <footer class="footer">
-        Anna się uczy 2020. <a href="#top" class="footer__link">Powrót na górę strony</a>
+        Anna się uczy 2020. <a class="footer__link" href="#top" >Powrót na górę strony</a>
     </footer>
 </body>
 

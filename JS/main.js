@@ -45,3 +45,13 @@ const showMeProperty = (myProperty) => {
 }
 
 showMeProperty('levels')
+
+
+function calculate(myNumber) {
+    console.log(`Dostałam ${myNumber}`);
+    return myNumber*7;
+}
+ 
+const myResult = calculate(1);
+ 
+console.log(myResult);
