@@ -31,7 +31,9 @@ background: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, F
 }
 
 .navigation {
-  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   font-size: 20px;
 }
 
