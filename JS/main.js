@@ -41,4 +41,19 @@ console.log(button);
 button.addEventListener('click', () => {
     const heading = document.querySelector('.main-header--js');
     heading.innerHTML = `witaj, nazywam się Anna`;
+
+    heading.classList.add('klasa-z-js');
+
+ 
+});
+
+const hamburger = document.querySelector('.hamburger--js');
+
+hamburger.addEventListener('click', () => {
+    const nav = document.querySelector('.navigation--js');
+    nav.classList.toggle('navigation--open');
 })
+
+const head = document.querySelector('.heading__title--js');
+
+head.innerHTML = 'WTF?'
