@@ -33,3 +33,12 @@ function createContent(querySelectorContent, content) {
 
 createContent(`.heading__paragraph--js`, 'Witaj świecie');
 
+
+
+const button = document.querySelector('.action--js');
+console.log(button);
+
+button.addEventListener('click', () => {
+    const heading = document.querySelector('.main-header--js');
+    heading.innerHTML = `witaj, nazywam się Anna`;
+})
