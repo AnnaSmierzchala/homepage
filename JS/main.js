@@ -1,3 +1,17 @@
+// This code will do this thing (...) and that thing (...)
+
+const hamburger = document.querySelector('.hamburger--js');
+
+hamburger.addEventListener('click', () => {
+    const nav = document.querySelector('.navigation--js');
+    nav.classList.toggle('navigation--open');
+})
+
+const button = document.querySelector('.action--js');
+console.log(button);
+
+
+
 const firstName = 'Anna';
 const age = 27;
 
@@ -35,8 +49,9 @@ createContent(`.heading__paragraph--js`, 'Witaj świecie');
 
 
 
-const button = document.querySelector('.action--js');
-console.log(button);
+
+
+
 
 button.addEventListener('click', () => {
     const heading = document.querySelector('.main-header--js');
@@ -46,14 +61,3 @@ button.addEventListener('click', () => {
 
  
 });
-
-const hamburger = document.querySelector('.hamburger--js');
-
-hamburger.addEventListener('click', () => {
-    const nav = document.querySelector('.navigation--js');
-    nav.classList.toggle('navigation--open');
-})
-
-const head = document.querySelector('.heading__title--js');
-
-head.innerHTML = 'WTF?'
