@@ -385,6 +385,215 @@
           />
         </article>
       </section>
+
+      <section class="lessons">
+        <h2 class="lessons__title">HTML part V</h2>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Formularze</h3>
+          <p>
+            Formularze służą do komunikacji ze światem, zewnętrznymi serwerami albo wewnątrz w obrębie naszych aplikacji chcemy coś pobrać . Elementów formularzy używamy na co dzień.
+          </p>
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Form, input, label</h4>
+            <p class="lesson-section__text">
+              Znacznik formularza<br/>
+  &lt;form&gt; takie opakowanie na nasz formularz<br/>
+  &lt;input&gt; podstawowy element, który buduje nasz formularz<br/>
+  inputa możemy opakować w &lt;p&gt; albo &lt;div&gt; albo listy<br/>
+  &lt;p&gt;&lt;input&gt;&lt;/p&gt;<br/>
+  enter domyślnie wysyła formularz
+            </p>
+
+<p class="lesson-section__text">
+  name=”nazwaPola” każdy input musi mieć name, tak jakby zmienna ten input np. firstName, do identyfikacji wartości w miejscu, do którego nasze dane wysyłamy<br/>
+  id=”nazwaPola” nazwa może być taka sama jak name, do identyfikacji naszego inputa, czyli pola wprowadzania danych wewnątrz DOM.
+</p>
+
+<p class="lesson-section__text">
+  &lt;label&gt; też w p, stworzy nam opis pola, ten opis obok pola <br/>
+  &lt;label&gt;blabla&lt;/label&gt;<br/>
+  &lt;label for=”firstName”>bla bla&lt;/label&gt; żeby ten tekst był całością z polem<br/>
+  
+  ale możemy też opakować:<label bez atrybutu for>bla &lt;input&gt;&lt;/label&gt;<br/>
+  
+  for=”idPola”
+</p>
+<img src="img/label.JPG" alt="label example">
+
+<p class="lesson-section__text">
+  Inputy’ mają różne typy, domyślny text<br/>
+  type=”text”<br/>
+  value=”wartość” jak wpiszemy tutaj wartość to w formularzu pole będzie uzupełnione
+</p>
+
+<p class="lesson-section__text">
+  placeholder=”tekst podpowiedzi”<br/>
+  Podpowiedź się pojawia jak jest puste pole, jak coś piszemy to znika , a jak jest value to musimy je usunąć żeby zobaczyć placeholder. Atrybut placeholder nie zastępuje elementu label - dla czytników ekranowych. Do opisywania pól zawsze używamy labelków!
+</p>
+
+&lt;p&gt; &lt;label&gt; &lt;input&gt;placeholder&lt;/label&gt;&lt;/p&gt;
+
+<img class="lesson-section__image"src="img/label2.JPG" alt="label example">
+          
+
+          </section>
+          <section class="lesson-section">
+            <h4 class="lesson-section__title">Fieldset, radio, checkbox</h4>
+
+            <p class="lesson-section__text">
+              Fieldset - grupa pól a legend to opis grupy pól
+            </p>
+
+            <p class="lesson-section__text">
+              &lt;fieldset&gt;<br/>
+              &lt;legend&gt;Address&lt;/legend&gt;<br/>
+              &lt;p&gt;&lt;label&gt; Street name:&lt;input class=”form__item” id=”streetName” placeolder=”Please enter street name” name=”streetName”/&gt;&lt;/label&gt;&lt;/p&gt;<br/>
+              &lt;/fieldset&gt;<br/>
+              podobnie dla city
+            </p>
+            
+            <p class="lesson-section__text">
+              type=”radio” radio buttony<br/>
+              &lt;fieldset&gt; legend favourite icecream flavour<br/>
+              &lt;p&gt;&lt;label&gt;&lt;input type=”radio” name=”iceCream” value=”chocolate”>chocolate&lt;label&gt;<br/>
+              jeżeli ma być grupa radio buttonów to name musi być taki sam dla całej grupy, żeby one mogły się przełączać 
+              value nie musi być tym samym czym label
+            </p>
+            
+            <p class="lesson-section__text">
+              type=”checkbox”<br/>
+              fieldset bez legend p label input name (checked)type value> i agree&lt;/label&gt;p<br/>
+              możemy ale nie musimy podawać wartości, jeśli nie podamy to wysłane będzie “on”
+              
+            </p>
+            <p class="lesson-section__text">
+              checked atrybut, który domyślnie zaznacza daną wartość, nie trzeba mu dodawać wartości
+            </p>
+          
+          </section>
+
+
+        <section class="lesson-section">
+            <h4 class="lesson-section__title">Number, tel, email, range, password, file
+            </h4>
+            <p class="lesson-section__text">
+              type=<br/>
+              p label favourite number<br/>
+              input class id placeholder name type=”number”<br/>
+              można wpisywać tylko cyfry, jest taka strzałka wybieraczka do numerów<br/>
+              
+              tel nie ma światowego standardu<br/>
+              
+              email np. daje podpowiedzi
+            </p>
+            
+            <p class="lesson-section__text">
+              range budowanie zakresu<br/>
+              &lt;input type=&rdquo;range&gt; min=”0” max=”100” step=”5><br/>
+              bez placeholdera, taki suwak, ale nie pokazuje wartości
+              do class dodajemy range--js zeby podejrzec wartosc<br/>
+              const myRange = document.querySelector(‘.range--js’);<br/>
+              myRange.value pokazuje to co wybrane, to co się kryje w inpucie, value dotyczy wszystkich inputów
+              
+            </p>
+            <p class="lesson-section__text">
+              password
+              z gwiazdkami np<br/>
+              
+              file,
+              bez placeholder,
+              możemy dołączyć plik do przesłania, do wyboru plików
+            </p>
+            
+        </section>
+
+        <section class="lesson-section">
+          <h4 class="lesson-section__title">Select, textarea, submit 
+
+          </h4>
+
+          <p class="lesson-section__text">
+            select element pozwala na zrobienie listy wyboru<br/>
+  &lt;label for=&rdquo;band&rdquo;&gt; Pick one band &lt;/label&gt;<br/>
+  &lt;select name =&rdquo;band&rdquo; id=&rdquo;band&rdquo;&gt;<br/>
+  &lt;option value=&rdquo;band-1&gt;bla&lt;/option&gt;<br/>
+  &lt;option&gt;bla&lt;/option&gt;<br/>
+  
+  używamy value jeśli chcemy potem przesłać inną wartość niż wpisana
+          </p>
+
+<p class="lesson-section__text">
+  &lt;textarea&gt;, do wprowadzania dłuższej treści<br/>
+  p label for Your story textarea, cos -  nie ma value dlatego musimy możemy coś wpisać między te dwa tagi, i to się pojawia w okienku, okienko może się rozszerzać, textarea, label display: block, textarea width 100%, height:
+</p>
+
+<p class="lesson-section__text">
+  input type=”submit” wysyła formularz, to co wpiszemy w value to legenda tego submita, nie posiada labela, tylko w p je opakowujemy
+</p>
+        </section>
+
+        <section class="lesson-section">
+          <h4 class="lesson-section__title">GET i POST 
+
+          </h4>
+
+
+          <p class="lesson-section__text">
+            atrybut action=”url://z-którym-gadamy”, domyślna wartość to adres pod, którym się teraz znajdujemy<br/>
+  form action=”https://dev.cotenfrontend.pl”, rządanie typu get<br/>
+  przy buttonie radio czy option value nie musi być tym samym czym label, to co w label jest nieistotne
+  wtedy po wysłaniu pokazuje się to co w value
+          </p>
+
+<p class="lesson-section__text">
+  https://dev.cotenfrontend.pl/?parametr=wartość<br/>
+możemy wejść w network i zobaczyć request methods, albo query string parameters, można modyfikować w tym linku a to nie dobrze<br/>
+  post, do form możemy dopisać method=”post”, rządanie typu post, form data zamiast query stringa, nie wysyła znaków dodatkowych, bezpieczniejsze<br/>
+  get do pobierania danych post do wysyłania danych
+</p>
+
+<p class="lesson-section__text">
+  enctype: czy to jest zwykły formularz czy zawiera inne treści poza tekstowymi<br/>
+  jak chcemy wysłać plik to musimy zmienić enctype na form data i wtedy serwer, który będzie odbierał to żądanie będzie wiedział, że może być tam jakiś plik
+</p>
+<img class="lesson-section__image" src="img/enctype.JPG" alt="enctype">
+
+
+        </section>
+          
+        <section class="lesson-section">
+          <h4 class="lesson-section__title">Walidacja
+
+          </h4>
+          <p class="lesson-section__text">
+            Sprawdzanie poprawności danych, które wprowadzamy do formularza<br/>
+  atrybut required bez wartości, jak nie wypełnie pola i chcę wysłać to dostaje info, że to pole musi być wypełnione
+  albo jak w mailu nie podamy pełnej nazwy to też nam mówi hej to nie jest email<br/>
+  walidacja następuje po stronie przeglądarki
+          </p>
+
+          <img class="lesson-section__image" src="img/patern.JPG" atl="patern example">
+          <a class="lesson-section__link" href="http://html5pattern.com/Names">Paterny</a>
+
+          <p class="lesson-section__text">
+            Paterny z wykorzystaniem wyrażeń regularnych
+  do walidacji poprawności danych<br/>
+  małe litery duże litery cyfry, każdy inny znak będzie traktowany jako niepasujący<br/>
+  
+  uwaga z tej strony polski kod pocztowy jest niepoprawny bez / mówi nam 2 cyfry - 3 cyfry
+  pattern do inputu, <br/>
+  jak wpisze zły kod pocztowy i chcę wysłać to będzie info, że zły<br/>
+  
+  walidacja po stronie frontendu nie zastępuje walidacji po stronie backendu
+          </p>
+
+
+
+        </section>
+
+          </article>
+          </section>
     </main>
     <footer class="footer">
       Anna się uczy 2020.

@@ -946,6 +946,99 @@
           </p>
         </article>
       </section>
+
+      <section class="lessons lessons--grid">
+        <h2 class="lessons__title lessons__title--grid">JS part IV</h2>
+
+        <article class="lesson lesson--1">
+          <h3 class="lesson__title">Eventy
+          </h3>
+
+          <p class="lesson__text">
+            Wywoływanie zdarzeń
+          </p>
+
+<p class="lesson__text">
+  Przepis na przycisk zmieniający nagłówek:<br/>
+  
+  Przycisk &lt;button&gt;<br/>
+  Nagłówek<br/>
+  Kod js, który obsłuży kliknięcie<br/>
+  Kod js, który zmieni treść nagłówka<br/>
+</p>
+
+<p class="lesson__text">
+  &lt;button&gt; class=”action--js” Zmień nagłówek<br/>
+  button vs a: button interakcje na stronie, wykonują akcję na stronie, np wysłanie formularza, włączenie menu, zmiana w DOM przez wciśnięcie buttona
+  a nawigacja, skakanie po sekcjach, stronach, stronach zewnętrznych
+</p>
+
+<p class="lesson__text">
+  element.addEventListener(type, listener [, options]) type i listener parametry, wywołujemy tą funkcję już na jakimś elemencie, który pobieramy z query selectora
+</p>
+
+<p class="lesson__text">
+  type - często wydarzenie związane z myszką, nas interesuje kliknięcie ale są też inne:
+  click, mouseenter, mouseleave, mouseover …
+</p>
+
+<a class="lesson__link" href="https://developer.mozilla.org/en-US/docs/Web/Events#Mouse_events">Mouse events</a>
+
+<p class="lesson__text">
+  const button = document.querySelector(‘.action--js);<br/>
+  console.log(button);<br/><br/>
+  
+  const myClick = () => {<br/>
+  console.log(‘kliknąłeś’)<br/>
+  }<br/>
+  button.addEventListener(‘click’, nazwa funkcji) czyli myClick - nie wywołujemy jej tylko podajemy nazwę
+  wywołanie to myClick();
+</p>
+
+<p class="lesson__text">
+  button pobranie buttona<br/>
+  const button = document.querySelector('.action--js');<br/>
+  console.log(button);<br/>
+  funkcja, która się zadzieje po kliknięciu
+</p>
+
+<p class="lesson__text">
+  pobrać nagłówek <br/>
+  const heading = document.querySelector('.main-header--js');<br/>
+      heading.innerHTML = `witaj, nazywam się Anna`;
+</p>
+
+<img class="lesson__image" src="img/event.JPG" alt="event example">
+
+<p class="lesson__text">
+  pobrać przycisk, dodać do niego listener, który będzie działał na kliknięcie, podpiąć pod to jakąś funkcję<br/>
+  
+  button.addEventListener('click', (e) => {<br/>
+      console.log(e);<br/>
+  })<br/><br/>
+  
+  button.addEventListener('click', (e) => {<br/>
+      console.log('halo');<br/>
+  })
+</p>
+
+
+<p class="lesson__text">
+  nie tylko do buttonów stosujemy tego listenera
+</p>
+
+<img class="lesson__image" src="img/event1.JPG" alt="event example">
+
+<a class="lesson__link" href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Event</a>
+
+
+
+
+
+
+          </article>
+          </section>
+
     </main>
     <footer class="footer">
       Anna się uczy 2020.
