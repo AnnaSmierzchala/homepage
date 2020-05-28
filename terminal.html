@@ -119,6 +119,154 @@
                     <p class="lesson__text"><strong>Check pointy:</strong></p>
                     <img class="lesson__image" src="img/checkpoint.JPG" alt="checkpointy">
             </article>
+
+            <article class="lesson">
+              <h3 class="lesson__title">.gitignore</h3>
+              <p class="lesson__text">Zawiera zestaw reguł, które pozwalają nam na zdefiniowanie listy rzeczy, które nie powinny być w repozytorium np. plik z hasłami w sensie żeby nie były publiczne.<br/>
+
+                Dlatego tworzymy plik .gitignore i dodajemy tam nazwę pliku, która ma być nasza prywatna.<br/>
+                
+                I nawet jak zrobimy git push to się doda tylko plik .gitignore, w którym będzie nazwa tego pliku, który chcieliśmy ukryć ale nikt nie będzi go widział co w nim jest.
+                
+            </p>
+          </article>
+
+            <article class="lesson">
+              <h3 class="lesson__title">Node.js</h3>
+              <p class="lesson__text"> Node to taki javascript uruchamiany poza przeglądarką, oparty na silniku chromowym natomiast różnica między nodem  tym co się dzieje w przeglądarce to to, że node nie ma dostępu do DOM i wszystkich API, konsolowy js<br/>
+
+                node skrypt.js<br/>
+                zakładamy nowy folder playground i nowy plik script.js dodajemy console log sprawdzamy terminal
+                dir<br/>
+                node script.js wypisze to co  pliku w środku, uruchamia nam plik<br/>
+                
+                Zastosowanie noda jest bardzo szerokie można pisać też backend, całe aplikacje serwerowe, ale my będziemy korzystać z gotowych rzeczy. 
+                
+                </p>
+                </article>
+
+                <article class="lesson">
+                  <h3 class="lesson__title">NPM i NPX</h3>
+                  <a class="lesson__link" href="https://yarnpkg.com/en/">Yarn</a>
+                  <p class="lesson__text"> 
+                   to nie jest node package manager no no no,
+                    chociaż jest managerem do paczek,
+                    to takie repozytorium z którego możemy pobrać gotowe paczki które pomogą nam lepiej szybciej łatwiej wygodniej budować nasz projekt.
+                    
+                    </p>
+                    <p class="lesson__text">
+                      Po co nam te paczki:<br/>
+  
+  -dodajemy do projektów sporo gotowych bibliotek/narzędzi<br/>
+  -nie można polegać na konfiguracji edytora/jego wtyczkach<br/>
+  -uniwersalne źródło, repozytorium ze wszystkimi narzędziami<br/>
+  -dostęp do aktualizacji
+                    </p>
+
+<p class="lesson__text">
+  npm to taki app store/ sklep play dla frontendowca, jedno źródło z którego ściągamy rzeczy,
+  taka skrzynka z narzędziami, których możemy użyć w naszym projekcie: narzędzie które nam ten projekt obsługują np. coś typu live serwer, drugi rodzaj pozwala nam na korzystanie z gotowych narzędzi już w naszym projekcie, wewnątrz np. normalize
+</p>
+
+<p class="lesson__text">
+  npm init / npm init -y robimy tylko raz w projekcie, inicjuje nam projekt
+</p>
+
+<p class="lesson__text">
+  dostajemy pytania możemy klikać enter, w vsc tworzy się plik package.json z obiektem w środku takie jakby const info =
+  json to sposób zapisu obiektów javascriptowych, plik który zawiera strukturę javascriptową, strukturę obiektu, gdzie są informacje o naszym projekcie. Mamy tutaj taki bardzo podstawowy pakiet json ale musimy go założyć żeby korzystać z tego co oferuje npm.
+</p>
+
+<p class="lesson__text">
+  w tej wersji z -y nie pojawiają się pytania i on wtedy wypełni domyślnie, tak jakbyśmy wciskali enter cały czas.
+</p>
+
+<p class="lesson__text">
+  npm install &lt;nazwa_paczki&gt; --save albo --save-dev<br/>
+  
+  npm install
+</p>
+
+<p class="lesson__text">
+  install normalize.css, dodały się info do json zależności:dependencies<br/>
+  i nowy plik package-lock.json - on trzyma info o tym co zainstalowaliśmy, nie edytujemy go możemy go wrzucić do repozytorium, pilnuje żeby się zależności nie rozjeżdżały, plik który blokuje wersję. Plus pojawił się katalog node_modules i on ma normalize i ten normalize ma też swojego jsona.
+</p>
+
+<p class="lesson__text">
+  node_modules moduły noudowe, paczki z których będziemy korzystać
+</p>
+
+
+<p class="lesson__text">
+  jeśli chcemy, żeby nasza paczka była w jakiś sposób wykorzystywana w tym co widzimy w przeglądarce taki normalize css to taka paczka to używamy --save<br/>
+  
+  a jeżeli będziemy instalować narzędzie do rozwoju oprogramowania, takie developerskie np. serwer lokalny to wtedy z przełącznikiem --save-save
+</p>
+
+<p class="lesson__text">
+  jest też opcja npm install bez nazwy paczki<br/>
+  generalnie jak coś doinstaluje to nam się pojawi, też w tym samym katalogu node_modules
+</p>
+
+<p class="lesson__text">
+  npm install instaluje rzeczy zdefiniowane w package.json i jak usuniemy node modules damy npm install to się znowu pojawi katalog z tym normalize i react np <br/>
+  
+  czyli package.json trzyma info o tym jakie paczki są nam potrzebne do zbudowania i budowania naszej strony
+</p>
+
+<p class="lesson__text">
+  node_modules mega ciężki katalog! nie commitujemy go, 
+  bo jak zrobimy package.json, gdzie będziemy trzymać info jakie paczki są potrzebne to tego nie musimy commitować i nie edytujemy nic w tych katalogach, tylko do odczytu
+</p>
+
+<p class="lesson__text">
+  w terminalu git init robimy repozytorium,
+  zakładamy .gitignore i git add git commit -m”initial commit”
+</p>
+
+<p class="lesson__text">
+  alternatywa dla npm jest np Yarn https://classic.yarnpkg.com/en/ też taki manager pakietó, korzysta z tej samej bazy co npm, jak będziemy coś szukać to w obu znajdzie nam to same paczki
+</p>
+
+<p class="lesson__text">
+  npx możemy korzystać z narzędzia bez instalowania go<br/>
+  
+  npx cowsay siema
+</p>
+
+            </article>
+
+            <article class="lesson">
+              <h3 class="lesson__title">NPM Scripts</h3>
+              <p class="lesson__text"> Skrypty npmowe to komendy, skróty które możemy zdefiniować w naszym pliku package,json,
+                teraz jest zdefiniowana tylko jedna komenda test: i ona zwróci nam błąd gdyż testy są  w tym momencie niezdefiniowane.
+                
+                </p>
+
+                <p class="lesson__text">Rozbudowujemy obiekt  scripts o inne komendy:</p>
+
+                <p class="lesson__text">
+                  "scripts": {<br/>
+                    "start": "node script.js",
+                </p>
+              
+              <p class="lesson__text">
+                w konsoli npm run start
+              </p>
+              
+               <p class="lesson__text">
+                 "scripts": {<br/>
+                    "cow": "cowsay hello",
+               </p>
+              
+               <p class="lesson__text">npm run cow<br/>
+                jak krowa nie będzie zainstalowana to nam nie zadziała, musi być w node_modules
+                </p>
+                </article>
+
+
+
+
         </section>
 
     </main>

@@ -10,31 +10,33 @@
 
   <body>
     <header id="top" class="heading">
-      <button class="hamburger hamburger--js" aria-label="otwórz menu">🍔</button>
-      <p class="heading__title heading__title--js">WTF<span class="span">: Co ten frontend</span>?</p>
+      <button class="hamburger hamburger--js" aria-label="otwórz menu">
+        🍔
+      </button>
+      <p class="heading__title heading__title--js">
+        WTF<span class="span">: Co ten frontend</span>?
+      </p>
       <p class="heading__paragraph heading__paragraph--js">Moje notatki</p>
-      
+
       <nav class="navigation navigation--js">
-        
-        <a class="navigation__link" href="index.html" target="_blank" 
+        <a class="navigation__link" href="index.html" target="_blank"
           >Strona główna</a
         >
-        <a class="navigation__link" href="html.html" target="_blank" >HTML</a>
-        <a class="navigation__link" href="css.html" target="_blank" >CSS</a>
-        <a class="navigation__link" href="javascript.html" target="_blank" 
+        <a class="navigation__link" href="html.html" target="_blank">HTML</a>
+        <a class="navigation__link" href="css.html" target="_blank">CSS</a>
+        <a class="navigation__link" href="javascript.html" target="_blank"
           >JavaScript</a
         >
-        <a class="navigation__link" href="browser.html" target="_blank" 
+        <a class="navigation__link" href="browser.html" target="_blank"
           >Przeglądarka</a
         >
-        <a class="navigation__link" href="terminal.html" target="_blank" 
+        <a class="navigation__link" href="terminal.html" target="_blank"
           >Terminal</a
         >
-        <a class="navigation__link" href="spis-tresci.html" target="_blank" 
+        <a class="navigation__link" href="spis-tresci.html" target="_blank"
           >Spis lekcji</a
         >
       </nav>
-      
     </header>
 
     <main class="mainn">
@@ -786,7 +788,10 @@
               >CSSgradient</a
             >
           </p>
-          <p>Jak dodajemy gradient to dobrze dodać background color ten podstawowy kolor i potem background image to już gradient. </p>
+          <p>
+            Jak dodajemy gradient to dobrze dodać background color ten
+            podstawowy kolor i potem background image to już gradient.
+          </p>
 
           <img
             class="lesson__image"
@@ -807,228 +812,474 @@
           <h3 class="lesson__title">Grid</h3>
 
           <p class="lesson__text">
-            Dwuwymiarowy świat stron internetowych.<br/>
-  
-  Po co grid? Potrzeba stworzenia prostego systemu do budowania layoutów (tabele, floaty, div-oza itp. nie spełniały oczekiwań i były kiepską praktyką).<br/>
-Przyjazny zapis i możliwość łatwej edycji w kontekście responsywności.<br/>
-  
-  Standard dopasowany do aktualnego stanu stron internetowych.
+            Dwuwymiarowy świat stron internetowych.<br />
+
+            Po co grid? Potrzeba stworzenia prostego systemu do budowania
+            layoutów (tabele, floaty, div-oza itp. nie spełniały oczekiwań i
+            były kiepską praktyką).<br />
+            Przyjazny zapis i możliwość łatwej edycji w kontekście
+            responsywności.<br />
+
+            Standard dopasowany do aktualnego stanu stron internetowych.
           </p>
 
-          <img class="lesson__image" src="img/grid.JPG" alt="grid example">
+          <img class="lesson__image" src="img/grid.JPG" alt="grid example" />
 
           <p class="lesson__text">
-            Numeracja zaczyna się od 1. Siatka, którą możemy podzielić na elementy. Prostokąty.
+            Numeracja zaczyna się od 1. Siatka, którą możemy podzielić na
+            elementy. Prostokąty.
           </p>
 
-<p class="lesson__text">
-  Kontener: display: grid z kilkoma elementami w środku np.6. Elementy ustawiają się jeden pod drugim. Jakby było flex to by się ustawiły obok blisko siebie.
-</p>
+          <p class="lesson__text">
+            Kontener: display: grid z kilkoma elementami w środku np.6. Elementy
+            ustawiają się jeden pod drugim. Jakby było flex to by się ustawiły
+            obok blisko siebie.
+          </p>
+
+          <p class="lesson__text">
+            Linie w devtoolsach, inspektor gridowy, identyfikacja kolumn i
+            wierszy.
+          </p>
+
+          <p class="lesson__text">
+            Grid działa bezpośrednio na swoje dzieci czyli jak w dziecku dodamy
+            wnuka to one będą się jakby trzymać razem jako jeden element, nie
+            przeskoczy nam nigdzie. Wszystkie własności odnoszą się do jego
+            bezpośrednich dzieci.
+          </p>
+
+          <p class="lesson__text">
+            Własność gridowa:<br />
+            grid-template-columns:&lt;warto&sacute;ci wypisujemy po spacji&gt;
+            grid-template-columns: 100px 300px;<br />
+            3 kolumny będą 100px(liczy 1,3,5) i 3 obok po 300px(2,4,6), możemy
+            dać więcej kolumn<br />
+            Jak jedno jest wyższe to cały wiersz się rozszerza do wysokości
+            najwyższego elementu.
+          </p>
+
+          <p class="lesson__text">
+            Można używać innych wartości niż px, vw
+          </p>
+
+          <p class="lesson__text">
+            grid-template-rows: 100px 200px, definiuje liczbę wierszy i jak mają
+            się zachowywać. Jak np. kontent jest dłuższy niż te 100px to nam nie
+            rozepcha tylko zostawi 100px. Jak się okaże, że się zrobiły 3
+            wiersze a nie mamy trzeciego zdefiniowanego to będzie przyjmował
+            automatyczną wartość.<br />
+
+            W wierszach rzadko definiujemy wysokość, generalnie.
+          </p>
+
+          <p class="lesson__text">
+            Jednostka: fr taki ułamek, sumujemy ilość podanych frów i
+            poszczególne wartości dzielimy przez sumę np. 1fr 1fr 2fr to ¼ ¼
+            2/4<br />
+
+            można mixować<br />
+            columns: 200px 1fr - fr zawsze liczy wartość na bazie wolnej
+            powierzchni, szerokości która została, ta wolna po odjęciu 200px,
+            niezdefiniowana przez żadne jednostki
+          </p>
+
+          <p class="lesson__text">
+            repeat(ileRazy, wartość); funkcja cssowa<br />
+
+            grid-template-columns: repeat(4, 1fr); albo 4, 200px, <br />
+
+            grid-template-columns: repeat(4, 200px) 1fr(kolejna kolumna-z wolnej
+            przestrzeni to co zostanie)
+          </p>
+          ;
+
+          <p class="lesson__text">
+            column-gap: 16px; tworzy przerwy między komórkami ale nie wypływa na
+            zewnątrz, rozmiar odstępu row-gap: 16px;
+          </p>
+
+          <p class="lesson__text">
+            minmax(minWartość, maxWartość);<br />
+            grid-template-columns: 1fr minmax(200px, 1fr); jak dochodzi do 200
+            to już się nie zmniejsza, jak będą px px to się będzie kurczyć
+            ostanie w stosunku do innych.
+          </p>
+        </article>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Grid - podstawowy layout</h3>
+
+          <img class="lesson__image" src="img/grid1.JPG" alt="grid example" />
+          <img class="lesson__image" src="img/grid2.JPG" alt="grid example" />
+          <img class="lesson__image" src="img/grid3.JPG" alt="grid example" />
+
+          <p class="lesson__text">
+            za pomocą kropki dodajemy pusty element, i to nam się tak brzydko
+            zrobi bo nie mamy zdefiniowanego column z 3 wartościami, więc musimy
+            dodać wartość i wszystko wróci do normy<br />
+            możemy do grida wrzucać niezdefiniowane obszary musimy pamiętać, że
+            przy definicji szerokości kolumny trzeba podać dla pustego, żeby
+            liczba kolumn zgadzała się z liczbą wartości dla kolumn
+          </p>
+
+          <p class="lesson__text">
+            gdzie się kończy gdzie zaczyna, na której linii
+          </p>
+
+          <img class="lesson__image" src="img/grid4.JPG" alt="grid example" />
+
+          <img class="lesson__image" src="img/grid5.JPG" alt="grid example" />
+
+          <p class="lesson__text">
+            Jak w header dopiszemy z-index np 1 to header zasłoni autora
+          </p>
+
+          <img class="lesson__image" src="img/grid6.JPG" alt="grid example" />
+
+          <p class="lesson__text">
+            cyfra po spanie mówi nam przez ile kolumn chce rysować nasz element,
+            jak damy więcej niż mamy to grid stworzy kolejną kolumnę, ważne żeby
+            ograniczyć się do ilości kolumn, które rzeczywiście mamy
+          </p>
+
+          <p class="lesson__text">
+            grid-area: 1 / 1 / 3 / span 1;<br />
+
+            grid-column: pierwsza / span 3;<br />
+            grid-row: 1 / 3;<br />
+
+            Grid to nie tetris, wszystko zamyka się w regularnych prostokątach.
+            Grid działa tylko na dzieci swoje. Grid nie zastępuje flexboxa, one
+            się super uzupełniają. Grid jest stosowany do budowania całych
+            layoutów, flexboxa używamy do pozycjonowania, centrowania elementów
+            już wewnątrz pojedynczego elementu, konkretnej treści
+          </p>
+        </article>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Media queries & mobile first</h3>
+
+          <p class="lesson__text">
+            CSS media queries - zapytania o media<br />
+            Strony są skrojone na wymiar, jedna strona z tym samym kodem HTML
+            może wyświetlać się na komputerze, tablecie, telefonie, tylko style
+            zmieniamy.
+          </p>
+
+          <p class="lesson__text">
+            RWD - responsive web design
+          </p>
+
+          <p class="lesson__text">
+            @media screen, print, all … media type<br />
+
+            min-width, max-width, color, aspect-ratio, orientation ...media
+            feature<br />
+
+            możemy łączyć za pomocą and / not / , <br />
+            pewnego rodzaju wyrażenie logiczne. <br />
+
+            @media query musi być na dole strony bo jak przeniesiemy na górę to
+            zadziała specyficzność, definiujemy po zdefiniowaniu elementu
+          </p>
+
+          <p class="lesson__text">
+            @media screen and (max-width: 600px) {<br />
+            body {<br />
+            background: hotpink;<br />
+            }<br />
+
+            .footer {<br />
+            background: blueviolet;<br />
+            }<br />
+            }
+          </p>
+
+          <p class="lesson__text">
+            @media not screen and (min-width: 600px), not zaneguje wyrażenie,
+            jeżeli któryś z tych dwóch będzie fałszem no to będzie prawda
+          </p>
+
+          <p>
+            @media screen, (max-width: 600px), "," działa jak or czyli zawsze
+            teraz będą te style media<br />
+
+            mobile-first takie podejście, stylujemy stronę najpierw na
+            urządzenia mobilne a potem za pomocą media-queries ustalamy jak
+            elementy powinny wyglądać na rozdzielczościach większych,
+          </p>
+
+          <img
+            class="lesson__image"
+            src="img/media.JPG"
+            alt="media quieres example"
+          />
+
+          <p class="lesson__text">
+            przenosimy to z maina do @media, i nam się pokazuje teraz to jako na
+            telefonie, jak dojade do 600 to się zmienia<br />
+
+            320px mobilka, 768 tablet, 1024, 1440, tutaj podajemy min
+          </p>
+
+          <img
+            class="lesson__image"
+            src="img/media1.JPG"
+            alt="media queries example"
+          />
+
+          <p class="lesson__text">
+            jak zdefiniujemy coś na 768 to nie zdefiniujemy tego a nie
+            zdefiniujemy tego na 1024 to będą te same style co na 768<br />
+
+            chyba, że zrobimy tak: @media screen and (min-width: 768px) and
+            (max-width: 1023px) <br />
+
+            podamy max-width graniczna wartość 1023px; to ponadto nie będą już
+            te style stosowane, np.nie będzie grida
+          </p>
+
+          <p class="lesson__text">
+            breakpoint punkt, w którym następuje łamanie strony, szerokości na
+            których następuje zmiana
+          </p>
+
+          <p class="lesson__text">
+            responsywność w mobile first polega na tym, że najpierw definiujemy
+            style, które obowiązują na całej stronie łącznie z wersją mobilną a
+            potem dodajemy kolejne breakpointy, żeby lepiej dopasować je do
+            większych ekranów. <br />
+
+            przepisujemy tylko te własności, które chcemy zmienić, nie trzeba
+            definiować wszytskiego na nowo, można chować elementy itp.
+          </p>
+        </article>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Hamburger menu</h3>
+          <p class="lesson__text">
+            Przepis na hamburger menu:<br />
+            Nawigacja<br />
+            Style do nawigacji na mobile<br />
+            Style do nawigacji na desktop<br />
+            Przycisk do pokazywania/ukrywania (zmiana klasy)<br />
+            Kod js do podpięcia się pod przycisk<br />
+            Kod js do zmiany klasy
+          </p>
+
+          <p class="lesson__text">
+            manipulacja klasami:<br />
+
+            element.classList add, remove, toggle, contains (tutaj podajemy samą
+            nazwę klasy bez kropki) classList to obiekt?
+          </p>
+
+          <img
+            class="lesson__image"
+            src="img/hamburger.JPG"
+            alt="hamburger menu"
+          />
+
+          <p class="lesson__text">
+            i ja np. mogę sobie ostylować tą klasę i wtedy się zmieni po
+            kliknięciu
+          </p>
+
+          <img
+            class="lesson__image"
+            src="img/hamburger1.JPG"
+            alt="hamburger menu"
+          />
+
+          <p class="lesson__text">
+            żeby zdjęcie nie wystawało to display: block, max-width: 100%,
+          </p>
+
+          <p class="lesson__text">
+            jak robimy header fixed i ustawiamy min height to dobrze dla tego co
+            pod np. main ustawic margin żeby nie wchodziło na to
+          </p>
+        </article>
+      </section>
+
+      <section class="lessons">
+        <h2 class="lessons__title">CSS part VI</h2>
+
+        <article class="lesson">
+          <h3 class="lesson__title">Pseudoelementy & Pseudoselektory</h3>
+
+          <p class="lesson__text">
+            pseudoelement pozwala na to, że css może tworzyć treść za pomocą własności content: “”
+element::before <br/>
+treść elementu<br/>
+element::after<br/></p>
+
+<p class="lesson__text">wybieramy jakiś nagłówek nazwa::before i styluje
+content: “hello”;
+możemy za pomocą tego uzupełnić treść np przed albo po nagłówku, ta treść nie jest jest częścią DOMU, tej właściwej treści, to jest psuedoelement, możemy np zmienić mu display
+block, width, height background, często są to rzeczy dekoracyjne
+np display inline block width height backgrund border-radius 50% i jest kropka content zostaje “”</p>
 
 <p class="lesson__text">
-  Linie w devtoolsach, inspektor gridowy, identyfikacja kolumn i wierszy.
+  można też używać : pojedynczego ale bardziej poprawnie jest ::
+</p>
+
+<a class="lesson__link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Pseudoklasy</a>
+
+<p class="lesson__text">
+  pseudoklasy  : pojedynczy dwukropek, <br/>
+  selektor: hover, visited, focus<br/>
+  modyfikator elementu, którego działanie wynika z innego działania, często się używa na linkach, focus np do inputów
 </p>
 
 <p class="lesson__text">
-  Grid działa bezpośrednio na swoje dzieci czyli jak w dziecku dodamy wnuka to one będą się jakby trzymać razem jako jeden element, nie przeskoczy nam nigdzie. Wszystkie własności odnoszą się do jego bezpośrednich dzieci.
+  first-child, last-child …<br/>
+  jeśli ten element jest trzecim dzieckiem jakiegoś rodzica to wtedy te style się wykonają na nim właśnie,
+  wszystkie artykuły nazywają się week summary, dodam week-summary:first-child: to się ostyluje tylko ten, który jest 1 dzieckiem grida w którym one się znajdują
 </p>
 
 <p class="lesson__text">
-  Własność gridowa:<br/>
-  grid-template-columns:&lt;warto&sacute;ci wypisujemy po spacji&gt;
-  grid-template-columns: 100px 300px;<br/>
-  3 kolumny będą 100px(liczy 1,3,5) i 3 obok po 300px(2,4,6), możemy dać więcej kolumn<br/>
-  Jak jedno jest wyższe to cały wiersz się rozszerza do wysokości najwyższego elementu.
+  selektor:not(selektor) zaprzeczenie <br/>
+  .week-summary:not(.week-summary--special) <br/>
+  background: hotpink;<br/>
+  wszystkie inne oprócz tego special się ostylują
 </p>
+</article>
 
-<p class="lesson__text">
-  Można używać innych wartości niż px, vw
-</p>
+<article class="lesson">
+  <h3 class="lesson__title">SASS/SCSS</h3>
 
-<p class="lesson__text">
-  grid-template-rows: 100px 200px, definiuje liczbę wierszy i jak mają się zachowywać. Jak np. kontent jest dłuższy niż te 100px to nam nie rozepcha tylko zostawi 100px. Jak się okaże, że się zrobiły 3 wiersze a nie mamy trzeciego zdefiniowanego to będzie przyjmował automatyczną wartość.<br/>
-  
-  W wierszach rzadko definiujemy wysokość, generalnie.
-</p>
-
-<p class="lesson__text">
-  Jednostka: fr taki ułamek, sumujemy ilość podanych frów i poszczególne wartości dzielimy przez sumę np. 1fr 1fr 2fr to ¼ ¼ 2/4<br/>
-  
-  można mixować<br/>
-  columns: 200px 1fr - fr zawsze liczy wartość na bazie wolnej powierzchni, szerokości która została, ta wolna po odjęciu 200px, niezdefiniowana przez żadne jednostki 
-</p>
-
-<p class="lesson__text">
-  repeat(ileRazy, wartość); funkcja cssowa<br/>
-  
-  grid-template-columns: repeat(4, 1fr); albo 4, 200px, <br/>
-  
-  grid-template-columns: repeat(4, 200px) 1fr(kolejna kolumna-z wolnej przestrzeni to co zostanie)
-</p>;
-
-<p class="lesson__text">
-  column-gap: 16px; tworzy przerwy między komórkami ale nie wypływa na zewnątrz, rozmiar odstępu
-  row-gap: 16px;
-</p>
-
-<p class="lesson__text">
-  minmax(minWartość, maxWartość);<br/>
-  grid-template-columns: 1fr minmax(200px, 1fr); jak dochodzi do 200 to już się nie zmniejsza, jak będą px px to się będzie kurczyć ostanie w stosunku do innych.
-</p>
-
-
-
-
-          </article>
-
-          <article class="lesson">
-            <h3 class="lesson__title">Grid - podstawowy layout
-            </h3>
-
-<img class="lesson__image" src="img/grid1.JPG" alt="grid example">
-<img class="lesson__image" src="img/grid2.JPG" alt="grid example">
-<img class="lesson__image" src="img/grid3.JPG" alt="grid example">
-
-<p class="lesson__text">
-  za pomocą kropki dodajemy pusty element, i to nam się tak brzydko zrobi bo nie mamy zdefiniowanego column z 3 wartościami, więc musimy dodać wartość i wszystko wróci do normy<br/>
-  możemy do grida wrzucać niezdefiniowane obszary musimy pamiętać, że przy definicji szerokości kolumny trzeba podać dla pustego, żeby liczba kolumn zgadzała się z liczbą wartości dla kolumn
-</p>
-
-<p class="lesson__text">gdzie się kończy gdzie zaczyna, na której linii</p>
-
-<img class="lesson__image" src="img/grid4.JPG" alt="grid example">
-
-<img class="lesson__image" src="img/grid5.JPG" alt="grid example">
-
-<p class="lesson__text">Jak w header dopiszemy z-index np 1 to header zasłoni autora</p>
-
-<img class="lesson__image" src="img/grid6.JPG" alt="grid example">
-
-<p class="lesson__text">cyfra po spanie mówi nam przez ile kolumn chce rysować nasz element, jak damy więcej niż mamy to grid stworzy kolejną kolumnę, ważne żeby ograniczyć się do ilości kolumn, które rzeczywiście mamy
-</p>
-
-<p class="lesson__text">grid-area: 1 / 1 / 3 / span 1;<br/>
-
-  grid-column: pierwsza / span 3;<br/>
-     grid-row: 1 / 3;<br/>
- 
- Grid to nie tetris, wszystko zamyka się w regularnych prostokątach. Grid działa tylko na dzieci swoje.
- Grid nie zastępuje flexboxa, one się super uzupełniają. Grid jest stosowany do budowania całych layoutów, flexboxa używamy do pozycjonowania, centrowania elementów już wewnątrz pojedynczego elementu, konkretnej treści
- </p>
-
-            </article>
-
-            <article class="lesson">
-              <h3 class="lesson__title">Media queries & mobile first
-              </h3>
-
-              <p class="lesson__text">
-                CSS media queries - zapytania o media<br/>
-  Strony są skrojone na wymiar, jedna strona z tym samym kodem HTML może wyświetlać się na komputerze, tablecie, telefonie, tylko style zmieniamy.
-              </p>
-
-<p class="lesson__text">
-  RWD - responsive web design
-</p>
-
-<p class="lesson__text">
-  @media screen, print, all … media type<br/>
-  
-  min-width, max-width, color, aspect-ratio, orientation ...media feature<br/>
-  
-  możemy łączyć za pomocą and / not / , <br/>
-  pewnego rodzaju wyrażenie logiczne. <br/>
-  
-  @media query musi być na dole strony bo jak przeniesiemy na górę to zadziała specyficzność, definiujemy po zdefiniowaniu elementu
-</p>
-
-<p class="lesson__text">@media screen and (max-width: 600px) {<br>
-  body {<br/>
-    background: hotpink;<br/>
-  }<br/>
- 
-  .footer {<br/>
-    background: blueviolet;<br/>
-  }<br/>
-}
-</p>
-
-<p class="lesson__text">@media not screen and (min-width: 600px), not zaneguje wyrażenie, jeżeli któryś z tych dwóch będzie fałszem no to będzie prawda </p>
-
-<p>@media screen, (max-width: 600px), "," działa jak or czyli zawsze teraz będą te style media<br/>
-
-  mobile-first takie podejście, stylujemy stronę najpierw na urządzenia mobilne a potem za pomocą media-queries ustalamy jak elementy powinny wyglądać na rozdzielczościach większych,
-  
-</p>
-
-<img class="lesson__image" src="img/media.JPG" alt="media quieres example">
-
-<p class="lesson__text">przenosimy to z maina do @media, i nam się pokazuje teraz to jako na telefonie, jak dojade do 600 to się zmienia<br/>
-
-  320px mobilka, 768 tablet, 1024, 1440, tutaj podajemy min
-  </p>
-
-  <img class="lesson__image" src="img/media1.JPG" alt="media queries example">
-
-  <p class="lesson__text">jak zdefiniujemy coś na 768 to nie zdefiniujemy tego a nie zdefiniujemy tego na 1024 to będą te same style co na 768<br/>
-
-    chyba, że zrobimy tak: @media screen and (min-width: 768px) and (max-width: 1023px) <br/>
+  <p class="lesson__text"> Problemy ze stylowaniem:<br/>
+    -porozrzucane klasy (bałagan w plikach)<br/>
+    -@media oddzielone od elementu (konieczność ponownego definiowania)<br/>
+    -kiepska czytelność plików (szczególnie przy zagnieżdżeniach)<br/>
+    -brak możliwości definiowania funkcji do robienia podobnych rzeczy
     
-    podamy max-width graniczna wartość 1023px; to ponadto nie będą już te style stosowane, np.nie będzie grida
     </p>
 
     <p class="lesson__text">
-      breakpoint
-  punkt, w którym następuje łamanie strony, szerokości na których następuje zmiana
+      Na ratunek preprocesory, sass to preprocesor css, zamienia nam swoją składnię jakąś na takiego css-a który jest rozumiany przez przeglądarkę
+    </p>
+<a class="lesson__link" href="https://sass-lang.com/documentation">SASS dokumentacja</a>
+
+<p class="lesson__text">
+  SASS potrzebuje narzędzia do działania zainstalujemy go potem
+  teraz się pobawimy za pomocą narzędzia w przeglądarce
+</p>
+
+<p class="lesson__text">
+  SASS vs SCSS<br/>
+  sass to narzędzie, ma swoja składnię ale też składnię scss, to są dwie różne składnie, Maciek używa SCSSa bo jest prostsza i bardziej czytelna <br/>
+  sassowa nie używa np. nawiasów klamrowych taki jest pythonow xd
+</p>
+
+<p class="lesson__text">
+  dwa rodzaje plików:<br/>
+  .scss dla programisty -->sass nad strzałką → .css dla przeglądarki
+  my piszemy w scss a narzędzie sass zamienia te pliki na pliki css które przeglądarka rozumie
+</p>
+
+<a class="lesson__link" href="https://www.sassmeister.com/">SASS tool</a>
+
+<p class="lesson__text">co nam daje sass? np $zmienna</p>
+
+<p class="lesson__text">@mixin @include<br/>
+  przyjmują kilka własności 
+  </p>
+<img class="lesson__image" src="img/sass.JPG" alt="mixin example">
+
+<img class="lesson__image" src="img/sass1.JPG" alt="mixin example">
+
+<p class="lesson__text">możemy też zrobić mixin który będzie przyjmował parametry</p>
+
+<img class="lesson__image" src="img/sass2.JPG" alt="mixin example">
+
+<p class="lesson__text">@extend</p>
+<p class="lesson__text">w @include to jest wrzucane do środka a w @extend wyrzuca nam na zewnątrz
+  lepiej mixin i include
+  </p>
+
+<img class="lesson__image" src="img/sass3.JPG" alt="mixin example">
+
+<p class="lesson__text">& parent selector</p>
+<p class="lesson__text">mamy to samo w obu stron</p>
+
+<img class="lesson__image" src="img/sass4.JPG" alt="parent example">
+<p>kod wynikowy jest identyczny ale wszystko zapisaliśmy w sasie
+</p>
+
+<img class="lesson__image" src="img/sass5.JPG" alt="parent example">
+
+<p class="lesson__text">Ważne kiedy korzystamy z preprocesorów nie edytujemy plików wynikowych .css</p>
+
+</article>
+
+
+
+<article class="lesson">
+  <h3 class="lesson__title">node-sass</h3>
+
+  <p class="lesson__text"> Połączyć noda z sassem, żby korzystać z niego w wersji składniowej<br/>
+
+    npm install node-sass --save-dev
+    </p>
+    <p class="lesson__text">
+      npx node-sass main.scss main.css<br/>
+      node-sass src/style.scss dest/style.css<br/>
+      
+      jak zrobimy teraz jakąś zmianę w main.scss to musimy ją wywołać przez tą samą komendę.
+      
     </p>
 
+    <p class="lesson__text">
+      Nie zmieniać nic w css bo one tam się nie zapisują, zawsze muszą być robione w scss i zmienione do css.
+    </p>
 
 <p class="lesson__text">
-  responsywność w mobile first polega na tym, że najpierw definiujemy style, które obowiązują na całej stronie łącznie z wersją mobilną a potem dodajemy kolejne breakpointy, żeby lepiej dopasować je do większych ekranów. <br/>
+  Podpinamy ten plik main.css do HTML, dodajemy też klasę test do naszego pliku index html<br/>
   
-  przepisujemy tylko te własności, które chcemy zmienić, nie trzeba definiować wszytskiego na nowo, można chować elementy itp.
+  nie chcemy cały czas dodawać komendy do wywoływania, więc npx node-sass -w main.scss main.css
+  i teraz jak dodam zmianę to się pokazuje na bieżąco i w terminalu też pokazuje change<br/>
+  
+  jak popełnimy błąd to też w terminalu się pokaże<br/>
+  
+  ctr+c wychodzimy z polecenia
 </p>
 
-              </article>
-
-              <article class="lesson">
-                <h3 class="lesson__title">Hamburger menu
-                </h3>
-                <p class="lesson__text">
-                  Przepis na hamburger menu:<br/>
-                  Nawigacja<br/>
-                  Style do nawigacji na mobile<br/>
-                  Style do nawigacji na desktop<br/>
-                  Przycisk do pokazywania/ukrywania (zmiana klasy)<br/>
-                  Kod js do podpięcia się pod przycisk<br/>
-                  Kod js do zmiany klasy
-                </p>
-                
-<p class="lesson__text">manipulacja klasami:<br/>
-
-  element.classList add, remove, toggle, contains (tutaj podajemy samą nazwę klasy bez kropki) classList to obiekt?
+<p class="lesson__text">dodajemy do jsona <br/>
+  "scripts": {<br/>
+      "sass": "npx node-sass -w main.scss main.css",<br/>
+  
+  i teraz uruchamiamy w terminalu npm run sass<br/>
+  
+  i teraz znowu się powinno monitorować i zmieniać na bieżąco
   </p>
 
-
-  <img class="lesson__image" src="img/hamburger.JPG" alt="hamburger menu">
-
-  <p class="lesson__text">i ja np. mogę sobie ostylować tą klasę i wtedy się zmieni po kliknięciu</p>
-
-  <img class="lesson__image" src="img/hamburger1.JPG" alt="hamburger menu">
-  
   <p class="lesson__text">
-    żeby zdjęcie nie wystawało to display: block, max-width: 100%,
+    zrobiliśmy folder sass i przenieśliśmy main.scss do folderu, trzeba teraz podmienić w jsonie ścieżkę do pliku sass/
   </p>
 
 <p class="lesson__text">
-  jak robimy header fixed i ustawiamy min height to dobrze dla tego co pod np. main ustawic margin żeby nie wchodziło na to
+  po npm run sass sprawdzamy ścieżkę i dostajemy:
+  npx node-sass -w scss/main.scss main.css<br/>
+  tak definiujemy skrypty<br/>
+  
+  
+  tworzymy plik style.scss w katalogu sass, przenosimy tam nasze style z style.css,
+  podmieniamy w json <br/>
+  scripts": {<br/>
+      "sass": "npx node-sass -w scss/style.scss style.css",<br/>
+  
+  i komenda npm run sass
 </p>
 
-                </article>
+<p class="lesson__text">generalnie pamiętać, żeby zawsze dobra była ścieżka do pliku bo jak widać może mi nie działać jak nie jest xd
+</p>
 
 
 
-          </section>
+    </article>
+            </section>
     </main>
     <footer class="footer">
       Anna się uczy 2020.
