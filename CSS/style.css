@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Comment */
 html {
   box-sizing: border-box; }
@@ -33,13 +34,27 @@ body {
     text-align: center;
     font-size: 28px;
     margin-bottom: 0;
-    padding: 0 80px; }
+    padding: 0 80px;
+    display: flex;
+    justify-content: center; }
     @media (min-width: 768px) {
       .heading__title {
         letter-spacing: 2px;
         color: #ffffff;
         text-align: center;
         font-size: 35px; } }
+  .heading__title::before {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid #fff;
+    margin: auto;
+    margin-right: 5px; }
+  .heading__title::after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid #fff;
+    margin: auto;
+    margin-left: 5px; }
   .heading__paragraph {
     display: none; }
     @media (min-width: 768px) {
@@ -128,6 +143,12 @@ body {
   padding: 10px 20px;
   border-radius: 20px;
   text-align: center; }
+
+.lessons__title::before {
+  content: "😁"; }
+
+.lessons__title::after {
+  content: "😁 "; }
 
 @media screen and (min-width: 768px) {
   .lessons--grid {
