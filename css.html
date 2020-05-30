@@ -954,6 +954,15 @@
             layoutów, flexboxa używamy do pozycjonowania, centrowania elementów
             już wewnątrz pojedynczego elementu, konkretnej treści
           </p>
+          <p>
+            Są 3 artykuły w sekcji i żeby dodać grida to można ominąć sekcję i
+            dodać diva bezpośrednio nad artykułem i objąć je 3, generalnie też
+            nie wszystko trzeba pakować w grida<br />
+
+            W devtollsach jest opcja na 3 kropkach show media queries i pokazuje
+            na jakich szerokościach mamy zdefiniowane style poza tymi default,
+            można też linijki dodać.
+          </p>
         </article>
 
         <article class="lesson">
@@ -1109,177 +1118,207 @@
           <h3 class="lesson__title">Pseudoelementy & Pseudoselektory</h3>
 
           <p class="lesson__text">
-            pseudoelement pozwala na to, że css może tworzyć treść za pomocą własności content: “”
-element::before <br/>
-treść elementu<br/>
-element::after<br/></p>
+            pseudoelement pozwala na to, że css może tworzyć treść za pomocą
+            własności content: “” element::before <br />
+            treść elementu<br />
+            element::after<br />
+          </p>
 
-<p class="lesson__text">wybieramy jakiś nagłówek nazwa::before i styluje
-content: “hello”;
-możemy za pomocą tego uzupełnić treść np przed albo po nagłówku, ta treść nie jest jest częścią DOMU, tej właściwej treści, to jest psuedoelement, możemy np zmienić mu display
-block, width, height background, często są to rzeczy dekoracyjne
-np display inline block width height backgrund border-radius 50% i jest kropka content zostaje “”</p>
+          <p class="lesson__text">
+            wybieramy jakiś nagłówek nazwa::before i styluje content: “hello”;
+            możemy za pomocą tego uzupełnić treść np przed albo po nagłówku, ta
+            treść nie jest jest częścią DOMU, tej właściwej treści, to jest
+            psuedoelement, możemy np zmienić mu display block, width, height
+            background, często są to rzeczy dekoracyjne np display inline block
+            width height backgrund border-radius 50% i jest kropka content
+            zostaje “”
+          </p>
 
-<p class="lesson__text">
-  można też używać : pojedynczego ale bardziej poprawnie jest ::
-</p>
+          <p class="lesson__text">
+            można też używać : pojedynczego ale bardziej poprawnie jest ::
+          </p>
 
-<a class="lesson__link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Pseudoklasy</a>
+          <a
+            class="lesson__link"
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
+            >Pseudoklasy</a
+          >
 
-<p class="lesson__text">
-  pseudoklasy  : pojedynczy dwukropek, <br/>
-  selektor: hover, visited, focus<br/>
-  modyfikator elementu, którego działanie wynika z innego działania, często się używa na linkach, focus np do inputów
-</p>
+          <p class="lesson__text">
+            pseudoklasy : pojedynczy dwukropek, <br />
+            selektor: hover, visited, focus<br />
+            modyfikator elementu, którego działanie wynika z innego działania,
+            często się używa na linkach, focus np do inputów
+          </p>
 
-<p class="lesson__text">
-  first-child, last-child …<br/>
-  jeśli ten element jest trzecim dzieckiem jakiegoś rodzica to wtedy te style się wykonają na nim właśnie,
-  wszystkie artykuły nazywają się week summary, dodam week-summary:first-child: to się ostyluje tylko ten, który jest 1 dzieckiem grida w którym one się znajdują
-</p>
+          <p class="lesson__text">
+            first-child, last-child …<br />
+            jeśli ten element jest trzecim dzieckiem jakiegoś rodzica to wtedy
+            te style się wykonają na nim właśnie, wszystkie artykuły nazywają
+            się week summary, dodam week-summary:first-child: to się ostyluje
+            tylko ten, który jest 1 dzieckiem grida w którym one się znajdują
+          </p>
 
-<p class="lesson__text">
-  selektor:not(selektor) zaprzeczenie <br/>
-  .week-summary:not(.week-summary--special) <br/>
-  background: hotpink;<br/>
-  wszystkie inne oprócz tego special się ostylują
-</p>
-</article>
+          <p class="lesson__text">
+            selektor:not(selektor) zaprzeczenie <br />
+            .week-summary:not(.week-summary--special) <br />
+            background: hotpink;<br />
+            wszystkie inne oprócz tego special się ostylują
+          </p>
+        </article>
 
-<article class="lesson">
-  <h3 class="lesson__title">SASS/SCSS</h3>
+        <article class="lesson">
+          <h3 class="lesson__title">SASS/SCSS</h3>
 
-  <p class="lesson__text"> Problemy ze stylowaniem:<br/>
-    -porozrzucane klasy (bałagan w plikach)<br/>
-    -@media oddzielone od elementu (konieczność ponownego definiowania)<br/>
-    -kiepska czytelność plików (szczególnie przy zagnieżdżeniach)<br/>
-    -brak możliwości definiowania funkcji do robienia podobnych rzeczy
-    
-    </p>
+          <p class="lesson__text">
+            Problemy ze stylowaniem:<br />
+            -porozrzucane klasy (bałagan w plikach)<br />
+            -@media oddzielone od elementu (konieczność ponownego
+            definiowania)<br />
+            -kiepska czytelność plików (szczególnie przy zagnieżdżeniach)<br />
+            -brak możliwości definiowania funkcji do robienia podobnych rzeczy
+          </p>
 
-    <p class="lesson__text">
-      Na ratunek preprocesory, sass to preprocesor css, zamienia nam swoją składnię jakąś na takiego css-a który jest rozumiany przez przeglądarkę
-    </p>
-<a class="lesson__link" href="https://sass-lang.com/documentation">SASS dokumentacja</a>
+          <p class="lesson__text">
+            Na ratunek preprocesory, sass to preprocesor css, zamienia nam swoją
+            składnię jakąś na takiego css-a który jest rozumiany przez
+            przeglądarkę
+          </p>
+          <a class="lesson__link" href="https://sass-lang.com/documentation"
+            >SASS dokumentacja</a
+          >
 
-<p class="lesson__text">
-  SASS potrzebuje narzędzia do działania zainstalujemy go potem
-  teraz się pobawimy za pomocą narzędzia w przeglądarce
-</p>
+          <p class="lesson__text">
+            SASS potrzebuje narzędzia do działania zainstalujemy go potem teraz
+            się pobawimy za pomocą narzędzia w przeglądarce
+          </p>
 
-<p class="lesson__text">
-  SASS vs SCSS<br/>
-  sass to narzędzie, ma swoja składnię ale też składnię scss, to są dwie różne składnie, Maciek używa SCSSa bo jest prostsza i bardziej czytelna <br/>
-  sassowa nie używa np. nawiasów klamrowych taki jest pythonow xd
-</p>
+          <p class="lesson__text">
+            SASS vs SCSS<br />
+            sass to narzędzie, ma swoja składnię ale też składnię scss, to są
+            dwie różne składnie, Maciek używa SCSSa bo jest prostsza i bardziej
+            czytelna <br />
+            sassowa nie używa np. nawiasów klamrowych taki jest pythonow xd
+          </p>
 
-<p class="lesson__text">
-  dwa rodzaje plików:<br/>
-  .scss dla programisty -->sass nad strzałką → .css dla przeglądarki
-  my piszemy w scss a narzędzie sass zamienia te pliki na pliki css które przeglądarka rozumie
-</p>
+          <p class="lesson__text">
+            dwa rodzaje plików:<br />
+            .scss dla programisty -->sass nad strzałką → .css dla przeglądarki
+            my piszemy w scss a narzędzie sass zamienia te pliki na pliki css
+            które przeglądarka rozumie
+          </p>
 
-<a class="lesson__link" href="https://www.sassmeister.com/">SASS tool</a>
+          <a class="lesson__link" href="https://www.sassmeister.com/"
+            >SASS tool</a
+          >
 
-<p class="lesson__text">co nam daje sass? np $zmienna</p>
+          <p class="lesson__text">co nam daje sass? np $zmienna</p>
 
-<p class="lesson__text">@mixin @include<br/>
-  przyjmują kilka własności 
-  </p>
-<img class="lesson__image" src="img/sass.JPG" alt="mixin example">
+          <p class="lesson__text">
+            @mixin @include<br />
+            przyjmują kilka własności
+          </p>
+          <img class="lesson__image" src="img/sass.JPG" alt="mixin example" />
 
-<img class="lesson__image" src="img/sass1.JPG" alt="mixin example">
+          <img class="lesson__image" src="img/sass1.JPG" alt="mixin example" />
 
-<p class="lesson__text">możemy też zrobić mixin który będzie przyjmował parametry</p>
+          <p class="lesson__text">
+            możemy też zrobić mixin który będzie przyjmował parametry
+          </p>
 
-<img class="lesson__image" src="img/sass2.JPG" alt="mixin example">
+          <img class="lesson__image" src="img/sass2.JPG" alt="mixin example" />
 
-<p class="lesson__text">@extend</p>
-<p class="lesson__text">w @include to jest wrzucane do środka a w @extend wyrzuca nam na zewnątrz
-  lepiej mixin i include
-  </p>
+          <p class="lesson__text">@extend</p>
+          <p class="lesson__text">
+            w @include to jest wrzucane do środka a w @extend wyrzuca nam na
+            zewnątrz lepiej mixin i include
+          </p>
 
-<img class="lesson__image" src="img/sass3.JPG" alt="mixin example">
+          <img class="lesson__image" src="img/sass3.JPG" alt="mixin example" />
 
-<p class="lesson__text">& parent selector</p>
-<p class="lesson__text">mamy to samo w obu stron</p>
+          <p class="lesson__text">& parent selector</p>
+          <p class="lesson__text">mamy to samo w obu stron</p>
 
-<img class="lesson__image" src="img/sass4.JPG" alt="parent example">
-<p>kod wynikowy jest identyczny ale wszystko zapisaliśmy w sasie
-</p>
+          <img class="lesson__image" src="img/sass4.JPG" alt="parent example" />
+          <p>kod wynikowy jest identyczny ale wszystko zapisaliśmy w sasie</p>
 
-<img class="lesson__image" src="img/sass5.JPG" alt="parent example">
+          <img class="lesson__image" src="img/sass5.JPG" alt="parent example" />
 
-<p class="lesson__text">Ważne kiedy korzystamy z preprocesorów nie edytujemy plików wynikowych .css</p>
+          <p class="lesson__text">
+            Ważne kiedy korzystamy z preprocesorów nie edytujemy plików
+            wynikowych .css
+          </p>
+        </article>
 
-</article>
+        <article class="lesson">
+          <h3 class="lesson__title">node-sass</h3>
 
+          <p class="lesson__text">
+            Połączyć noda z sassem, żby korzystać z niego w wersji
+            składniowej<br />
 
+            npm install node-sass --save-dev
+          </p>
+          <p class="lesson__text">
+            npx node-sass main.scss main.css<br />
+            node-sass src/style.scss dest/style.css<br />
 
-<article class="lesson">
-  <h3 class="lesson__title">node-sass</h3>
+            jak zrobimy teraz jakąś zmianę w main.scss to musimy ją wywołać
+            przez tą samą komendę.
+          </p>
 
-  <p class="lesson__text"> Połączyć noda z sassem, żby korzystać z niego w wersji składniowej<br/>
+          <p class="lesson__text">
+            Nie zmieniać nic w css bo one tam się nie zapisują, zawsze muszą być
+            robione w scss i zmienione do css.
+          </p>
 
-    npm install node-sass --save-dev
-    </p>
-    <p class="lesson__text">
-      npx node-sass main.scss main.css<br/>
-      node-sass src/style.scss dest/style.css<br/>
-      
-      jak zrobimy teraz jakąś zmianę w main.scss to musimy ją wywołać przez tą samą komendę.
-      
-    </p>
+          <p class="lesson__text">
+            Podpinamy ten plik main.css do HTML, dodajemy też klasę test do
+            naszego pliku index html<br />
 
-    <p class="lesson__text">
-      Nie zmieniać nic w css bo one tam się nie zapisują, zawsze muszą być robione w scss i zmienione do css.
-    </p>
+            nie chcemy cały czas dodawać komendy do wywoływania, więc npx
+            node-sass -w main.scss main.css i teraz jak dodam zmianę to się
+            pokazuje na bieżąco i w terminalu też pokazuje change<br />
 
-<p class="lesson__text">
-  Podpinamy ten plik main.css do HTML, dodajemy też klasę test do naszego pliku index html<br/>
-  
-  nie chcemy cały czas dodawać komendy do wywoływania, więc npx node-sass -w main.scss main.css
-  i teraz jak dodam zmianę to się pokazuje na bieżąco i w terminalu też pokazuje change<br/>
-  
-  jak popełnimy błąd to też w terminalu się pokaże<br/>
-  
-  ctr+c wychodzimy z polecenia
-</p>
+            jak popełnimy błąd to też w terminalu się pokaże<br />
 
-<p class="lesson__text">dodajemy do jsona <br/>
-  "scripts": {<br/>
-      "sass": "npx node-sass -w main.scss main.css",<br/>
-  
-  i teraz uruchamiamy w terminalu npm run sass<br/>
-  
-  i teraz znowu się powinno monitorować i zmieniać na bieżąco
-  </p>
+            ctr+c wychodzimy z polecenia
+          </p>
 
-  <p class="lesson__text">
-    zrobiliśmy folder sass i przenieśliśmy main.scss do folderu, trzeba teraz podmienić w jsonie ścieżkę do pliku sass/
-  </p>
+          <p class="lesson__text">
+            dodajemy do jsona <br />
+            "scripts": {<br />
+            "sass": "npx node-sass -w main.scss main.css",<br />
 
-<p class="lesson__text">
-  po npm run sass sprawdzamy ścieżkę i dostajemy:
-  npx node-sass -w scss/main.scss main.css<br/>
-  tak definiujemy skrypty<br/>
-  
-  
-  tworzymy plik style.scss w katalogu sass, przenosimy tam nasze style z style.css,
-  podmieniamy w json <br/>
-  scripts": {<br/>
-      "sass": "npx node-sass -w scss/style.scss style.css",<br/>
-  
-  i komenda npm run sass
-</p>
+            i teraz uruchamiamy w terminalu npm run sass<br />
 
-<p class="lesson__text">generalnie pamiętać, żeby zawsze dobra była ścieżka do pliku bo jak widać może mi nie działać jak nie jest xd
-</p>
+            i teraz znowu się powinno monitorować i zmieniać na bieżąco
+          </p>
 
+          <p class="lesson__text">
+            zrobiliśmy folder sass i przenieśliśmy main.scss do folderu, trzeba
+            teraz podmienić w jsonie ścieżkę do pliku sass/
+          </p>
 
+          <p class="lesson__text">
+            po npm run sass sprawdzamy ścieżkę i dostajemy: npx node-sass -w
+            scss/main.scss main.css<br />
+            tak definiujemy skrypty<br />
 
-    </article>
-            </section>
+            tworzymy plik style.scss w katalogu sass, przenosimy tam nasze style
+            z style.css, podmieniamy w json <br />
+            scripts": {<br />
+            "sass": "npx node-sass -w scss/style.scss style.css",<br />
+
+            i komenda npm run sass
+          </p>
+
+          <p class="lesson__text">
+            generalnie pamiętać, żeby zawsze dobra była ścieżka do pliku bo jak
+            widać może mi nie działać jak nie jest xd
+          </p>
+        </article>
+      </section>
     </main>
     <footer class="footer">
       Anna się uczy 2020.

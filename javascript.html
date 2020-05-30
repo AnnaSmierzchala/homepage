@@ -10,31 +10,33 @@
 
   <body>
     <header id="top" class="heading">
-      <button class="hamburger hamburger--js" aria-label="otwórz menu">🍔</button>
-      <p class="heading__title heading__title--js">WTF<span class="span">: Co ten frontend</span>?</p>
+      <button class="hamburger hamburger--js" aria-label="otwórz menu">
+        🍔
+      </button>
+      <p class="heading__title heading__title--js">
+        WTF<span class="span">: Co ten frontend</span>?
+      </p>
       <p class="heading__paragraph heading__paragraph--js">Moje notatki</p>
-      
+
       <nav class="navigation navigation--js">
-        
-        <a class="navigation__link" href="index.html" target="_blank" 
+        <a class="navigation__link" href="index.html" target="_blank"
           >Strona główna</a
         >
-        <a class="navigation__link" href="html.html" target="_blank" >HTML</a>
-        <a class="navigation__link" href="css.html" target="_blank" >CSS</a>
-        <a class="navigation__link" href="javascript.html" target="_blank" 
+        <a class="navigation__link" href="html.html" target="_blank">HTML</a>
+        <a class="navigation__link" href="css.html" target="_blank">CSS</a>
+        <a class="navigation__link" href="javascript.html" target="_blank"
           >JavaScript</a
         >
-        <a class="navigation__link" href="browser.html" target="_blank" 
+        <a class="navigation__link" href="browser.html" target="_blank"
           >Przeglądarka</a
         >
-        <a class="navigation__link" href="terminal.html" target="_blank" 
+        <a class="navigation__link" href="terminal.html" target="_blank"
           >Terminal</a
         >
-        <a class="navigation__link" href="spis-tresci.html" target="_blank" 
+        <a class="navigation__link" href="spis-tresci.html" target="_blank"
           >Spis lekcji</a
         >
       </nav>
-      
     </header>
     <main class="mainn">
       <h1 class="main-header">Wszystko o JavaScript</h1>
@@ -54,7 +56,6 @@
             developerów.<br />
             Nowe feature’y mogą nie być wspierane we wszystkich przeglądarkach,
             ale są na to sposoby
-          
           </p>
 
           <p class="lesson__text">
@@ -951,94 +952,288 @@
         <h2 class="lessons__title lessons__title--grid">JS part IV</h2>
 
         <article class="lesson lesson--1">
-          <h3 class="lesson__title">Eventy
-          </h3>
+          <h3 class="lesson__title">Logika w JS</h3>
+
+          <p class="lesson__text">
+            Każdy język programowania opiera się na logice a logika opiera się
+            na wartościach prawda i fałsz, prawda czy fałsz?
+          </p>
+
+          <p>
+            Żeby na takie pytanie odpowiedzieć musimy mieć jakieś wyrażenie
+            logiczne np porównanie JavaScript != Java operator porównania - nie
+            równa się, jeżeli lewa nie równa się prawej to to wyrażenie będzie
+            prawdą
+          </p>
+
+          <p>
+            słowo kluczowe if, podajemy wyrażenie logiczne i zwraca true lub
+            false<br />
+            if(‘JavaScript’ != ‘Java’) {<br />
+            // wykonaj kod jeśli true<br />
+            }
+          </p>
+
+          <p>
+            nawiasy klamrowe wyznaczają blok kodu, ten blok kodu będzie się
+            wykonywał tylko jeśli wyrażenie w nawiasie jest prawdą<br />
+
+            if(‘JavaScript’ != ‘Java’) {<br />
+            console.log(‘Java to JavaScript’);<br />
+            }<br />
+            dostanę
+          </p>
+
+          <p>
+            if(‘Java’ != ‘Java’) {<br />
+            console.log(‘Java to JavaScript’);<br />
+            }<br />
+            nie dostanę
+          </p>
+
+          <p>Operatory porównania:</p>
+
+          <img src="img/porownanie.JPG" alt="operatory porównania" />
+
+          <p>
+            === ścisłe porównanie<br />
+
+            if (humanOne.age > humanTwo.age) {<br />
+            console.log(‘human one jest starszy’);<br />
+            }<br />
+            if (humanOne.age < humanTwo.age) {<br />
+            console.log(‘human two jest starszy’);<br />
+            }<br />
+            === albo są równolatkami
+          </p>
+
+          <p>
+            Falsy - 6 wartości: false, 0, '' "" `` pusty string, null,
+            undefined, Nan -not a number
+          </p>
+
+          <p>Truthy: cała reszta, 'tekst' 12, -4, {}, [], true, itd.</p>
+
+          <p>
+            if (false) {<br />
+            console.log(‘to się nie wykona’); <br />
+            }
+          </p>
+
+          <p>
+            połączyć nasze warunki logiczne w bardziej złożone warunki
+            logiczne<br />
+
+            && and - wszystkie warunki muszą być true, wykona się tylko jak oba
+            są true<br />
+
+            if ((myVariable ==4) && (otherVar !== ‘test’)) {...}<br />
+
+            if ((humanTwo.age === 35) && humanTwo.address) {} <br />
+            albo human.pet<br />
+          </p>
+
+          <p>
+            or || przynajmniej jeden warunek ma być true<br />
+
+            if ((myVariable == 4) || (otherVar !== ‘test’)) {...}
+          </p>
+
+          <p>
+            NOT odwraca watość wyrażenie logicznego<br />
+
+            if (!(‘JavaScript’ == ‘Java’)) { <br />
+            // ten kod się wykona<br />
+            } <br />
+            if (!false) { <br />
+            console.log('to się wykona')<br />
+            }
+          </p>
+
+          <p>
+            to się wykona bo to zaprzeczenie a zaprzeczeniem fals jest true<br />
+            używamy kiedy chcemy zaprzeczyć wyrażenie logiczne, ale raczej się
+            nie poleca używać<br />
+
+            !false => true<br />
+            !true => false
+          </p>
+
+          <p>
+            else budowanie bloku kodu jeśli wartość wyrażenia będzie fałszem,
+            jakby alternatywa dla warunku<br />
+
+            if (myVariable == 4) {<br />
+            //wykonaj kod jeśli true<br />
+            } else {<br />
+            //wykonaj kod jeśli false<br />
+            }
+          </p>
+
+          <p>
+            if (humanOne.age > humanTwo.age) {<br />
+            console.log('human one jest starszy');<br />
+            } else {<br />
+            console.log('human two jest starszy lub są
+            <br />równolatkami');<br />
+            }
+          </p>
+
+          <p>
+            możemy też używać funkcji else if <br />
+
+            if (myVariable ==4) {<br />
+            //wykonaj kod jeśli true<br />
+            } else if (myVariable == 8) {<br />
+            //wykonaj kod jeśli myVariable ==8 <br />
+            }
+          </p>
+
+          <img src="img/if else.JPG" alt="using if else example" />
+
+          <p>Instrukcja switch</p>
+          <img src="img/switch.JPG" alt="switch instruction example" />
+
+          <img src="img/switch1.JPG" alt="switch instruction example" />
+
+          <p>
+            musi być para kejsów, używamy kiedy znamy dokładne wartości jakie ma
+            osiągnąć nasza zmienna, to samo można zrobić, w sensie taką
+            funkcjonalność osiągnąć przy pomocy IFa
+          </p>
+
+          <p>
+            Zapis skrócony<br />
+            (zmienna1 > zmienna2) ? console.log('true') : console.log('false)
+          </p>
+
+          <p>
+            if (32 > 20) {<br />
+            console.log('to prawda')<br />
+            } else {<br />
+            console.log('to nieprawda')<br />
+            }<br />
+
+            (32 > 20) ? console.log('to prawda') : console.log('to nieprawda');
+          </p>
+
+          <p>
+            wynik operacji logicznych możemy zwracać do jakiejś zmiennej<br />
+            const result = (32 > 20) ? true : false;<br />
+            console.log(result)<br />
+            tu przed true jest domyślnie return, mogą być różne rzeczy w środku
+            np. obiekty
+          </p>
+
+          <p>
+            const result = (32 > 20) ? {name: 'ania'} : false;<br />
+            console.log(result)<br />
+            możemy zwracać i obiekty i słowa kluczowe, albo age zamiast name
+          </p>
+
+          <p>
+            const result = (humanOne.age > humanTwo.age) ? age : false;<br />
+            console.log(result)<br />
+            tak też można
+          </p>
+
+          <a href="https://www.destroyallsoftware.com/talks/wat"> check this</a>
+        </article>
+
+        <article class="lesson lesson--1">
+          <h3 class="lesson__title">Eventy</h3>
 
           <p class="lesson__text">
             Wywoływanie zdarzeń
           </p>
 
-<p class="lesson__text">
-  Przepis na przycisk zmieniający nagłówek:<br/>
-  
-  Przycisk &lt;button&gt;<br/>
-  Nagłówek<br/>
-  Kod js, który obsłuży kliknięcie<br/>
-  Kod js, który zmieni treść nagłówka<br/>
-</p>
+          <p class="lesson__text">
+            Przepis na przycisk zmieniający nagłówek:<br />
 
-<p class="lesson__text">
-  &lt;button&gt; class=”action--js” Zmień nagłówek<br/>
-  button vs a: button interakcje na stronie, wykonują akcję na stronie, np wysłanie formularza, włączenie menu, zmiana w DOM przez wciśnięcie buttona
-  a nawigacja, skakanie po sekcjach, stronach, stronach zewnętrznych
-</p>
+            Przycisk &lt;button&gt;<br />
+            Nagłówek<br />
+            Kod js, który obsłuży kliknięcie<br />
+            Kod js, który zmieni treść nagłówka<br />
+          </p>
 
-<p class="lesson__text">
-  element.addEventListener(type, listener [, options]) type i listener parametry, wywołujemy tą funkcję już na jakimś elemencie, który pobieramy z query selectora
-</p>
+          <p class="lesson__text">
+            &lt;button&gt; class=”action--js” Zmień nagłówek<br />
+            button vs a: button interakcje na stronie, wykonują akcję na
+            stronie, np wysłanie formularza, włączenie menu, zmiana w DOM przez
+            wciśnięcie buttona a nawigacja, skakanie po sekcjach, stronach,
+            stronach zewnętrznych
+          </p>
 
-<p class="lesson__text">
-  type - często wydarzenie związane z myszką, nas interesuje kliknięcie ale są też inne:
-  click, mouseenter, mouseleave, mouseover …
-</p>
+          <p class="lesson__text">
+            element.addEventListener(type, listener [, options]) type i listener
+            parametry, wywołujemy tą funkcję już na jakimś elemencie, który
+            pobieramy z query selectora
+          </p>
 
-<a class="lesson__link" href="https://developer.mozilla.org/en-US/docs/Web/Events#Mouse_events">Mouse events</a>
+          <p class="lesson__text">
+            type - często wydarzenie związane z myszką, nas interesuje
+            kliknięcie ale są też inne: click, mouseenter, mouseleave, mouseover
+            …
+          </p>
 
-<p class="lesson__text">
-  const button = document.querySelector(‘.action--js);<br/>
-  console.log(button);<br/><br/>
-  
-  const myClick = () => {<br/>
-  console.log(‘kliknąłeś’)<br/>
-  }<br/>
-  button.addEventListener(‘click’, nazwa funkcji) czyli myClick - nie wywołujemy jej tylko podajemy nazwę
-  wywołanie to myClick();
-</p>
+          <a
+            class="lesson__link"
+            href="https://developer.mozilla.org/en-US/docs/Web/Events#Mouse_events"
+            >Mouse events</a
+          >
 
-<p class="lesson__text">
-  button pobranie buttona<br/>
-  const button = document.querySelector('.action--js');<br/>
-  console.log(button);<br/>
-  funkcja, która się zadzieje po kliknięciu
-</p>
+          <p class="lesson__text">
+            const button = document.querySelector(‘.action--js);<br />
+            console.log(button);<br /><br />
 
-<p class="lesson__text">
-  pobrać nagłówek <br/>
-  const heading = document.querySelector('.main-header--js');<br/>
-      heading.innerHTML = `witaj, nazywam się Anna`;
-</p>
+            const myClick = () => {<br />
+            console.log(‘kliknąłeś’)<br />
+            }<br />
+            button.addEventListener(‘click’, nazwa funkcji) czyli myClick - nie
+            wywołujemy jej tylko podajemy nazwę wywołanie to myClick();
+          </p>
 
-<img class="lesson__image" src="img/event.JPG" alt="event example">
+          <p class="lesson__text">
+            button pobranie buttona<br />
+            const button = document.querySelector('.action--js');<br />
+            console.log(button);<br />
+            funkcja, która się zadzieje po kliknięciu
+          </p>
 
-<p class="lesson__text">
-  pobrać przycisk, dodać do niego listener, który będzie działał na kliknięcie, podpiąć pod to jakąś funkcję<br/>
-  
-  button.addEventListener('click', (e) => {<br/>
-      console.log(e);<br/>
-  })<br/><br/>
-  
-  button.addEventListener('click', (e) => {<br/>
-      console.log('halo');<br/>
-  })
-</p>
+          <p class="lesson__text">
+            pobrać nagłówek <br />
+            const heading = document.querySelector('.main-header--js');<br />
+            heading.innerHTML = `witaj, nazywam się Anna`;
+          </p>
 
+          <img class="lesson__image" src="img/event.JPG" alt="event example" />
 
-<p class="lesson__text">
-  nie tylko do buttonów stosujemy tego listenera
-</p>
+          <p class="lesson__text">
+            pobrać przycisk, dodać do niego listener, który będzie działał na
+            kliknięcie, podpiąć pod to jakąś funkcję<br />
 
-<img class="lesson__image" src="img/event1.JPG" alt="event example">
+            button.addEventListener('click', (e) => {<br />
+            console.log(e);<br />
+            })<br /><br />
 
-<a class="lesson__link" href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Event</a>
+            button.addEventListener('click', (e) => {<br />
+            console.log('halo');<br />
+            })
+          </p>
 
+          <p class="lesson__text">
+            nie tylko do buttonów stosujemy tego listenera
+          </p>
 
+          <img class="lesson__image" src="img/event1.JPG" alt="event example" />
 
-
-
-
-          </article>
-          </section>
-
+          <a
+            class="lesson__link"
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Event"
+            >Event</a
+          >
+        </article>
+      </section>
     </main>
     <footer class="footer">
       Anna się uczy 2020.
