@@ -1,0 +1,19 @@
+.lessons {
+    &__title {
+      font-size: 23px;
+      background-color: rgba(243, 138, 138, 0.253);
+      color: #ffffff;
+      margin: 20px auto;
+      max-width: 500px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-align: center;
+    }
+    &__title::before {
+      content: "😁";
+    }
+    &__title::after {
+      content: "😁 ";
+    
+    }
+  }

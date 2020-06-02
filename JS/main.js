@@ -20,7 +20,7 @@ console.log(age);
 console.log(`Hej, nazywam się ${firstName} i mam ${age} lat`);
 
 
-const heading = document.querySelector('.main-header--js');
+const heading = document.querySelector('.main__header--js');
 
 heading.innerHTML = 'Tu miał być inny tekst ale go zmieniłam za pomocą js'
 
@@ -54,7 +54,7 @@ createContent(`.heading__paragraph--js`, 'Witaj świecie');
 
 
 button.addEventListener('click', () => {
-    const heading = document.querySelector('.main-header--js');
+    const heading = document.querySelector('.main__header--js');
     heading.innerHTML = `witaj, nazywam się Anna`;
 
     heading.classList.add('klasa-z-js');

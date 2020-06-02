@@ -1,0 +1,19 @@
+.week {
+    background-color: rgba(251, 231, 210, 0.87);
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    &__title {
+      color: #710c0c;
+      font-size: 18px;
+    }
+    &__list-link {
+      text-decoration: none;
+      color: #470a1e;
+      &:hover {
+        color: #ec5b8c;
+      }
+    }
+  }
+  

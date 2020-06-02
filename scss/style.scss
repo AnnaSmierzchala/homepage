@@ -1,4 +1,15 @@
 /* Comment */
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+@import "modules/heading.scss";
+@import "modules/navigation.scss";
+@import "modules/mainn.scss";
+@import "modules/lessons.scss";
+@import "modules/lesson.scss";
+@import "modules/extras.scss";
+@import "modules/extra.scss";
+@import "modules/weeks.scss";
+@import "modules/week.scss";
+
 
 html {
   box-sizing: border-box;
@@ -27,282 +38,6 @@ body {
   text-align: justify;
 }
 
-.heading {
-  min-height: 100px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #710c0c;
-  @media (min-width: 768px) {
-    min-height: 160px;
-  }
-  &__title {
-    letter-spacing: 2px;
-    color: #ffffff;
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 0;
-    padding: 0 80px;
-    display: flex;
-    justify-content: center;
-    @media (min-width: 768px) {
-      letter-spacing: 2px;
-      color: #ffffff;
-      text-align: center;
-      font-size: 35px;
-    }
-  }
-  &__title::before {
-    content: "";
-    flex: 1 1;
-    border-bottom: 1px solid #fff;
-    margin: auto;
-    margin-right: 5px;
-  }
-  &__title::after {
-    content: "";
-    flex: 1 1;
-    border-bottom: 1px solid #fff;
-    margin: auto;
-    margin-left: 5px;
-  }
-  &__paragraph {
-    display: none;
-    @media (min-width: 768px) {
-      text-align: center;
-      color: #e0c2cc;
-      font-size: 15px;
-      letter-spacing: 2px;
-      display: block;
-      margin: 0;
-    }
-  }
-}
-
-.main-header {
-  font-size: 20px;
-  color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 20px;
-  text-align: center;
-  @media (min-width: 768px) {
-    font-size: 30px;
-    color: #ffffff;
-    margin: 20px auto;
-    max-width: 750px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-align: center;
-  }
-  &__paragraph {
-    text-align: center;
-    color: #e0c2cc;
-    font-size: 15px;
-    letter-spacing: 2px;
-  }
-}
-
-.navigation {
-  padding: 20px;
-  display: none;
-  @media (min-width: 768px) {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    font-size: 20px;
-  }
-  &__link {
-    text-decoration: none;
-    color: #f38a8a;
-    padding: 5px;
-    letter-spacing: 1px;
-    display: block;
-    margin: 0;
-    @media (min-width: 768px) {
-      border-right: 1px solid #b40d45;
-    }
-    &:hover {
-      color: #b40d45;
-    }
-  }
-  &--open {
-    display: block;
-  }
-}
-
-.hamburger {
-  position: absolute;
-  top: 25px;
-  right: 20px;
-  font-size: 35px;
-  border: none;
-  background: none;
-  @media (min-width: 768px) {
-    display: none;
-  }
-}
-
-.span {
-  display: none;
-  @media (min-width: 768px) {
-    display: inline;
-  }
-}
-
-.mainn {
-  margin: 120px auto 0;
-  @media (min-width: 768px) {
-    margin: 190px auto 0;
-  }
-}
-
-.lessons {
-  &__title {
-    font-size: 23px;
-    background-color: rgba(243, 138, 138, 0.253);
-    color: #ffffff;
-    margin: 20px auto;
-    max-width: 500px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-align: center;
-  }
-  &__title::before {
-    content: "😁";
-  }
-  &__title::after {
-    content: "😁 ";
-  }
-  &--grid {
-    @media screen and (min-width: 768px) {
-      display: grid;
-      grid-template-areas:
-        "lessons__title--grid lessons__title--grid lessons__title--grid"
-        "lesson--1 lesson--2 lesson-3";
-      grid-template-columns: 1fr 1fr 1fr;
-      column-gap: 20px;
-      row-gap: 20px;
-      margin: 20px;
-    }
-  }
-}
-
-.extras__title {
-  font-size: 23px;
-  background-color: rgba(243, 138, 138, 0.253);
-  color: #ffffff;
-  margin: 20px auto;
-  max-width: 500px;
-  padding: 10px 20px;
-  border-radius: 20px;
-  text-align: center;
-}
-
-.weeks__title {
-  font-size: 23px;
-  background-color: rgba(243, 138, 138, 0.253);
-  color: #ffffff;
-  margin: 20px auto;
-  max-width: 500px;
-  padding: 10px 20px;
-  border-radius: 20px;
-  text-align: center;
-}
-
-.lesson {
-  background-color: rgba(251, 231, 210, 0.87);
-  margin: 20px auto;
-  max-width: 900px;
-  padding: 5px 20px;
-  border-radius: 20px;
-  box-sizing: border-box;
-  &__title {
-    color: #710c0c;
-    font-size: 18px;
-  }
-  &__text-link {
-    text-decoration: none;
-    color: #470a1e;
-    &:hover {
-      color: #ec5b8c;
-    }
-  }
-  &__image {
-    display: block;
-    max-width: 100%;
-  }
-}
-
-.lesson-section {
-  &__image {
-    display: block;
-    max-width: 100%;
-  }
-  &__text-link {
-    text-decoration: none;
-    color: #470a1e;
-    &:hover {
-      color: #ec5b8c;
-    }
-  }
-}
-
-.extra {
-  background-color: rgba(251, 231, 210, 0.87);
-  margin: 20px auto;
-  max-width: 900px;
-  padding: 5px 20px;
-  border-radius: 20px;
-  box-sizing: border-box;
-  &__title {
-    color: #710c0c;
-    font-size: 18px;
-  }
-  &__list-link {
-    text-decoration: none;
-    color: #470a1e;
-    &:hover {
-      color: #ec5b8c;
-    }
-  }
-  &--inline {
-    width: 440px;
-    margin-right: 10px;
-  }
-
-  &--inline1 {
-    width: 440px;
-    margin-left: 10px;
-  }
-}
-
-.week {
-  background-color: rgba(251, 231, 210, 0.87);
-  margin: 20px auto;
-  max-width: 900px;
-  padding: 5px 20px;
-  border-radius: 20px;
-  box-sizing: border-box;
-  &__title {
-    color: #710c0c;
-    font-size: 18px;
-  }
-  &__list-link {
-    text-decoration: none;
-    color: #470a1e;
-    &:hover {
-      color: #ec5b8c;
-    }
-  }
-}
-
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px auto;
-  max-width: 900px;
-}
-
 .footer {
   text-align: center;
   color: #ffffff;
@@ -314,53 +49,24 @@ body {
   }
 }
 
-.main {
-  margin: 120px auto 0;
-  @media (min-width: 768px) {
+
+.grid1 {
+  @media screen and (min-width: 768px) {
     display: grid;
-    grid-template-areas:
-      "header header header"
-      "weeks--1 weeks--2 weeks--3";
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
     row-gap: 20px;
-    grid-template-rows: 150px;
-    margin: 180px 20px 0;
+    margin: 20px;
   }
 }
 
-@media (min-width: 768px) {
-  .header {
-    grid-area: 1/ 1/ 2/4;
+.grid {
+  @media screen and (min-width: 768px) {  
+    display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 20px;
+        margin: 20px;
+      }
   }
-
-  .weeks--1 {
-    grid-area: 2/1/3/2;
-  }
-
-  .weeks--2 {
-    grid-area: 2/2/3/3;
-  }
-
-  .weeks--3 {
-    grid-area: 2/3/3/4;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .lessons__title--grid {
-    grid-area: 1/1/2/4;
-  }
-
-  .lesson--1 {
-    grid-area: 2/1/3/2;
-  }
-
-  .lesson--2 {
-    grid-area: 2/2/3/3;
-  }
-
-  .lesson--3 {
-    grid-area: 2/3/3/4;
-  }
-}
+  
